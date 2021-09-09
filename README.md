@@ -19,9 +19,12 @@ Proyecto MinTic Ciclo 3. Desarrollo de Software
 
 ## Capa Dominio. (Anotación Pascal)
 1. Clases
-`public class NameClass
+`namespace NameProject.App.Dominio
 {
-	public DataType NameAtrrib {get;set;}
+	public class NameClass
+	{
+		public DataType NameAtrrib {get;set;}
+	}
 }`
 2. Herencia 
 	Al final de la clase ":" nombre clase a heredar
