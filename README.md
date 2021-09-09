@@ -31,7 +31,7 @@ En la clase a crear se realiza la asociación: `public NameClass NameAsociacion 
 ## Implementación Capa Dominio. Clases (Visual Studio Code)
 1. En la capa de Dominio. Crear carpeta de "Entidades"
 2. En carpeta de Entidades crear archivo por cada clase NameClass.cs
-3. Para atributos con erorr, generar clases o tipos propios ("enum" separados por ",")
+3. Para atributos con error, generar clases o tipos propios ("enum" separados por ",")
 
 ## Instalación de paquetes
 ### Global
