@@ -76,5 +76,5 @@ namespace NameProject.App.Persistencia
 13. En Program.cs ingresar la referencia = `using NameProject.App.Dominio;`
 14. Guardar y compilar
 15. Cambiar a Capa Persistencia
-16. Migración = `dotnet ef migrations add Inicial --startup-project ..\NameProject.App.Console\`
+16. Migración = `dotnet ef migrations add NameMigrations --startup-project ..\NameProject.App.Console\`
 17. Actualizar BD = `dotnet ef database update --starup-project ..\NameProject.App.Console\`
