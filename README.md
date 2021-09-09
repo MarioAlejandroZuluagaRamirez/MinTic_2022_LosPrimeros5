@@ -17,7 +17,7 @@ Proyecto MinTic Ciclo 3. Desarrollo de Software
 6. Crear Dominio = `dotnet new classlib -o NameProject.App.Dominio`
 7. Crear Servicios = `dotnet new webapi -o NameProject.App.Servicios`
 
-## Capa Dominio. (Anotación Pascal)
+## Capa Dominio. (Anotación CamelCase)
 1. Clases
 `namespace NameProject.App.Dominio
 {
