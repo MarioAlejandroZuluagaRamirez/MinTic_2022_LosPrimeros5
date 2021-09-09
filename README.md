@@ -9,13 +9,13 @@ Proyecto MinTic Ciclo 3. Desarrollo de Software
 5. Servicios = csproject - webapi
 
 ## Creacion de proyectos (CMD):
-1. Crear carpeta de programa
-2. Ingresar a la carpeta de programa 
-3. Crear sln = `dotnet new sln -o NameDir.App`
-4. Crear Presentación = `dotnet new console -o NameDir.App.Consola`
-5. Crear Persistencia = `dotnet new classlib -o NameDir.App.Persistencia`
-6. Crear Dominio = `dotnet new classlib -o NameDir.App.Dominio`
-7. Crear Servicios = `dotnet new webapi -o NameDir.App.Servicios`
+1. Crear carpeta de Proyecto
+2. Ingresar a la carpeta de Proyecto 
+3. Crear sln = `dotnet new sln -o NameProject.App`
+4. Crear Presentación = `dotnet new console -o NameProject.App.Consola`
+5. Crear Persistencia = `dotnet new classlib -o NameProject.App.Persistencia`
+6. Crear Dominio = `dotnet new classlib -o NameProject.App.Dominio`
+7. Crear Servicios = `dotnet new webapi -o NameProject.App.Servicios`
 
 ## Capa Dominio. (Anotación Pascal)
 1. Clases
@@ -51,27 +51,27 @@ En la clase a crear se realiza la asociación: `public NameClass NameAsociacion 
 5. Ingresar a AppRepositorios
 6. Crear clase AppContext.cs
 `using Microsoft.EntityFrameworkCore;
-using HospiEnCasa.App.Dominio;
-namespace HospiEnCasa.App.Persistencia
+using NameProject.App.Dominio;
+namespace NameProject.App.Persistencia
 {
 	public class AppContext:DbContext
 	{
-		public DbSet<Persona> Personas {get;set;}
+		public DbSet<"Entidad"> Personas {get;set;}
 			protectes override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 	{
 		if (!optionsBuilder.IsConfigured)	
 	}
 		optionsBuilder
-		.UseSqlServer("Data Source = (localdb)\\MSSQLLocalDB; Initial Catalog = HospiEnCasaData");
+		.UseSqlServer("Data Source = (localdb)\\MSSQLLocalDB; Initial Catalog = NameProjectData");
 	}
 }`
-8. Agregar referencia: `dotnet add referencia ..\HospiEnCasa.App.Dominio\`
+8. Agregar referencia: `dotnet add referencia ..\NameProject.App.Dominio\`
 9. Compilar = `dotnet build`
 10. Cambiar a carpeta consola
 11. Instalar paquete = `dotnet add package Microsoft.EntityFrameworkCore.Desing --Version 5.0.0`
-12. Agregar referencia = `dotnet add reference ..\HospiEnCasa.App.Persistencia`
-13. En Program.cs ingresar la referencia = `using HospiEnCasa.App.Dominio;`
+12. Agregar referencia = `dotnet add reference ..\NameProject.App.Persistencia`
+13. En Program.cs ingresar la referencia = `using NameProject.App.Dominio;`
 14. Guardar y compilar
 15. Cambiar a Capa Persistencia
-16. Migración = `dotnet ef migrations add Inicial --startup-project ..\HospiEnCasa.App.Console\`
-17. Actualizar BD = `dotnet ef database update --starup-project ..\HospiEnCasa.App.Console\`
+16. Migración = `dotnet ef migrations add Inicial --startup-project ..\NameProject.App.Console\`
+17. Actualizar BD = `dotnet ef database update --starup-project ..\NameProject.App.Console\`
