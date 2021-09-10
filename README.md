@@ -53,9 +53,9 @@ En la clase a crear se realiza la asociación: `public NameClass NameAsociacion 
 4. Crear carpeta AppRepositorios
 5. Ingresar a AppRepositorios
 6. Crear clase AppContext.cs
-`using Microsoft.EntityFrameworkCore;
+`
+using Microsoft.EntityFrameworkCore;
 using NameProject.App.Dominio;
-
 namespace NameProject.App.Persistencia
 {
     public class AppContext : DbContext
@@ -70,7 +70,8 @@ namespace NameProject.App.Persistencia
             }
         }
     }
-}`
+}
+`
 8. Agregar referencia: `dotnet add referencia ..\NameProject.App.Dominio\`
 9. Compilar = `dotnet build`
 10. Cambiar a carpeta consola
