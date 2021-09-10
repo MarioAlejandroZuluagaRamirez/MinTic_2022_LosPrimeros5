@@ -72,7 +72,7 @@ namespace NameProject.App.Persistencia
     }
 }
 `
-8. Agregar referencia: `dotnet add referencia ..\NameProject.App.Dominio\`
+8. Agregar referencia: `dotnet add reference ..\NameProject.App.Dominio\`
 9. Compilar = `dotnet build`
 10. Cambiar a carpeta consola
 11. Instalar paquete = `dotnet add package Microsoft.EntityFrameworkCore.Desing --Version 5.0.0`
