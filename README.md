@@ -55,18 +55,21 @@ En la clase a crear se realiza la asociación: `public NameClass NameAsociacion 
 6. Crear clase AppContext.cs
 `using Microsoft.EntityFrameworkCore;
 using NameProject.App.Dominio;
+
 namespace NameProject.App.Persistencia
 {
-	public class AppContext:DbContext
-	{
-		public DbSet<"Entidad"> Personas {get;set;}
-			protectes override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-	{
-		if (!optionsBuilder.IsConfigured)	
-	}
-		optionsBuilder
-		.UseSqlServer("Data Source = (localdb)\\MSSQLLocalDB; Initial Catalog = NameProjectData");
-	}
+    public class AppContext : DbContext
+    {
+            public DbSet<Entity> Atribute {get;set;} 
+            protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            if (!optionsBuilder.IsConfigured)
+            {
+                optionsBuilder
+                .UseSqlServer("Data Source = (localdb)\\MSSQLLocalDB; Initial Catalog = NameProjectData");
+            }
+        }
+    }
 }`
 8. Agregar referencia: `dotnet add referencia ..\NameProject.App.Dominio\`
 9. Compilar = `dotnet build`
