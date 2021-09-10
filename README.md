@@ -75,7 +75,7 @@ namespace NameProject.App.Persistencia
 8. Agregar referencia: `dotnet add reference ..\NameProject.App.Dominio\`
 9. Compilar = `dotnet build`
 10. Cambiar a carpeta consola
-11. Instalar paquete = `dotnet add package Microsoft.EntityFrameworkCore.Desing --Version 5.0.0`
+11. Instalar paquete = `dotnet add package Microsoft.EntityFrameworkCore.Design --version 5.0.0`
 12. Agregar referencia = `dotnet add reference ..\NameProject.App.Persistencia`
 13. En Program.cs ingresar la referencia = `using NameProject.App.Dominio;`
 14. Guardar y compilar
