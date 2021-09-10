@@ -1,6 +1,12 @@
 # MinTic_2022_LosPrimeros5
 Proyecto MinTic Ciclo 3. Desarrollo de Software
 
+## Aplicaciones
+1. .NET Core
+2. SQLServer
+3. Visual Studio Code
+4. SQL Managmente
+
 ## Tipos de proyectos
 1. Aplicacion = sln (Agrupa conjunto de proyectos)
 2. Presentación = csproject - razor
@@ -19,7 +25,8 @@ Proyecto MinTic Ciclo 3. Desarrollo de Software
 
 ## Capa Dominio. (Anotación CamelCase)
 1. Clases
-`namespace NameProject.App.Dominio
+`using System;
+namespace NameProject.App.Dominio
 {
 	public class NameClass
 	{
