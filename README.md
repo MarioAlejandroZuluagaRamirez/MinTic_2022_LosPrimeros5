@@ -41,10 +41,10 @@ En la clase a crear se realiza la asociación: `public NameClass NameAsociacion 
 1. `dotnet tool install --global dotnet-ef`
 2. `dotnet tool update --global dotnet-ef`
 ### Proyecto
-1. `dotnet add package Microsoft.EntityFrameworkCore --Version 5.0.0`
-2. `dotnet add package Microsoft.EntityFrameworkCore.Tools --Version 5.0.0`
-3. `dotnet add package Microsoft.EntityFrameworkCore.Desing --Version 5.0.0`
-4. `dotnet add package Microsoft.EntityFrameworkCore.SqlServer --Version 5.0.0`
+1. `dotnet add package Microsoft.EntityFrameworkCore --version 5.0.0`
+2. `dotnet add package Microsoft.EntityFrameworkCore.Tools --version 5.0.0`
+3. `dotnet add package Microsoft.EntityFrameworkCore.Design --version 5.0.0`
+4. `dotnet add package Microsoft.EntityFrameworkCore.SqlServer --version 5.0.0`
 
 ## Implementación de Capa de Persistencia (Visual Studio Code)
 1. Ingresar a la capa de persistencia
