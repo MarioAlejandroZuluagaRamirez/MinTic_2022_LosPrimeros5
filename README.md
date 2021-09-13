@@ -93,12 +93,12 @@ namespace NameProject.App.Persistencia
 18. Migración = `dotnet ef migrations add NameMigrations --startup-project ..\NameProject.App.Console\`
 19. Actualizar BD = `dotnet ef database update --startup-project ..\NameProject.App.Console\`
 
-##Eliminar Migración
+## Eliminar Migración
 1. Actualizar DB = `dotnet ef database update --startup-project ..\NameProject.App.Console\`
 2. Revertir Migración = `dotnet ef database update 0 --startup-project ..\NameProject.App.Console\`
 3. Eliminar Migración = `dotnet ef migrations remove --startup-project ..\NameProject.App.Console\`
 
-##Implementación de Metodos para manipulación de BD
+## Implementación de Metodos para manipulación de BD
 En carpeta Persistencia\AppRepositorios
 1. Crear archivo IRepositorioEntidad.cs
 2. Codigo = `
