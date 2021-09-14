@@ -79,19 +79,17 @@ En la clase a crear se realiza la asociación: `public NameClass NameAsociacion 
 			}
 		    }
 		}
-8. Agregar referencia: `dotnet add reference ..\NameProject.App.Dominio\`
-9. Compilar = `dotnet build`
-10. Cambiar a carpeta consola
-	11. Instalar paquete = `dotnet add package Microsoft.EntityFrameworkCore.Design --version 5.0.0`
-12. Agregar referencia = `dotnet add reference ..\NameProject.App.Persistencia`
-13. Agregar referencia = `dotnet add reference ..\NameProject.App.Dominio`
-14. En Program.cs ingresar la referencia = 
-	`using NameProject.App.Dominio;
-	using NameProject.App.Persistencia;`
-16. Guardar y compilar
-17. Cambiar a Capa Persistencia
-18. Migración = `dotnet ef migrations add NameMigrations --startup-project ..\NameProject.App.Console\`
-19. Actualizar BD = `dotnet ef database update --startup-project ..\NameProject.App.Console\`
+7. Agregar referencia: `dotnet add reference ..\NameProject.App.Dominio\`
+8. Compilar = `dotnet build`
+9. Cambiar a carpeta consola
+10. Instalar paquete = `dotnet add package Microsoft.EntityFrameworkCore.Design --version 5.0.0`
+11. Agregar referencia = `dotnet add reference ..\NameProject.App.Persistencia`
+12. Agregar referencia = `dotnet add reference ..\NameProject.App.Dominio`
+13. En Program.cs ingresar la referencia = `using NameProject.App.Dominio;` y `using NameProject.App.Persistencia;`
+14. Guardar y compilar
+15. Cambiar a Capa Persistencia
+16. Migración = `dotnet ef migrations add NameMigrations --startup-project ..\NameProject.App.Console\`
+17. Actualizar BD = `dotnet ef database update --startup-project ..\NameProject.App.Console\`
 
 ## Eliminar Migración
 1. Actualizar DB = `dotnet ef database update --startup-project ..\NameProject.App.Console\`
