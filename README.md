@@ -113,7 +113,7 @@ En carpeta Persistencia\AppRepositorios
 				//DataType Nombre_Metodo (DataType NameVariable)
 				Entidad AddEntidad(Entidad NameVariable);
 				Entidad UpdateEntidad(Entidad NameVariable);
-				Void DeleteEntidad (int idEntidad)
+				void DeleteEntidad (int idEntidad);
 				Entidad GetEntidad (int idEntidad);
 			}
 		}
@@ -132,7 +132,7 @@ En carpeta Persistencia\AppRepositorios
 			{
 				private readonly AppContext _appContext;
 
-				public RepositorioPaciente(AppContext appContext)
+				public RepositorioEntidad(AppContext appContext)
 				{
 				    _appContext = appContext;
 				}
@@ -140,7 +140,7 @@ En carpeta Persistencia\AppRepositorios
 				//Implementar metodos de la clase Super
 				Entidad IRepositorioEntidad.AddEntidad(Entidad NameVariable)
 				{
-					var entidadAdicionado = _appContext.Pacientes.Add(NameVariable);
+					var entidadAdicionado = _appContext.Entidad.Add(NameVariable);
 					_appContext.SaveChanges();
 					return entidadAdicionado.Entity;
 				}
