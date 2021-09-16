@@ -181,7 +181,7 @@ En carpeta Persistencia\AppRepositorios
 			}
 		}
 5. Compilar
-6. Validar: Creación de consola, add references y using Persistencia / Dominio.
+6. Validar: Creación de consola, add references (Persistencia / Dominio) y using (Persistencia / Dominio).
 7. En consola adicionar Repositorio y Metodo
 	
 		private static IRepositorioEntidad _repoEntidad = new RepositorioEntidad(new Persistencia.AppContext());
@@ -200,8 +200,32 @@ En carpeta Persistencia\AppRepositorios
 
 		private static void FindEntidad (int idEntidad)
 		{
-			var NameVariable = _repoPaciente.GetPaciente(idEntidad);
-			Console.WriteLine(Entidad.Atributo1... );
+			var NameVariable = _repoEntidad.GetEntidad(idEntidad);
+			Console.WriteLine(Entidad.Atributo1 );
+		}
+		
+		private static void UpdateEntidad(int idEntidad)
+		{
+		    var NameVariable = _repoEntidad.GetEntidad(idEntidad);
+		    Namevariable.Atributo1 = "XXX";
+		    Namevariable.Atributo2 = "XX";
+		    _repoEntidad.UpdateEntidad(NameVariable);
+		}
+		
+		private static void DeleteEntidad(int idEntidad)
+		{
+		    _repoEntidad.DeleteEntidad(idEntidad);
+		    var NameVariable = _repoEntidad.GetEntidad(idEntidad);
+		    if (NameVariable == null)
+		    {
+			Console.WriteLine("Registro eliminado");
+		    }
+		}
+
+		private static void ListarEntidad()
+		{
+		    IEnumerable<Entidad> NameVariable = _repoEntidad.GetAllEntidad();
+		    Console.WriteLine(NameVariable.First().Atributo);
 		}
 	
 8. En el main llamar al metodo creado en el punto anterior.
