@@ -1,4 +1,5 @@
-# MinTic_2022_LosPrimeros5. Proyecto MinTic Ciclo 3. Desarrollo de Software
+# MinTic_2022_LosPrimeros5. 
+Proyecto MinTic Ciclo 3. Desarrollo de Software
 
 ## Aplicaciones
 1. .NET Core
