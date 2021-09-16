@@ -1,5 +1,4 @@
-# MinTic_2022_LosPrimeros5
-Proyecto MinTic Ciclo 3. Desarrollo de Software
+# MinTic_2022_LosPrimeros5. Proyecto MinTic Ciclo 3. Desarrollo de Software
 
 ## Aplicaciones
 1. .NET Core
@@ -229,4 +228,4 @@ En carpeta Persistencia\AppRepositorios
 		}
 	
 8. En el main llamar al metodo creado en el punto anterior.
-9. Ejectura proyecto: `dotnet run` 
+9. Ejectura proyecto: `dotnet run`
