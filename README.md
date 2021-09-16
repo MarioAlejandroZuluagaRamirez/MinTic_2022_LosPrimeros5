@@ -2,6 +2,7 @@
 Proyecto MinTic Ciclo 3. Desarrollo de Software
 
 ### GitHub
+git init
 git remote add origin URLRepository
 
 ## Aplicaciones
