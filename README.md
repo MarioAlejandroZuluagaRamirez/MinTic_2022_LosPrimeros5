@@ -159,12 +159,12 @@ En carpeta Persistencia\AppRepositorios
 					return _appContext.Entidad;
 				}
 
-				Entidad IRepositorioEntidad.GetPaciente (int idEntidad)
+				Entidad IRepositorioEntidad.GetEntidad (int idEntidad)
 				{
 					return _appContext.Entidad.FirstOrDefault(p => p.id == idEntidad);
 				}
 
-				Entidad IRepositorioEntidad.UpdatePaciente (Entidad NameVariable)
+				Entidad IRepositorioEntidad.UpdateEntidad (Entidad NameVariable)
 				{
 					var entidadEncontrado = _appContext.Entidad.FirstOrDefault(p => p.id == entidad.id);
 					if (entidadEncontrado !=null)
