@@ -1,9 +1,9 @@
 # MinTic_2022_LosPrimeros5. 
 Proyecto MinTic Ciclo 3. Desarrollo de Software
 
-### GitHub
-git init
-git remote add origin URLRepository
+### GitHub. Comandos básicos:
+1. git init
+2. git remote add origin URLRepository
 
 ## Aplicaciones
 1. .NET Core
