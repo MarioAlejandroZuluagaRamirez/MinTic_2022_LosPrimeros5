@@ -1,4 +1,6 @@
 ﻿using System;
+//using SICAU.App.Dominio;
+//using SICAU.App.Persistencia;
 
 namespace SICAU.App.Consola
 {

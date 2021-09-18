@@ -2,6 +2,6 @@ namespace SICAU.App.Dominio
 {
     public class Profesor:Persona
     {
-        public Departamento departamento {get;set;}
+        public string departamento {get;set;}
     }
 }

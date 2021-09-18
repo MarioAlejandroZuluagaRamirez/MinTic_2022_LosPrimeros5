@@ -5,11 +5,11 @@ namespace SICAU.App.Dominio
 {
     public class EncuestaCovid
     {
-        public int id {get;set;}
-        public DateTime fechaEncuesta {get;set;}
-        public EstadoCovid estadoCovid {get;set;}
-        public List<String> sintomas {get;set;}
-        public DateTime fechaDiagnostico {get;set;}
-        public Persona persona {get;set;}
+        public int id { get; set; }
+        public DateTime fechaEncuesta { get; set; }
+        public EstadoCovid estadoCovid { get; set; }
+        public DateTime fechaDiagnostico { get; set; }
+        public Persona persona { get; set; }
+        public List<Sintomas> sintomas {get;set;}
     }
 }
