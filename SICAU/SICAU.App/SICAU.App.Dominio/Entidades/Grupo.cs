@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace SICAU.App.Dominio
 {
     public class Grupo
@@ -7,6 +9,6 @@ namespace SICAU.App.Dominio
         public Profesor profesor {get;set;}
         public Materia materia {get;set;}
         public Horario horario {get;set;}
-        public System.Collections.Generic.List<Estudiante> estudiantes {get;set;}
+        public List<Estudiante> estudiantes {get;set;}
     }
 }

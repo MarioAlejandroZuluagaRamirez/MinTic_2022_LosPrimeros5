@@ -19,7 +19,7 @@ namespace SICAU.App.Persistencia
         public DbSet<Horario> horarios { get; set; }
         public DbSet<Grupo> grupos { get; set; }
         public DbSet<EncuestaCovid> encuestaCovids { get; set; }
-        public DbSet<Sintomas> sintomas { get; set; }
+        public DbSet<Sintoma> sintomas { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)

@@ -10,7 +10,7 @@ using SICAU.App.Persistencia;
 namespace SICAU.App.Persistencia.Migrations
 {
     [DbContext(typeof(AppContext))]
-    [Migration("20210918164334_InitialMigration")]
+    [Migration("20210919003932_InitialMigration")]
     partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -206,7 +206,7 @@ namespace SICAU.App.Persistencia.Migrations
                     b.HasDiscriminator<string>("Discriminator").HasValue("Sede");
                 });
 
-            modelBuilder.Entity("SICAU.App.Dominio.Sintomas", b =>
+            modelBuilder.Entity("SICAU.App.Dominio.Sintoma", b =>
                 {
                     b.Property<int>("id")
                         .ValueGeneratedOnAdd()
@@ -216,7 +216,7 @@ namespace SICAU.App.Persistencia.Migrations
                     b.Property<int?>("EncuestaCovidid")
                         .HasColumnType("int");
 
-                    b.Property<string>("sintomas")
+                    b.Property<string>("sintoma")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("id");
@@ -379,10 +379,10 @@ namespace SICAU.App.Persistencia.Migrations
                     b.Navigation("universidad");
                 });
 
-            modelBuilder.Entity("SICAU.App.Dominio.Sintomas", b =>
+            modelBuilder.Entity("SICAU.App.Dominio.Sintoma", b =>
                 {
                     b.HasOne("SICAU.App.Dominio.EncuestaCovid", null)
-                        .WithMany("sintomas")
+                        .WithMany("sintoma")
                         .HasForeignKey("EncuestaCovidid");
                 });
 
@@ -419,7 +419,7 @@ namespace SICAU.App.Persistencia.Migrations
 
             modelBuilder.Entity("SICAU.App.Dominio.EncuestaCovid", b =>
                 {
-                    b.Navigation("sintomas");
+                    b.Navigation("sintoma");
                 });
 
             modelBuilder.Entity("SICAU.App.Dominio.Grupo", b =>

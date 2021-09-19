@@ -106,7 +106,7 @@ namespace SICAU.App.Persistencia.Migrations
                 {
                     id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    sintomas = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    sintoma = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     EncuestaCovidid = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
