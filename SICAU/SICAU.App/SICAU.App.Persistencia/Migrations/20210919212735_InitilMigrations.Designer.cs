@@ -10,8 +10,8 @@ using SICAU.App.Persistencia;
 namespace SICAU.App.Persistencia.Migrations
 {
     [DbContext(typeof(AppContext))]
-    [Migration("20210919153316_InitialMigration")]
-    partial class InitialMigration
+    [Migration("20210919212735_InitilMigrations")]
+    partial class InitilMigrations
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -319,7 +319,7 @@ namespace SICAU.App.Persistencia.Migrations
                     b.Property<int>("capacidad")
                         .HasColumnType("int");
 
-                    b.Property<string>("codigo")
+                    b.Property<string>("numero")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasDiscriminator().HasValue("Salon");

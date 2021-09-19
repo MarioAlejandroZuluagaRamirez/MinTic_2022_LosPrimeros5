@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace SICAU.App.Persistencia.Migrations
 {
-    public partial class InitialMigration : Migration
+    public partial class InitilMigrations : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -65,7 +65,7 @@ namespace SICAU.App.Persistencia.Migrations
                     ubicacion = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     universidadid = table.Column<int>(type: "int", nullable: true),
                     Discriminator = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    codigo = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    numero = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     capacidad = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>

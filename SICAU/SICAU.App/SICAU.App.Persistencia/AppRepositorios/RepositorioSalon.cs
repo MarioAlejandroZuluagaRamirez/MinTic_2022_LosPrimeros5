@@ -48,7 +48,7 @@ namespace SICAU.App.Persistencia
                 salonEncontrado.sede = salon.sede;
                 salonEncontrado.ubicacion = salon.ubicacion;
                 salonEncontrado.universidad = salon.universidad;
-                salonEncontrado.codigo = salon.codigo;
+                salonEncontrado.numero = salon.numero;
                 salonEncontrado.capacidad = salon.capacidad;
                 _appContext.SaveChanges();
             }
