@@ -7,6 +7,7 @@ namespace SICAU.App.Persistencia
     {
             public DbSet<Encuesta> encuestas {get;set;} 
             public DbSet<Horario> horario {get;set;} 
+            public DbSet<Sede> sede {get;set;} 
             
             protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
