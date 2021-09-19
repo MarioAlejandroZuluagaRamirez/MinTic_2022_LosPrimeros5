@@ -1,7 +1,8 @@
 namespace SICAU.App.Dominio
 {
-    public class Salon:Sede
+    public class Salon : Sede
     {
-        public int capacidad {get;set;}
+        public string codigo { get; set; }
+        public int capacidad { get; set; }
     }
 }

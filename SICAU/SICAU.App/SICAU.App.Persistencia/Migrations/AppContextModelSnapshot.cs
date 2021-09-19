@@ -317,6 +317,9 @@ namespace SICAU.App.Persistencia.Migrations
                     b.Property<int>("capacidad")
                         .HasColumnType("int");
 
+                    b.Property<string>("codigo")
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasDiscriminator().HasValue("Salon");
                 });
 
