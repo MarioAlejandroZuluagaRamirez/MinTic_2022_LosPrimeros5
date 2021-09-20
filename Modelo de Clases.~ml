@@ -2174,7 +2174,7 @@
 <XPD:REF name="Owner">uTjHmUONy0KiN/pG6fNvmwAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="Attributes[1]" type="UMLAttribute" guid="fGhGGD+UPEONY8cfxY6OPQAA">
-<XPD:ATTR name="Name" type="string">codigo</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">numero</XPD:ATTR>
 <XPD:ATTR name="TypeExpression" type="string">String</XPD:ATTR>
 <XPD:REF name="Owner">uTjHmUONy0KiN/pG6fNvmwAA</XPD:REF>
 </XPD:OBJ>
