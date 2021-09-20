@@ -1,5 +1,3 @@
-using System;
-
 namespace SICAU.App.Dominio
 {
     public class Estudiante : Persona

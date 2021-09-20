@@ -1,7 +1,8 @@
 namespace SICAU.App.Dominio
 {
-    public class Materia
+    public class Sintoma
     {
         public int id {get;set;}
+        public string sintoma {get;set;}
     }
 }
