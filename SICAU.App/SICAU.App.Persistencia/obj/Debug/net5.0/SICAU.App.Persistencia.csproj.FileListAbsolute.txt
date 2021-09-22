@@ -34,3 +34,21 @@ C:\Users\Usuario\Documents\MinticDesarrolloSoft\MinTic_2022_LosPrimeros5\SICAU.A
 C:\Users\Usuario\Documents\MinticDesarrolloSoft\MinTic_2022_LosPrimeros5\SICAU.App\SICAU.App.Persistencia\obj\Debug\net5.0\SICAU.App.Persistencia.csproj.CopyComplete
 C:\Users\Usuario\Documents\MinticDesarrolloSoft\MinTic_2022_LosPrimeros5\SICAU.App\SICAU.App.Persistencia\obj\Debug\net5.0\ref\SICAU.App.Persistencia.dll
 C:\Users\Usuario\Documents\MinticDesarrolloSoft\MinTic_2022_LosPrimeros5\SICAU.App\SICAU.App.Persistencia\obj\Debug\net5.0\SICAU.App.Persistencia.genruntimeconfig.cache
+D:\U de Caldas\Desarrollo de Software\Proyecto\MinTic_2022_LosPrimeros5\SICAU.App\SICAU.App.Persistencia\obj\Debug\net5.0\SICAU.App.Persistencia.csproj.AssemblyReference.cache
+D:\U de Caldas\Desarrollo de Software\Proyecto\MinTic_2022_LosPrimeros5\SICAU.App\SICAU.App.Persistencia\obj\Debug\net5.0\SICAU.App.Persistencia.GeneratedMSBuildEditorConfig.editorconfig
+D:\U de Caldas\Desarrollo de Software\Proyecto\MinTic_2022_LosPrimeros5\SICAU.App\SICAU.App.Persistencia\obj\Debug\net5.0\SICAU.App.Persistencia.AssemblyInfoInputs.cache
+D:\U de Caldas\Desarrollo de Software\Proyecto\MinTic_2022_LosPrimeros5\SICAU.App\SICAU.App.Persistencia\obj\Debug\net5.0\SICAU.App.Persistencia.AssemblyInfo.cs
+D:\U de Caldas\Desarrollo de Software\Proyecto\MinTic_2022_LosPrimeros5\SICAU.App\SICAU.App.Persistencia\obj\Debug\net5.0\SICAU.App.Persistencia.csproj.CoreCompileInputs.cache
+D:\U de Caldas\Desarrollo de Software\Proyecto\MinTic_2022_LosPrimeros5\SICAU.App\SICAU.App.Persistencia\obj\Debug\net5.0\SICAU.App.Persistencia.dll
+D:\U de Caldas\Desarrollo de Software\Proyecto\MinTic_2022_LosPrimeros5\SICAU.App\SICAU.App.Persistencia\obj\Debug\net5.0\ref\SICAU.App.Persistencia.dll
+D:\U de Caldas\Desarrollo de Software\Proyecto\MinTic_2022_LosPrimeros5\SICAU.App\SICAU.App.Persistencia\obj\Debug\net5.0\SICAU.App.Persistencia.pdb
+D:\U de Caldas\Desarrollo de Software\Proyecto\MinTic_2022_LosPrimeros5\SICAU.App\SICAU.App.Persistencia\bin\Debug\net5.0\SICAU.App.Persistencia.deps.json
+D:\U de Caldas\Desarrollo de Software\Proyecto\MinTic_2022_LosPrimeros5\SICAU.App\SICAU.App.Persistencia\bin\Debug\net5.0\SICAU.App.Persistencia.runtimeconfig.json
+D:\U de Caldas\Desarrollo de Software\Proyecto\MinTic_2022_LosPrimeros5\SICAU.App\SICAU.App.Persistencia\bin\Debug\net5.0\SICAU.App.Persistencia.runtimeconfig.dev.json
+D:\U de Caldas\Desarrollo de Software\Proyecto\MinTic_2022_LosPrimeros5\SICAU.App\SICAU.App.Persistencia\bin\Debug\net5.0\SICAU.App.Persistencia.dll
+D:\U de Caldas\Desarrollo de Software\Proyecto\MinTic_2022_LosPrimeros5\SICAU.App\SICAU.App.Persistencia\bin\Debug\net5.0\ref\SICAU.App.Persistencia.dll
+D:\U de Caldas\Desarrollo de Software\Proyecto\MinTic_2022_LosPrimeros5\SICAU.App\SICAU.App.Persistencia\bin\Debug\net5.0\SICAU.App.Persistencia.pdb
+D:\U de Caldas\Desarrollo de Software\Proyecto\MinTic_2022_LosPrimeros5\SICAU.App\SICAU.App.Persistencia\bin\Debug\net5.0\SICAU.App.Dominio.dll
+D:\U de Caldas\Desarrollo de Software\Proyecto\MinTic_2022_LosPrimeros5\SICAU.App\SICAU.App.Persistencia\bin\Debug\net5.0\SICAU.App.Dominio.pdb
+D:\U de Caldas\Desarrollo de Software\Proyecto\MinTic_2022_LosPrimeros5\SICAU.App\SICAU.App.Persistencia\obj\Debug\net5.0\SICAU.App.Persistencia.csproj.CopyComplete
+D:\U de Caldas\Desarrollo de Software\Proyecto\MinTic_2022_LosPrimeros5\SICAU.App\SICAU.App.Persistencia\obj\Debug\net5.0\SICAU.App.Persistencia.genruntimeconfig.cache

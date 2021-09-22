@@ -22,3 +22,15 @@ C:\Users\Usuario\Documents\MinticDesarrolloSoft\MinTic_2022_LosPrimeros5\SICAU.A
 C:\Users\Usuario\Documents\MinticDesarrolloSoft\MinTic_2022_LosPrimeros5\SICAU.App\SICAU.App.Dominio\obj\Debug\net5.0\SICAU.App.Dominio.dll
 C:\Users\Usuario\Documents\MinticDesarrolloSoft\MinTic_2022_LosPrimeros5\SICAU.App\SICAU.App.Dominio\obj\Debug\net5.0\ref\SICAU.App.Dominio.dll
 C:\Users\Usuario\Documents\MinticDesarrolloSoft\MinTic_2022_LosPrimeros5\SICAU.App\SICAU.App.Dominio\obj\Debug\net5.0\SICAU.App.Dominio.pdb
+D:\U de Caldas\Desarrollo de Software\Proyecto\MinTic_2022_LosPrimeros5\SICAU.App\SICAU.App.Dominio\bin\Debug\net5.0\SICAU.App.Dominio.deps.json
+D:\U de Caldas\Desarrollo de Software\Proyecto\MinTic_2022_LosPrimeros5\SICAU.App\SICAU.App.Dominio\bin\Debug\net5.0\SICAU.App.Dominio.dll
+D:\U de Caldas\Desarrollo de Software\Proyecto\MinTic_2022_LosPrimeros5\SICAU.App\SICAU.App.Dominio\bin\Debug\net5.0\ref\SICAU.App.Dominio.dll
+D:\U de Caldas\Desarrollo de Software\Proyecto\MinTic_2022_LosPrimeros5\SICAU.App\SICAU.App.Dominio\bin\Debug\net5.0\SICAU.App.Dominio.pdb
+D:\U de Caldas\Desarrollo de Software\Proyecto\MinTic_2022_LosPrimeros5\SICAU.App\SICAU.App.Dominio\obj\Debug\net5.0\SICAU.App.Dominio.csproj.AssemblyReference.cache
+D:\U de Caldas\Desarrollo de Software\Proyecto\MinTic_2022_LosPrimeros5\SICAU.App\SICAU.App.Dominio\obj\Debug\net5.0\SICAU.App.Dominio.GeneratedMSBuildEditorConfig.editorconfig
+D:\U de Caldas\Desarrollo de Software\Proyecto\MinTic_2022_LosPrimeros5\SICAU.App\SICAU.App.Dominio\obj\Debug\net5.0\SICAU.App.Dominio.AssemblyInfoInputs.cache
+D:\U de Caldas\Desarrollo de Software\Proyecto\MinTic_2022_LosPrimeros5\SICAU.App\SICAU.App.Dominio\obj\Debug\net5.0\SICAU.App.Dominio.AssemblyInfo.cs
+D:\U de Caldas\Desarrollo de Software\Proyecto\MinTic_2022_LosPrimeros5\SICAU.App\SICAU.App.Dominio\obj\Debug\net5.0\SICAU.App.Dominio.csproj.CoreCompileInputs.cache
+D:\U de Caldas\Desarrollo de Software\Proyecto\MinTic_2022_LosPrimeros5\SICAU.App\SICAU.App.Dominio\obj\Debug\net5.0\SICAU.App.Dominio.dll
+D:\U de Caldas\Desarrollo de Software\Proyecto\MinTic_2022_LosPrimeros5\SICAU.App\SICAU.App.Dominio\obj\Debug\net5.0\ref\SICAU.App.Dominio.dll
+D:\U de Caldas\Desarrollo de Software\Proyecto\MinTic_2022_LosPrimeros5\SICAU.App\SICAU.App.Dominio\obj\Debug\net5.0\SICAU.App.Dominio.pdb

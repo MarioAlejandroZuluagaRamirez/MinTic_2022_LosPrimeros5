@@ -11,6 +11,8 @@ namespace SICAU.App.Consola
         private static IRepositorioPersona _repoPersona = new RepositorioPersona(new Persistencia.AppContext());
         private static IRepositorioPersonalAseo _repoPersonalAseo = new RepositorioPersonalAseo(new Persistencia.AppContext());
         private static IRepositorioProfesor _repoProfesor = new RepositorioProfesor(new Persistencia.AppContext());
+        private static IRepositorioSede _repoSede = new RepositorioSede(new Persistencia.AppContext());
+        // private static IRepositorioSalon _repoSalon = new RepositorioSalon(new Persistencia.AppContext());
         static void Main(string[] args)
         {
             Console.WriteLine("Hello world!");
@@ -41,6 +43,9 @@ namespace SICAU.App.Consola
             //UpdateProfesor(19); // Testeado Ok. Pendiente de creacion cruds Materia para finalizar pruebas
             //ListarProfesor(); // Testeado Ok
             //DeleteProfesor(17); // Testeado OK
+
+            // AddSede();
+            // ListarSede();
 
         }
         //--------------------------------------------------------------------------------------------
@@ -179,6 +184,93 @@ namespace SICAU.App.Consola
             _repoProfesor.DeleteProfesor(idProfesor);
             var profesor = _repoProfesor.GetProfesor(idProfesor);
             if (profesor == null)
+            {
+                Console.WriteLine("Registro eliminado");
+            }
+        }
+        //--------------------------------------------------------------------------------------------
+        //--------------------------------------------------------------------------------------------
+        // Metodos Clase Sede
+        //--------------------------------------------------------------------------------------------
+
+        private static void AddSede()
+        {
+            var sede = new Sede
+            {
+                nombre = "NombreSede",
+                descripcion = "Esta es la sede principal",
+                ubicacion = "Medellin Antioquia calle 26 # 35 - 14 barrio las palmas",
+               
+            };
+            _repoSede.AddSede(sede);
+        }
+        private static void FindSede(int idSede)
+        {
+            var sede = _repoSede.GetSede(idSede);
+            Console.WriteLine(sede.nombre + " " + sede.descripcion + " " + sede.ubicacion);
+        }
+        private static void UpdateSede(int idSede)
+        {
+            var sede = _repoSede.GetSede(idSede);
+            sede.nombre = "Sede Principal";
+            sede.descripcion = "Sede Principal De Ingenieria";
+            sede.ubicacion = "Medellin Antioquia calle 26 # 35 - 14 barrio las palmas";
+            
+            _repoSede.UpdateSede(sede);
+        }
+        private static void ListarSede()
+        {
+            IEnumerable<Sede> sede = _repoSede.GetAllSede();
+            Console.WriteLine(sede.Last().nombre + " " + sede.Last().descripcion + " " + sede.Last().ubicacion);
+        }
+        private static void DeleteSede(int idSede)
+        {
+            _repoSede.DeleteSede(idSede);
+            var sede = _repoSede.GetSede(idSede);
+            if (sede == null)
+            {
+                Console.WriteLine("Registro eliminado");
+            }
+        }
+        //--------------------------------------------------------------------------------------------
+        //--------------------------------------------------------------------------------------------
+        // Metodos Clase Salon
+        //--------------------------------------------------------------------------------------------
+
+        private static void AddSalon()
+        {
+            var salon = new Salon
+            {
+                numero = "310",
+                capacidad = "50",
+                
+               
+            };
+            _repoSede.AddSalon(salon);
+        }
+        private static void FindSalon(int idSalon)
+        {
+            var salon = _repoSalon.GetSalon(idSalon);
+            Console.WriteLine(salon.numero + " " + salon.capacidad);
+        }
+        private static void UpdateSalon(int idSalon)
+        {
+            var salon = _repoSalon.GetSalon(idSalon);
+            salon.numero = "311";
+            salon.capacidad = "40";
+                        
+            _repoSalon.UpdateSalon(salon);
+        }
+        private static void ListarSalon()
+        {
+            IEnumerable<Salon> salon = _repoSalon.GetAllSalon();
+            Console.WriteLine(salon.Last().numero + " " + salon.Last().capacidad);
+        }
+        private static void DeleteSalon(int idSalon)
+        {
+            _repoSalon.DeleteSalon(idSalon);
+            var salon = _repoSalon.GetSalon(idSalon);
+            if (salon == null)
             {
                 Console.WriteLine("Registro eliminado");
             }
