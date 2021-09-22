@@ -228,8 +228,10 @@ namespace SICAU.App.Persistencia.Migrations
                     b.Property<string>("departamento")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("materia")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int?>("materiaid")
+                        .HasColumnType("int");
+
+                    b.HasIndex("materiaid");
 
                     b.HasDiscriminator().HasValue("Profesor");
                 });
@@ -269,6 +271,15 @@ namespace SICAU.App.Persistencia.Migrations
                     b.HasOne("SICAU.App.Dominio.Encuesta", null)
                         .WithMany("sintoma")
                         .HasForeignKey("Encuestaid");
+                });
+
+            modelBuilder.Entity("SICAU.App.Dominio.Profesor", b =>
+                {
+                    b.HasOne("SICAU.App.Dominio.Materia", "materia")
+                        .WithMany()
+                        .HasForeignKey("materiaid");
+
+                    b.Navigation("materia");
                 });
 
             modelBuilder.Entity("SICAU.App.Dominio.Encuesta", b =>

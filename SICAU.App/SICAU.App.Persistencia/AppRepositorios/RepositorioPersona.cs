@@ -54,6 +54,5 @@ namespace SICAU.App.Persistencia
             }
             return personaEncontrado;
         }
-
     }
 }

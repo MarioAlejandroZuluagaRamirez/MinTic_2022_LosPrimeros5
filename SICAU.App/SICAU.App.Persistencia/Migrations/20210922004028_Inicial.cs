@@ -21,30 +21,6 @@ namespace SICAU.App.Persistencia.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "personas",
-                columns: table => new
-                {
-                    id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    nombre = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    apellido = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    identificacion = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    fechaNacimiento = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    estadoCovid = table.Column<int>(type: "int", nullable: false),
-                    Discriminator = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    unidad = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    carrera = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    semestre = table.Column<int>(type: "int", nullable: true),
-                    turno = table.Column<int>(type: "int", nullable: true),
-                    departamento = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    materia = table.Column<string>(type: "nvarchar(max)", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_personas", x => x.id);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "salones",
                 columns: table => new
                 {
@@ -71,6 +47,36 @@ namespace SICAU.App.Persistencia.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_sedes", x => x.id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "personas",
+                columns: table => new
+                {
+                    id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    nombre = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    apellido = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    identificacion = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    fechaNacimiento = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    estadoCovid = table.Column<int>(type: "int", nullable: false),
+                    Discriminator = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    unidad = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    carrera = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    semestre = table.Column<int>(type: "int", nullable: true),
+                    turno = table.Column<int>(type: "int", nullable: true),
+                    departamento = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    materiaid = table.Column<int>(type: "int", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_personas", x => x.id);
+                    table.ForeignKey(
+                        name: "FK_personas_materias_materiaid",
+                        column: x => x.materiaid,
+                        principalTable: "materias",
+                        principalColumn: "id",
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -172,6 +178,11 @@ namespace SICAU.App.Persistencia.Migrations
                 column: "salonid");
 
             migrationBuilder.CreateIndex(
+                name: "IX_personas_materiaid",
+                table: "personas",
+                column: "materiaid");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_sintomas_Encuestaid",
                 table: "sintomas",
                 column: "Encuestaid");
@@ -189,9 +200,6 @@ namespace SICAU.App.Persistencia.Migrations
                 name: "sintomas");
 
             migrationBuilder.DropTable(
-                name: "materias");
-
-            migrationBuilder.DropTable(
                 name: "salones");
 
             migrationBuilder.DropTable(
@@ -199,6 +207,9 @@ namespace SICAU.App.Persistencia.Migrations
 
             migrationBuilder.DropTable(
                 name: "personas");
+
+            migrationBuilder.DropTable(
+                name: "materias");
         }
     }
 }
