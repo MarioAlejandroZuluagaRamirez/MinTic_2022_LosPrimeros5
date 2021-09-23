@@ -13,6 +13,8 @@ namespace SICAU.App.Consola
         private static IRepositorioProfesor _repoProfesor = new RepositorioProfesor(new Persistencia.AppContext());
         private static IRepositorioSede _repoSede = new RepositorioSede(new Persistencia.AppContext());
         private static IRepositorioSalon _repoSalon = new RepositorioSalon(new Persistencia.AppContext());
+        private static IRepositorioMateria _repoMateria = new RepositorioMateria (new Persistencia.AppContext());
+        private static IRepositorioHorario _repoHorario = new RepositorioHorario (new Persistencia.AppContext());
         static void Main(string[] args)
         {
             Console.WriteLine("Hello world!");
@@ -23,7 +25,7 @@ namespace SICAU.App.Consola
             //AddPersona(); // Testeado Ok
             //FindPersona(1); // Testeado Ok
             //UpdatePersona(1); // Testeado Ok
-            //ListarPersona(); // Testeado ok
+            //ListPersona(); // Testeado ok
             //DeletePersona(1); // Testeado Ok
             //--------------------------------------------------------------------------------------------
             //--------------------------------------------------------------------------------------------
@@ -32,7 +34,7 @@ namespace SICAU.App.Consola
             //AddPersonalAseo(); // Testeado Ok
             //FindPersonalAseo(5); // Testeado Ok
             //UpdatePersonalAseo(6); // Testeado Ok
-            //ListarPersonalAseo(); // Testeado ok
+            //ListPersonalAseo(); // Testeado ok
             //DeletePersonalAseo(5); // Testeado Ok
             //--------------------------------------------------------------------------------------------
             //--------------------------------------------------------------------------------------------
@@ -41,7 +43,7 @@ namespace SICAU.App.Consola
             //AddProfesor(); // Testeado Ok.  Pendiente de creacion cruds Materia para finalizar pruebas
             //FindProfesor(19); // Testeado Ok
             //UpdateProfesor(19); // Testeado Ok. Pendiente de creacion cruds Materia para finalizar pruebas
-            //ListarProfesor(); // Testeado Ok
+            //ListProfesor(); // Testeado Ok
             //DeleteProfesor(17); // Testeado OK
             //--------------------------------------------------------------------------------------------
             //--------------------------------------------------------------------------------------------
@@ -61,7 +63,23 @@ namespace SICAU.App.Consola
             // UpdateSalon(1);  // Testeado Ok
             // ListSalon();     // Testeado Ok
             // DeleteSalon(2);  // Testeado Ok
-
+            //--------------------------------------------------------------------------------------------
+            //--------------------------------------------------------------------------------------------
+            // Ejecución de Pruebas Clase Materia
+            //--------------------------------------------------------------------------------------------
+            // AddMateria();      // Testeado Ok
+            // FindMateria(1);    // Testeado Ok
+            // UpdateMateria(1);  // Testeado Ok
+            // ListMateria();     // Testeado Ok
+            // DeleteMateria(4);  // Testeado Ok
+            //--------------------------------------------------------------------------------------------
+            // Ejecución de Pruebas Clase Hoario
+            //--------------------------------------------------------------------------------------------
+            // AddHorario();      // Testeado Ok
+            // FindHorario(1);    // Testeado Ok
+            // UpdateHorario(1);  // Testeado Ok
+            // ListHorario();     // Testeado Ok
+            // DeleteHorario(2);  // Testeado Ok
         }
         //--------------------------------------------------------------------------------------------
         //--------------------------------------------------------------------------------------------
@@ -94,7 +112,7 @@ namespace SICAU.App.Consola
             persona.estadoCovid = EstadoCovid.negativo;
             _repoPersona.UpdatePersona(persona);
         }
-        private static void ListarPersona()
+        private static void ListPersona()
         {
             IEnumerable<Persona> persona = _repoPersona.GetAllPersona();
             Console.WriteLine(persona.Last().nombre + " " + persona.Last().apellido);
@@ -141,7 +159,7 @@ namespace SICAU.App.Consola
             personalAseo.turno = Turno.tarde;
             _repoPersonalAseo.UpdatePersonalAseo(personalAseo);
         }
-        private static void ListarPersonalAseo()
+        private static void ListPersonalAseo()
         {
             IEnumerable<PersonalAseo> personalAseo = _repoPersonalAseo.GetAllPersonalAseo();
             Console.WriteLine(personalAseo.Last().nombre + " " + personalAseo.Last().apellido);
@@ -189,7 +207,7 @@ namespace SICAU.App.Consola
             profesor.materia = null;
             _repoProfesor.UpdateProfesor(profesor);
         }
-        private static void ListarProfesor()
+        private static void ListProfesor()
         {
             IEnumerable<Profesor> profesor = _repoProfesor.GetAllProfesor();
             Console.WriteLine(profesor.Last().nombre + " " + profesor.Last().apellido);
@@ -286,6 +304,90 @@ namespace SICAU.App.Consola
             _repoSalon.DeleteSalon(idSalon);
             var salon = _repoSalon.GetSalon(idSalon);
             if (salon == null)
+            {
+                Console.WriteLine("Registro eliminado");
+            }
+        }
+        //--------------------------------------------------------------------------------------------
+        //--------------------------------------------------------------------------------------------
+        // Metodos Clase Materia
+        //--------------------------------------------------------------------------------------------
+        private static void AddMateria()
+        {
+            var materia = new Materia
+            {
+                materia = "MateriaPrueba",
+            };
+            _repoMateria.AddMateria(materia);
+        }
+        private static void FindMateria (int idMateria)
+        {
+            var materia = _repoMateria.GetMateria(idMateria);
+            Console.WriteLine(materia.materia);
+        }
+        private static void UpdateMateria(int idMateria)
+        {
+            var materia = _repoMateria.GetMateria(idMateria);
+            materia.materia = "Desarrollo de software";
+            _repoMateria.UpdateMateria(materia);
+        }
+        private static void ListMateria()
+        {
+            IEnumerable<Materia> materia = _repoMateria.GetAllMateria();
+            Console.WriteLine(materia.Last().materia);
+        }
+        private static void DeleteMateria(int idMateria)
+        {
+            _repoMateria.DeleteMateria(idMateria);
+            var materia = _repoMateria.GetMateria(idMateria);
+            if (materia == null)
+            {
+                Console.WriteLine("Registro eliminado");
+            }
+        }
+        //--------------------------------------------------------------------------------------------
+        //--------------------------------------------------------------------------------------------
+        // Metodos Clase Hoario
+        //--------------------------------------------------------------------------------------------
+        private static void AddHorario()
+        {
+            var horario = new Horario
+            {
+                horaIngreso = DateTime.Parse ("01/01/1900 18:00:00"),
+                materia = null,
+                diasemana = DiaSemana.lunes,
+                duracion = 120,
+                persona = null,
+                salon = null
+            };
+            _repoHorario.AddHorario(horario);
+        }
+        private static void FindHorario (int idHorario)
+        {
+            var horario = _repoHorario.GetHorario(idHorario);
+            Console.WriteLine(horario.horaIngreso);
+        }
+        private static void UpdateHorario(int idHorario)
+        {
+            var persona = _repoPersona.GetPersona(18);
+            var materia = _repoMateria.GetMateria(1);
+            var horario = _repoHorario.GetHorario(idHorario);
+            horario.horaIngreso = DateTime.Parse("20:00:00");
+            horario.materia = materia;
+            horario.persona = persona;
+            horario.salon = null;
+            _repoHorario.UpdateHorario(horario);
+        }
+        private static void ListHorario()
+        {
+            IEnumerable<Horario> horario = _repoHorario.GetAllHorario();
+            Console.WriteLine(horario.Last().horaIngreso);
+        }
+        private static void DeleteHorario(int idHorario)
+        {
+            _repoHorario.DeleteHorario(idHorario);
+            var horario = _repoHorario.GetHorario(idHorario);
+            if (horario == null)
             {
                 Console.WriteLine("Registro eliminado");
             }

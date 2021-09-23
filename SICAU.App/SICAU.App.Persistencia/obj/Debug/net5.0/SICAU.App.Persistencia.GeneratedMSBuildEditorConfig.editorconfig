@@ -7,4 +7,4 @@ build_property.PublishSingleFile =
 build_property.IncludeAllContentForSelfExtract = 
 build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
 build_property.RootNamespace = SICAU.App.Persistencia
-build_property.ProjectDir = D:\U de Caldas\Desarrollo de Software\Proyecto\MinTic_2022_LosPrimeros5\SICAU.App\SICAU.App.Persistencia\
+build_property.ProjectDir = c:\Users\mazul\Desktop\Desarrollo de Software MinTic\C#\SICAU\SICAU.App\SICAU.App.Persistencia\

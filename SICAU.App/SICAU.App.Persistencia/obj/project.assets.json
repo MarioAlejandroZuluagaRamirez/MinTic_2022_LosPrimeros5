@@ -5814,19 +5814,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\bamil\\.nuget\\packages\\": {}
+    "C:\\Users\\mazul\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\U de Caldas\\Desarrollo de Software\\Proyecto\\MinTic_2022_LosPrimeros5\\SICAU.App\\SICAU.App.Persistencia\\SICAU.App.Persistencia.csproj",
+      "projectUniqueName": "C:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\SICAU\\SICAU.App\\SICAU.App.Persistencia\\SICAU.App.Persistencia.csproj",
       "projectName": "SICAU.App.Persistencia",
-      "projectPath": "D:\\U de Caldas\\Desarrollo de Software\\Proyecto\\MinTic_2022_LosPrimeros5\\SICAU.App\\SICAU.App.Persistencia\\SICAU.App.Persistencia.csproj",
-      "packagesPath": "C:\\Users\\bamil\\.nuget\\packages\\",
-      "outputPath": "D:\\U de Caldas\\Desarrollo de Software\\Proyecto\\MinTic_2022_LosPrimeros5\\SICAU.App\\SICAU.App.Persistencia\\obj\\",
+      "projectPath": "C:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\SICAU\\SICAU.App\\SICAU.App.Persistencia\\SICAU.App.Persistencia.csproj",
+      "packagesPath": "C:\\Users\\mazul\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\SICAU\\SICAU.App\\SICAU.App.Persistencia\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\bamil\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\mazul\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5840,8 +5840,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "D:\\U de Caldas\\Desarrollo de Software\\Proyecto\\MinTic_2022_LosPrimeros5\\SICAU.App\\SICAU.App.Dominio\\SICAU.App.Dominio.csproj": {
-              "projectPath": "D:\\U de Caldas\\Desarrollo de Software\\Proyecto\\MinTic_2022_LosPrimeros5\\SICAU.App\\SICAU.App.Dominio\\SICAU.App.Dominio.csproj"
+            "C:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\SICAU\\SICAU.App\\SICAU.App.Dominio\\SICAU.App.Dominio.csproj": {
+              "projectPath": "C:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\SICAU\\SICAU.App\\SICAU.App.Dominio\\SICAU.App.Dominio.csproj"
             }
           }
         }
