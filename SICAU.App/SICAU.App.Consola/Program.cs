@@ -12,7 +12,7 @@ namespace SICAU.App.Consola
         private static IRepositorioPersonalAseo _repoPersonalAseo = new RepositorioPersonalAseo(new Persistencia.AppContext());
         private static IRepositorioProfesor _repoProfesor = new RepositorioProfesor(new Persistencia.AppContext());
         private static IRepositorioSede _repoSede = new RepositorioSede(new Persistencia.AppContext());
-        // private static IRepositorioSalon _repoSalon = new RepositorioSalon(new Persistencia.AppContext());
+        private static IRepositorioSalon _repoSalon = new RepositorioSalon(new Persistencia.AppContext());
         static void Main(string[] args)
         {
             Console.WriteLine("Hello world!");
@@ -43,9 +43,24 @@ namespace SICAU.App.Consola
             //UpdateProfesor(19); // Testeado Ok. Pendiente de creacion cruds Materia para finalizar pruebas
             //ListarProfesor(); // Testeado Ok
             //DeleteProfesor(17); // Testeado OK
-
-            // AddSede();
-            // ListarSede();
+            //--------------------------------------------------------------------------------------------
+            //--------------------------------------------------------------------------------------------
+            // Ejecución de Pruebas Clase Sede
+            //--------------------------------------------------------------------------------------------
+            // AddSede();       // Testeado Ok
+            // FindSede(1);     // Testeado Ok
+            // UpdateSede(1);   // Testeado Ok
+            // ListSede();      // Testeado Ok
+            // DeleteSede(2);   // Testeado Ok
+            //--------------------------------------------------------------------------------------------
+            //--------------------------------------------------------------------------------------------
+            // Ejecución de Pruebas Clase Salon
+            //--------------------------------------------------------------------------------------------
+            // AddSalon();      // Testeado Ok
+            // FindSalon(1);    // Testeado Ok
+            // UpdateSalon(1);  // Testeado Ok
+            // ListSalon();     // Testeado Ok
+            // DeleteSalon(2);  // Testeado Ok
 
         }
         //--------------------------------------------------------------------------------------------
@@ -218,7 +233,7 @@ namespace SICAU.App.Consola
             
             _repoSede.UpdateSede(sede);
         }
-        private static void ListarSede()
+        private static void ListSede()
         {
             IEnumerable<Sede> sede = _repoSede.GetAllSede();
             Console.WriteLine(sede.Last().nombre + " " + sede.Last().descripcion + " " + sede.Last().ubicacion);
@@ -246,7 +261,7 @@ namespace SICAU.App.Consola
                 
                
             };
-            _repoSede.AddSalon(salon);
+            _repoSalon.AddSalon(salon);
         }
         private static void FindSalon(int idSalon)
         {
@@ -261,7 +276,7 @@ namespace SICAU.App.Consola
                         
             _repoSalon.UpdateSalon(salon);
         }
-        private static void ListarSalon()
+        private static void ListSalon()
         {
             IEnumerable<Salon> salon = _repoSalon.GetAllSalon();
             Console.WriteLine(salon.Last().numero + " " + salon.Last().capacidad);
