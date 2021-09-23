@@ -8,11 +8,16 @@
     "net5.0": []
   },
   "packageFolders": {
+<<<<<<< HEAD
     "C:\\Users\\Yo\\.nuget\\packages\\": {}
+=======
+    "C:\\Users\\mazul\\.nuget\\packages\\": {}
+>>>>>>> d17ef472e99b6bf2a0889c15b3878939c66c1a28
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\SICAU\\MinTic_2022_LosPrimeros5\\SICAU.App\\SICAU.App.Dominio\\SICAU.App.Dominio.csproj",
       "projectName": "SICAU.App.Dominio",
       "projectPath": "C:\\SICAU\\MinTic_2022_LosPrimeros5\\SICAU.App\\SICAU.App.Dominio\\SICAU.App.Dominio.csproj",
@@ -21,6 +26,17 @@
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Yo\\AppData\\Roaming\\NuGet\\NuGet.Config"
+=======
+      "projectUniqueName": "C:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\SICAU\\SICAU.App\\SICAU.App.Dominio\\SICAU.App.Dominio.csproj",
+      "projectName": "SICAU.App.Dominio",
+      "projectPath": "C:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\SICAU\\SICAU.App\\SICAU.App.Dominio\\SICAU.App.Dominio.csproj",
+      "packagesPath": "C:\\Users\\mazul\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\SICAU\\SICAU.App\\SICAU.App.Dominio\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\mazul\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+>>>>>>> d17ef472e99b6bf2a0889c15b3878939c66c1a28
       ],
       "originalTargetFrameworks": [
         "net5.0"
