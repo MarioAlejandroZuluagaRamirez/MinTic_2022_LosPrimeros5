@@ -34,3 +34,15 @@ D:\U de Caldas\Desarrollo de Software\Proyecto\MinTic_2022_LosPrimeros5\SICAU.Ap
 D:\U de Caldas\Desarrollo de Software\Proyecto\MinTic_2022_LosPrimeros5\SICAU.App\SICAU.App.Dominio\obj\Debug\net5.0\SICAU.App.Dominio.dll
 D:\U de Caldas\Desarrollo de Software\Proyecto\MinTic_2022_LosPrimeros5\SICAU.App\SICAU.App.Dominio\obj\Debug\net5.0\ref\SICAU.App.Dominio.dll
 D:\U de Caldas\Desarrollo de Software\Proyecto\MinTic_2022_LosPrimeros5\SICAU.App\SICAU.App.Dominio\obj\Debug\net5.0\SICAU.App.Dominio.pdb
+C:\SICAU\MinTic_2022_LosPrimeros5\SICAU.App\SICAU.App.Dominio\bin\Debug\net5.0\SICAU.App.Dominio.deps.json
+C:\SICAU\MinTic_2022_LosPrimeros5\SICAU.App\SICAU.App.Dominio\bin\Debug\net5.0\SICAU.App.Dominio.dll
+C:\SICAU\MinTic_2022_LosPrimeros5\SICAU.App\SICAU.App.Dominio\bin\Debug\net5.0\ref\SICAU.App.Dominio.dll
+C:\SICAU\MinTic_2022_LosPrimeros5\SICAU.App\SICAU.App.Dominio\bin\Debug\net5.0\SICAU.App.Dominio.pdb
+C:\SICAU\MinTic_2022_LosPrimeros5\SICAU.App\SICAU.App.Dominio\obj\Debug\net5.0\SICAU.App.Dominio.csproj.AssemblyReference.cache
+C:\SICAU\MinTic_2022_LosPrimeros5\SICAU.App\SICAU.App.Dominio\obj\Debug\net5.0\SICAU.App.Dominio.GeneratedMSBuildEditorConfig.editorconfig
+C:\SICAU\MinTic_2022_LosPrimeros5\SICAU.App\SICAU.App.Dominio\obj\Debug\net5.0\SICAU.App.Dominio.AssemblyInfoInputs.cache
+C:\SICAU\MinTic_2022_LosPrimeros5\SICAU.App\SICAU.App.Dominio\obj\Debug\net5.0\SICAU.App.Dominio.AssemblyInfo.cs
+C:\SICAU\MinTic_2022_LosPrimeros5\SICAU.App\SICAU.App.Dominio\obj\Debug\net5.0\SICAU.App.Dominio.csproj.CoreCompileInputs.cache
+C:\SICAU\MinTic_2022_LosPrimeros5\SICAU.App\SICAU.App.Dominio\obj\Debug\net5.0\SICAU.App.Dominio.dll
+C:\SICAU\MinTic_2022_LosPrimeros5\SICAU.App\SICAU.App.Dominio\obj\Debug\net5.0\ref\SICAU.App.Dominio.dll
+C:\SICAU\MinTic_2022_LosPrimeros5\SICAU.App\SICAU.App.Dominio\obj\Debug\net5.0\SICAU.App.Dominio.pdb

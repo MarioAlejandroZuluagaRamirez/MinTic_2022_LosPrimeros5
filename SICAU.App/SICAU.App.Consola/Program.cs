@@ -13,6 +13,8 @@ namespace SICAU.App.Consola
         private static IRepositorioProfesor _repoProfesor = new RepositorioProfesor(new Persistencia.AppContext());
         private static IRepositorioSede _repoSede = new RepositorioSede(new Persistencia.AppContext());
         private static IRepositorioSalon _repoSalon = new RepositorioSalon(new Persistencia.AppContext());
+        private static IRepositorioEstudiante _repoEstudiante = new RepositorioEstudiante(new Persistencia.AppContext());
+        private static IRepositorioDirectivo _repoDirectivo = new RepositorioDirectivo(new Persistencia.AppContext());
         static void Main(string[] args)
         {
             Console.WriteLine("Hello world!");
@@ -61,6 +63,22 @@ namespace SICAU.App.Consola
             // UpdateSalon(1);  // Testeado Ok
             // ListSalon();     // Testeado Ok
             // DeleteSalon(2);  // Testeado Ok
+            //--------------------------------------------------------------------------------------------
+            // Ejecución de Pruebas Clase Estudiante
+            //--------------------------------------------------------------------------------------------
+            // AddEstudiante();      // Testeado Ok
+            // FindEstudiante(1);    // Testeado Ok
+            // UpdateEstudiante(1);  // Testeado Ok
+            // ListEstudiante();     // Testeado Ok
+            // DeleteEstudiante(3);  // Testeado Ok
+            //--------------------------------------------------------------------------------------------
+            // Ejecución de Pruebas Clase Directivo
+            //--------------------------------------------------------------------------------------------
+            // AddDirectivo();      // Testeado Ok
+            // FindDirectivo(4);    // Testeado Ok
+            // UpdateDirectivo(4);  // Testeado Ok
+            // ListDirectivo();     // Testeado Ok
+            // DeleteDirectivo(5);  // Testeado Ok
 
         }
         //--------------------------------------------------------------------------------------------
@@ -290,5 +308,103 @@ namespace SICAU.App.Consola
                 Console.WriteLine("Registro eliminado");
             }
         }
+        //--------------------------------------------------------------------------------------------
+        //--------------------------------------------------------------------------------------------
+        // Metodos Clase Estudiante
+        //--------------------------------------------------------------------------------------------
+         private static void AddEstudiante()
+        {
+            var estudiante = new Estudiante
+            {
+                nombre = "NombreEstudiante",
+                apellido = "ApellidoEstudiante",
+                identificacion = "9876321",
+                fechaNacimiento = DateTime.Parse("1999-01-16"),
+                semestre = 2,
+                carrera = "Ingeniería"                
+            };
+            _repoEstudiante.AddEstudiante(estudiante);
+        }
+
+        private static void FindEstudiante(int idEstudiante)
+        {
+            var estudiante = _repoEstudiante.GetEstudiante(idEstudiante);
+            Console.WriteLine(estudiante.nombre + " " + estudiante.apellido);
+        }
+        private static void UpdateEstudiante(int idEstudiante)
+        {
+            var estudiante = _repoEstudiante.GetEstudiante(idEstudiante);
+            estudiante.nombre = "Roberto";
+            estudiante.apellido = "Martinez Mejia";
+            estudiante.identificacion = "19992121";
+            estudiante.fechaNacimiento = DateTime.Parse("1980-12-31");
+            estudiante.semestre = 2;
+            estudiante.carrera = "Ingenieria de Sistemas";
+            _repoEstudiante.UpdateEstudiante(estudiante);
+        }
+        private static void ListEstudiante()
+        {
+            IEnumerable<Estudiante> estudiante = _repoEstudiante.GetAllEstudiante();
+            Console.WriteLine(estudiante.Last().nombre + " " + estudiante.Last().apellido);
+        }
+        private static void DeleteEstudiante(int idEstudiante)
+        {
+            _repoEstudiante.DeleteEstudiante(idEstudiante);
+            var estudiante = _repoEstudiante.GetEstudiante(idEstudiante);
+            if (estudiante == null)
+            {
+                Console.WriteLine("Registro eliminado");
+            }
+        }
+
+        //--------------------------------------------------------------------------------------------
+        //--------------------------------------------------------------------------------------------
+        // Metodos Clase Directivo
+        //--------------------------------------------------------------------------------------------
+         private static void AddDirectivo()
+        {
+            var directivo = new Directivo
+            {
+                nombre = "NombreDirectivo",
+                apellido = "ApellidoDirectivo",
+                identificacion = "6321",
+                fechaNacimiento = DateTime.Parse("2000-01-16"),
+                unidad = "Rectoría"
+                                
+            };
+            _repoDirectivo.AddDirectivo(directivo);
+        }
+
+        private static void FindDirectivo(int idDirectivo)
+        {
+            var directivo = _repoDirectivo.GetDirectivo(idDirectivo);
+            Console.WriteLine(directivo.nombre + " " + directivo.apellido);
+        }
+        private static void UpdateDirectivo(int idDirectivo)
+        {
+            var directivo = _repoDirectivo.GetDirectivo(idDirectivo);
+            directivo.nombre = "Roberto";
+            directivo.apellido = "Martinez Mejia";
+            directivo.identificacion = "454545";
+            directivo.fechaNacimiento = DateTime.Parse("1980-12-31");            
+            directivo.unidad = "Recursos Humanos";
+            _repoDirectivo.UpdateDirectivo(directivo);
+        }
+        private static void ListDirectivo()
+        {
+            IEnumerable<Directivo> directivo = _repoDirectivo.GetAllDirectivo();
+            Console.WriteLine(directivo.Last().nombre + " " + directivo.Last().apellido);
+        }
+        private static void DeleteDirectivo(int idDirectivo)
+        {
+            _repoDirectivo.DeleteDirectivo(idDirectivo);
+            var directivo = _repoDirectivo.GetDirectivo(idDirectivo);
+            if (directivo == null)
+            {
+                Console.WriteLine("Registro eliminado");
+            }
+        }
+
+
     }
 }
