@@ -13,13 +13,10 @@ namespace SICAU.App.Consola
         private static IRepositorioProfesor _repoProfesor = new RepositorioProfesor(new Persistencia.AppContext());
         private static IRepositorioSede _repoSede = new RepositorioSede(new Persistencia.AppContext());
         private static IRepositorioSalon _repoSalon = new RepositorioSalon(new Persistencia.AppContext());
-<<<<<<< HEAD
         private static IRepositorioEstudiante _repoEstudiante = new RepositorioEstudiante(new Persistencia.AppContext());
         private static IRepositorioDirectivo _repoDirectivo = new RepositorioDirectivo(new Persistencia.AppContext());
-=======
         private static IRepositorioMateria _repoMateria = new RepositorioMateria (new Persistencia.AppContext());
         private static IRepositorioHorario _repoHorario = new RepositorioHorario (new Persistencia.AppContext());
->>>>>>> d17ef472e99b6bf2a0889c15b3878939c66c1a28
         static void Main(string[] args)
         {
             Console.WriteLine("Hello world!");
@@ -69,7 +66,6 @@ namespace SICAU.App.Consola
             // ListSalon();     // Testeado Ok
             // DeleteSalon(2);  // Testeado Ok
             //--------------------------------------------------------------------------------------------
-<<<<<<< HEAD
             // Ejecución de Pruebas Clase Estudiante
             //--------------------------------------------------------------------------------------------
             // AddEstudiante();      // Testeado Ok
@@ -86,7 +82,6 @@ namespace SICAU.App.Consola
             // ListDirectivo();     // Testeado Ok
             // DeleteDirectivo(5);  // Testeado Ok
 
-=======
             //--------------------------------------------------------------------------------------------
             // Ejecución de Pruebas Clase Materia
             //--------------------------------------------------------------------------------------------
@@ -103,7 +98,6 @@ namespace SICAU.App.Consola
             // UpdateHorario(1);  // Testeado Ok
             // ListHorario();     // Testeado Ok
             // DeleteHorario(2);  // Testeado Ok
->>>>>>> d17ef472e99b6bf2a0889c15b3878939c66c1a28
         }
         //--------------------------------------------------------------------------------------------
         //--------------------------------------------------------------------------------------------
@@ -334,7 +328,6 @@ namespace SICAU.App.Consola
         }
         //--------------------------------------------------------------------------------------------
         //--------------------------------------------------------------------------------------------
-<<<<<<< HEAD
         // Metodos Clase Estudiante
         //--------------------------------------------------------------------------------------------
          private static void AddEstudiante()
@@ -376,8 +369,7 @@ namespace SICAU.App.Consola
         {
             _repoEstudiante.DeleteEstudiante(idEstudiante);
             var estudiante = _repoEstudiante.GetEstudiante(idEstudiante);
-            if (estudiante == null)
-=======
+        }
         // Metodos Clase Materia
         //--------------------------------------------------------------------------------------------
         private static void AddMateria()
@@ -409,12 +401,10 @@ namespace SICAU.App.Consola
             _repoMateria.DeleteMateria(idMateria);
             var materia = _repoMateria.GetMateria(idMateria);
             if (materia == null)
->>>>>>> d17ef472e99b6bf2a0889c15b3878939c66c1a28
             {
                 Console.WriteLine("Registro eliminado");
             }
         }
-<<<<<<< HEAD
 
         //--------------------------------------------------------------------------------------------
         //--------------------------------------------------------------------------------------------
@@ -429,7 +419,6 @@ namespace SICAU.App.Consola
                 identificacion = "6321",
                 fechaNacimiento = DateTime.Parse("2000-01-16"),
                 unidad = "Rectoría"
-                                
             };
             _repoDirectivo.AddDirectivo(directivo);
         }
@@ -458,8 +447,7 @@ namespace SICAU.App.Consola
         {
             _repoDirectivo.DeleteDirectivo(idDirectivo);
             var directivo = _repoDirectivo.GetDirectivo(idDirectivo);
-            if (directivo == null)
-=======
+        }
         //--------------------------------------------------------------------------------------------
         //--------------------------------------------------------------------------------------------
         // Metodos Clase Hoario
@@ -503,15 +491,9 @@ namespace SICAU.App.Consola
             _repoHorario.DeleteHorario(idHorario);
             var horario = _repoHorario.GetHorario(idHorario);
             if (horario == null)
->>>>>>> d17ef472e99b6bf2a0889c15b3878939c66c1a28
             {
                 Console.WriteLine("Registro eliminado");
             }
         }
-<<<<<<< HEAD
-
-
-=======
->>>>>>> d17ef472e99b6bf2a0889c15b3878939c66c1a28
     }
 }
