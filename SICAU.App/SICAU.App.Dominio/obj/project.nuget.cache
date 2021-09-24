@@ -4,12 +4,5 @@
   "success": true,
   "projectFilePath": "C:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\SICAU\\SICAU.App\\SICAU.App.Dominio\\SICAU.App.Dominio.csproj",
   "expectedPackageFiles": [],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problema al leer el archivo de caché C:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\SICAU\\SICAU.App\\SICAU.App.Dominio\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }
