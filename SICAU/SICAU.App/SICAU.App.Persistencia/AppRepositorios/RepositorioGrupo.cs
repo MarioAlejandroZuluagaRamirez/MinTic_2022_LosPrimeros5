@@ -49,7 +49,6 @@ namespace SICAU.App.Persistencia
                 grupoEncontrado.profesor = grupo.profesor;
                 grupoEncontrado.materia = grupo.materia;
                 grupoEncontrado.horario = grupo.horario;
-                grupoEncontrado.estudiantes = grupo.estudiantes;
                 _appContext.SaveChanges();
             }
             return grupoEncontrado;

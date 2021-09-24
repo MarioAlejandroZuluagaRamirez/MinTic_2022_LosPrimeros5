@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using SICAU.App.Dominio;
+using SICAU.App.Dominio.Entidades;
 
 namespace SICAU.App.Persistencia
 {
@@ -20,6 +21,7 @@ namespace SICAU.App.Persistencia
         public DbSet<Grupo> grupos { get; set; }
         public DbSet<EncuestaCovid> encuestaCovids { get; set; }
         public DbSet<Sintoma> sintomas { get; set; }
+        public DbSet<EstudianteGrupo> estudianteGrupos { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
