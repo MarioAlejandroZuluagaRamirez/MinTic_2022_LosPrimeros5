@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using SICAU.App.Persistencia;
 
 namespace SICAU.App.Frontend
 {
@@ -24,6 +25,8 @@ namespace SICAU.App.Frontend
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
+            //Oscar
+            //services.AddSingleton<IRepositorioDirectivo, RepositorioDirectivo>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

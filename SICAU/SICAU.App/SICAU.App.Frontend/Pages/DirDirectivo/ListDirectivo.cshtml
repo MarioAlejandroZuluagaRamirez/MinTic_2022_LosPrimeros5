@@ -1,0 +1,34 @@
+﻿@page
+@model SICAU.App.Frontend.Pages.ListDirectivoModel
+@{
+}
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+<h1>Listado Directivos</h1>
+
+<table class="table table-bordered table-striped">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nombres</th>
+            <th scope="col">Apellidos</th>
+            <th scope="col"> </th>
+        </tr>
+  </thead>
+  <tbody>
+    @foreach (var directivo in Model.directivos)
+    {
+        <tr>
+            <td>@directivo.id</td>
+            <td>@directivo.nombre</td>
+            <td>@directivo.apellido</td>
+            <td>
+                <a class="btn btn-primary table-btn" asp-page="/DirDirectivo/DetailDirectivo" asp-route-idDirectivo="@directivo.id">
+                <i class="fas fa-info-circle"></i> 
+                    Detalle
+                </a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>

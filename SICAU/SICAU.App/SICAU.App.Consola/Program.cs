@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using SICAU.App.Dominio;
 using SICAU.App.Persistencia;
 
@@ -7,24 +8,47 @@ namespace SICAU.App.Consola
     class Program
     {
         private static IRepositorioDirectivo _repoDirectivo = new RepositorioDirectivo(new Persistencia.AppContext());
-        private static IRepositorioEncuestaCovid _repoEncuestaCovid = new RepositorioEncuestaCovid (new Persistencia.AppContext());
-        private static IRepositorioEstudiante _repoEstudiante = new RepositorioEstudiante(new Persistencia.AppContext());
-        private static IRepositorioFacultad _repoFacultad = new RepositorioFacultad(new Persistencia.AppContext());
-        private static IRepositorioGrupo _repoGrupo = new RepositorioGrupo(new Persistencia.AppContext());
-        private static IRepositorioHorario _repoHorario = new RepositorioHorario (new Persistencia.AppContext());
-        private static IRepositorioMateria _repoMateria = new RepositorioMateria (new Persistencia.AppContext());
-        private static IRepositorioPersona _repoPersona = new RepositorioPersona(new Persistencia.AppContext());
-        private static IRepositorioPersonalAseo _repoPersonalAseo = new RepositorioPersonalAseo(new Persistencia.AppContext());
-        private static IRepositorioProfesor _repoProfesor = new RepositorioProfesor(new Persistencia.AppContext());
-        private static IRepositorioPrograma _repoPrograma = new RepositorioPrograma(new Persistencia.AppContext());
-        private static IRepositorioSalon _repoSalon = new RepositorioSalon(new Persistencia.AppContext());
         private static IRepositorioSede _repoSede = new RepositorioSede(new Persistencia.AppContext());
-        private static IRepositorioSintoma _repoSintoma = new RepositorioSintoma(new Persistencia.AppContext());
-        private static IRepositorioUniversidad _repoUniversidad = new RepositorioUniversidad(new Persistencia.AppContext());
-        
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+            //AddDirectivo();
+            //AddSede();
+            UpdateDirectivo(1);
+        }
+
+        public static void AddDirectivo()
+        {
+            var directivo = new Directivo()
+            {
+                nombre = "Jenny",
+                apellido= "Bibiana",
+                identificacion= "1022928550",
+                fechaNacimiento = DateTime.Parse("1986-07-15"),
+                estadoCovid= EstadoCovid.Negativo,
+                unidad = "",
+                sede = null
+            };
+           _repoDirectivo.AddDirectivo(directivo);
+        }
+
+        public static void AddSede()
+        {
+            var sede = new Sede()
+            {
+                sede = "Sede A",
+                ubicacion= "Calle 65 No 67-99",
+                universidad = null
+            };
+            _repoSede.AddSede(sede);
+        }
+
+        public static void UpdateDirectivo(int idDirectivo)
+        {
+            var sede = _repoSede.GetSede(1);
+            var directivo = _repoDirectivo.GetDirectivo(idDirectivo);
+            directivo.sede = sede;
+            _repoDirectivo.UpdateDirectivo(directivo);
         }
     }
 }

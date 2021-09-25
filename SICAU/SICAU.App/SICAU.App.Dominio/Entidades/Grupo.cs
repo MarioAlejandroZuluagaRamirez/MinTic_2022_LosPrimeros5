@@ -9,5 +9,6 @@ namespace SICAU.App.Dominio
         public Profesor profesor {get;set;}
         public Materia materia {get;set;}
         public Horario horario {get;set;}
+        public List<Estudiante> estudiantes {get;set;}
     }
 }

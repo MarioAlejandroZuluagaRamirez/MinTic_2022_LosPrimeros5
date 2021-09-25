@@ -8,9 +8,18 @@ namespace SICAU.App.Persistencia
     {
         private readonly AppContext _appContext;
 
+        //Oscar
+        IEnumerable<Directivo> directivos;
+
         public RepositorioDirectivo(AppContext appContext)
         {
             _appContext = appContext;
+        }
+
+        //Oscar
+        public RepositorioDirectivo(IEnumerable<Directivo> directivos)
+        {
+            this.directivos = directivos;
         }
 
         Directivo IRepositorioDirectivo.AddDirectivo(Directivo directivo)

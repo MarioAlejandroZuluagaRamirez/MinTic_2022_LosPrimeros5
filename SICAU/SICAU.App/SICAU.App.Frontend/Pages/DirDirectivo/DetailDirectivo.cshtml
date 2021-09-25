@@ -1,0 +1,55 @@
+﻿@page
+@model SICAU.App.Frontend.Pages.DetailDirectivoModel
+@{
+}
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+<h1> Detalle Directivo ID: @Model.directivo.id</h1>
+
+<h4></h4>
+
+<tr>
+    <td>
+        <a class="btn btn-primary table-btn" asp-page="/DirDirectivo/ListDirectivo">
+        <i class="fas fa-arrow-circle-left"></i> 
+            Regresar
+        </a>
+    </td>
+</tr>
+
+<h4></h4>
+
+<table class="table table-bordered table-striped">
+    <tr>
+        <td class="table-dark">ID Directivo</td>
+        <td>@Model.directivo.id</td>
+    </tr>
+    <tr>
+        <td class="table-dark">Nombres</td>
+        <td>@Model.directivo.nombre</td>
+    </tr>
+    <tr>
+        <td class="table-dark">Apellido </td>
+        <td>@Model.directivo.apellido</td>
+    </tr>
+    <tr>
+        <td class="table-dark">Número de Identificacion</td>
+        <td>@Model.directivo.identificacion</td>
+    </tr>
+    <tr>
+        <td class="table-dark">Fecha de Nacimiento</td>
+        <td>@Model.directivo.fechaNacimiento.ToString("yyyy-MM-dd")</td>
+    </tr>
+    <tr>
+        <td class="table-dark">Estado Covid Actual</td>
+        <td>@Model.directivo.estadoCovid</td>
+    </tr>
+    <tr>
+        <td class="table-dark">Unidad a la que pertenece</td>
+        <td>@Model.directivo.unidad</td>
+    </tr>
+    <tr>
+        <td class="table-dark">Sede a la que se encuentra asignado</td>
+        <td>@Model.directivo.sede</td>
+    </tr>
+</table>
