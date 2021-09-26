@@ -31,7 +31,7 @@ namespace SICAU.App.Consola
             //FindPersona(1); // Testeado Ok
             //UpdatePersona(1); // Testeado Ok
             //ListPersona(); // Testeado ok
-            //DeletePersona(1); // Testeado Ok
+            DeletePersona(20); // Testeado Ok
             //--------------------------------------------------------------------------------------------
             //--------------------------------------------------------------------------------------------
             // Ejecución de Pruebas Clase PersonalAseo
@@ -126,7 +126,7 @@ namespace SICAU.App.Consola
         {
             var persona = new Persona
             {
-                nombre = "NombrePrueba",
+                nombre = "Otra Prueba",
                 apellido = "ApellidoPrueba",
                 identificacion = "12345678",
                 fechaNacimiento = DateTime.Parse("1990-05-12"),
