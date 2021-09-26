@@ -17,6 +17,9 @@ namespace SICAU.App.Consola
         private static IRepositorioDirectivo _repoDirectivo = new RepositorioDirectivo(new Persistencia.AppContext());
         private static IRepositorioMateria _repoMateria = new RepositorioMateria (new Persistencia.AppContext());
         private static IRepositorioHorario _repoHorario = new RepositorioHorario (new Persistencia.AppContext());
+        private static IRepositorioEncuesta _repoEncuesta = new RepositorioEncuesta(new Persistencia.AppContext());
+        private static IRepositorioSintoma _repoSintoma = new RepositorioSintoma(new Persistencia.AppContext());
+
         static void Main(string[] args)
         {
             Console.WriteLine("Hello world!");
@@ -98,6 +101,22 @@ namespace SICAU.App.Consola
             // UpdateHorario(1);  // Testeado Ok
             // ListHorario();     // Testeado Ok
             // DeleteHorario(2);  // Testeado Ok
+            //--------------------------------------------------------------------------------------------
+            // Ejecución de Pruebas Clase Encuesta
+            //--------------------------------------------------------------------------------------------
+            // AddEncuesta();      // Testeado Ok
+            // FindEncuesta(1);    // Testeado Ok
+            // UpdateEncuesta(1);  // Testeado Ok
+            // ListEncuesta();     // Testeado Ok
+            // DeleteEncuesta(1);  // Testeado Ok
+            //--------------------------------------------------------------------------------------------
+            // Ejecución de Pruebas Clase Sintomas
+            //--------------------------------------------------------------------------------------------
+            // AddSintoma();      // Testeado Ok
+            // FindSintoma(1);    // Testeado Ok
+            // UpdateSintoma(1);  // Testeado Ok
+            // ListSintoma();     // Testeado Ok
+            //DeleteSintoma(2);  // Testeado Ok
         }
         //--------------------------------------------------------------------------------------------
         //--------------------------------------------------------------------------------------------
@@ -491,6 +510,94 @@ namespace SICAU.App.Consola
             _repoHorario.DeleteHorario(idHorario);
             var horario = _repoHorario.GetHorario(idHorario);
             if (horario == null)
+            {
+                Console.WriteLine("Registro eliminado");
+            }
+        }
+        //--------------------------------------------------------------------------------------------
+        //--------------------------------------------------------------------------------------------
+        // Metodos Clase Encuesta
+        //--------------------------------------------------------------------------------------------
+        private static void AddEncuesta()
+        {
+            var encuesta = new Encuesta
+            {
+                //id = 1010,
+                fechaEncuesta = DateTime.Parse("2021-09-25"),
+                estadoCovid = EstadoCovid.positivo,
+                sintoma = null,
+                fechaDiagnostico = DateTime.Parse("2021-09-24"),
+                persona = null,            
+               
+            };
+            _repoEncuesta.AddEncuesta(encuesta);
+        }
+        private static void FindEncuesta(int idEncuesta)
+        {
+            var encuesta = _repoEncuesta.GetEncuesta(idEncuesta);
+            Console.WriteLine(encuesta.id + " " + encuesta.fechaEncuesta + " " + encuesta.estadoCovid
+            + " " + encuesta.sintoma + " " + encuesta.fechaDiagnostico + " " + encuesta.persona);
+        }
+        private static void UpdateEncuesta(int idEncuesta)
+        {
+            var encuesta = _repoEncuesta.GetEncuesta(idEncuesta);
+            encuesta.fechaEncuesta = DateTime.Parse("2020-08-23");
+            encuesta.estadoCovid = EstadoCovid.negativo;
+            encuesta.sintoma = null;
+            encuesta.fechaDiagnostico = DateTime.Parse("2020-08-22");
+            encuesta.persona= null;
+                        
+            _repoEncuesta.UpdateEncuesta(encuesta);
+        }
+        private static void ListEncuesta()
+        {
+            IEnumerable<Encuesta> encuesta = _repoEncuesta.GetAllEncuesta();
+            Console.WriteLine(encuesta.Last().id + " " + encuesta.Last().fechaEncuesta + " " + encuesta.Last().estadoCovid
+            + " " + encuesta.Last().sintoma + " " + encuesta.Last().fechaDiagnostico + " " + encuesta.Last().persona);
+        }
+        private static void DeleteEncuesta(int idEncuesta)
+        {
+            _repoEncuesta.DeleteEncuesta(idEncuesta);
+            var encuesta = _repoEncuesta.GetEncuesta(idEncuesta);
+            if (encuesta == null)
+            {
+                Console.WriteLine("Registro eliminado");
+            }
+        }
+        //--------------------------------------------------------------------------------------------
+        //--------------------------------------------------------------------------------------------
+        // Metodos Clase Sintomas
+        //--------------------------------------------------------------------------------------------
+        private static void AddSintoma()
+        {
+            var sintoma = new Sintoma
+            {                
+                sintoma = "Perdida del gusto"
+            };
+            _repoSintoma.AddSintoma(sintoma);
+        }
+        private static void FindSintoma(int idSintoma)
+        {
+            var sintoma = _repoSintoma.GetSintoma(idSintoma);
+            Console.WriteLine(sintoma.id + " " + sintoma.sintoma);
+        }
+        private static void UpdateSintoma(int idSintoma)
+        {
+            var sintoma = _repoSintoma.GetSintoma(idSintoma);
+            sintoma.sintoma = "Tos";
+                        
+            _repoSintoma.UpdateSintoma(sintoma);
+        }
+        private static void ListSintoma()
+        {
+            IEnumerable<Sintoma> sintoma = _repoSintoma.GetAllSintoma();
+            Console.WriteLine(sintoma.Last().id + " " + sintoma.Last().sintoma);
+        }
+        private static void DeleteSintoma(int idSintoma)
+        {
+            _repoSintoma.DeleteSintoma(idSintoma);
+            var sintoma = _repoSintoma.GetSintoma(idSintoma);
+            if (sintoma == null)
             {
                 Console.WriteLine("Registro eliminado");
             }

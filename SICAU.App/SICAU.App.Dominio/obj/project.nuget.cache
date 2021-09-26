@@ -1,15 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "o6FMsd0q4joUjGhTjBQq7PZe7wBjSMW+RHoCt0N5cb3lWebgYPr02o5ExQyWR4CIoFC6nqN6Lue9/BRNfqR36g==",
+  "dgSpecHash": "QJNWCXVNl7hSjUSiCXx+ywtub7vEfsd0tvU4aL+J4zCqbz2PWk1mkp465VeJisDqEDq8ZaDUkGkHlPVVtBFzJw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\SICAU\\SICAU.App\\SICAU.App.Dominio\\SICAU.App.Dominio.csproj",
+  "projectFilePath": "C:\\Users\\Usuario\\Documents\\MinticDesarrolloSoft\\MinTic_2022_LosPrimeros5\\SICAU.App\\SICAU.App.Dominio\\SICAU.App.Dominio.csproj",
   "expectedPackageFiles": [],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problema al leer el archivo de caché C:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\SICAU\\SICAU.App\\SICAU.App.Dominio\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }
