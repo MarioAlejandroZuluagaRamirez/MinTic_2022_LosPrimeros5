@@ -49,7 +49,6 @@ namespace SICAU.App.Persistencia
                 encuestaCovidEncontrado.estadoCovid = encuestaCovid.estadoCovid;
                 encuestaCovidEncontrado.fechaDiagnostico = encuestaCovid.fechaDiagnostico;
                 encuestaCovidEncontrado.persona = encuestaCovid.persona;
-                encuestaCovidEncontrado.sintoma = encuestaCovid.sintoma;
                  _appContext.SaveChanges();
             }
             return encuestaCovidEncontrado;

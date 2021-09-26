@@ -45,6 +45,50 @@ namespace SICAU.App.Persistencia.Migrations
                     b.ToTable("encuestaCovids");
                 });
 
+            modelBuilder.Entity("SICAU.App.Dominio.EncuestaCovidSintoma", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<int?>("encuestaCovidid")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("sintomaid")
+                        .HasColumnType("int");
+
+                    b.HasKey("id");
+
+                    b.HasIndex("encuestaCovidid");
+
+                    b.HasIndex("sintomaid");
+
+                    b.ToTable("encuestaCovidSintomas");
+                });
+
+            modelBuilder.Entity("SICAU.App.Dominio.Entidades.EstudianteGrupo", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<int?>("estudianteid")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("grupoid")
+                        .HasColumnType("int");
+
+                    b.HasKey("id");
+
+                    b.HasIndex("estudianteid");
+
+                    b.HasIndex("grupoid");
+
+                    b.ToTable("estudianteGrupos");
+                });
+
             modelBuilder.Entity("SICAU.App.Dominio.Facultad", b =>
                 {
                     b.Property<int>("id")
@@ -211,15 +255,10 @@ namespace SICAU.App.Persistencia.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<int?>("EncuestaCovidid")
-                        .HasColumnType("int");
-
                     b.Property<string>("sintoma")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("id");
-
-                    b.HasIndex("EncuestaCovidid");
 
                     b.ToTable("sintomas");
                 });
@@ -268,16 +307,11 @@ namespace SICAU.App.Persistencia.Migrations
                 {
                     b.HasBaseType("SICAU.App.Dominio.Persona");
 
-                    b.Property<int?>("Grupoid")
-                        .HasColumnType("int");
-
                     b.Property<int?>("programaid")
                         .HasColumnType("int");
 
                     b.Property<int>("semestre")
                         .HasColumnType("int");
-
-                    b.HasIndex("Grupoid");
 
                     b.HasIndex("programaid");
 
@@ -332,6 +366,36 @@ namespace SICAU.App.Persistencia.Migrations
                     b.Navigation("persona");
                 });
 
+            modelBuilder.Entity("SICAU.App.Dominio.EncuestaCovidSintoma", b =>
+                {
+                    b.HasOne("SICAU.App.Dominio.EncuestaCovid", "encuestaCovid")
+                        .WithMany()
+                        .HasForeignKey("encuestaCovidid");
+
+                    b.HasOne("SICAU.App.Dominio.Sintoma", "sintoma")
+                        .WithMany()
+                        .HasForeignKey("sintomaid");
+
+                    b.Navigation("encuestaCovid");
+
+                    b.Navigation("sintoma");
+                });
+
+            modelBuilder.Entity("SICAU.App.Dominio.Entidades.EstudianteGrupo", b =>
+                {
+                    b.HasOne("SICAU.App.Dominio.Estudiante", "estudiante")
+                        .WithMany()
+                        .HasForeignKey("estudianteid");
+
+                    b.HasOne("SICAU.App.Dominio.Grupo", "grupo")
+                        .WithMany()
+                        .HasForeignKey("grupoid");
+
+                    b.Navigation("estudiante");
+
+                    b.Navigation("grupo");
+                });
+
             modelBuilder.Entity("SICAU.App.Dominio.Grupo", b =>
                 {
                     b.HasOne("SICAU.App.Dominio.Horario", "horario")
@@ -380,13 +444,6 @@ namespace SICAU.App.Persistencia.Migrations
                     b.Navigation("universidad");
                 });
 
-            modelBuilder.Entity("SICAU.App.Dominio.Sintoma", b =>
-                {
-                    b.HasOne("SICAU.App.Dominio.EncuestaCovid", null)
-                        .WithMany("sintoma")
-                        .HasForeignKey("EncuestaCovidid");
-                });
-
             modelBuilder.Entity("SICAU.App.Dominio.Directivo", b =>
                 {
                     b.HasOne("SICAU.App.Dominio.Sede", "sede")
@@ -398,10 +455,6 @@ namespace SICAU.App.Persistencia.Migrations
 
             modelBuilder.Entity("SICAU.App.Dominio.Estudiante", b =>
                 {
-                    b.HasOne("SICAU.App.Dominio.Grupo", null)
-                        .WithMany("estudiantes")
-                        .HasForeignKey("Grupoid");
-
                     b.HasOne("SICAU.App.Dominio.Programa", "programa")
                         .WithMany()
                         .HasForeignKey("programaid");
@@ -416,16 +469,6 @@ namespace SICAU.App.Persistencia.Migrations
                         .HasForeignKey("sedeid");
 
                     b.Navigation("sede");
-                });
-
-            modelBuilder.Entity("SICAU.App.Dominio.EncuestaCovid", b =>
-                {
-                    b.Navigation("sintoma");
-                });
-
-            modelBuilder.Entity("SICAU.App.Dominio.Grupo", b =>
-                {
-                    b.Navigation("estudiantes");
                 });
 #pragma warning restore 612, 618
         }

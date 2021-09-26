@@ -22,6 +22,7 @@ namespace SICAU.App.Persistencia
         public DbSet<EncuestaCovid> encuestaCovids { get; set; }
         public DbSet<Sintoma> sintomas { get; set; }
         public DbSet<EstudianteGrupo> estudianteGrupos { get; set; }
+        public DbSet<EncuestaCovidSintoma> encuestaCovidSintomas { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)

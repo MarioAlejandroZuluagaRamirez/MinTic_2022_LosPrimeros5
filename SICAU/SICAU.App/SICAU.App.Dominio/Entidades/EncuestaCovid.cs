@@ -10,6 +10,5 @@ namespace SICAU.App.Dominio
         public EstadoCovid estadoCovid { get; set; }
         public DateTime fechaDiagnostico { get; set; }
         public Persona persona { get; set; }
-        public List<Sintoma> sintoma {get;set;}
     }
 }

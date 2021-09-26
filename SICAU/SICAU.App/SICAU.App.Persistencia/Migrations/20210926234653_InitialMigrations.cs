@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace SICAU.App.Persistencia.Migrations
 {
-    public partial class InitilMigrations : Migration
+    public partial class InitialMigrations : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -20,6 +20,19 @@ namespace SICAU.App.Persistencia.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_facultades", x => x.id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "sintomas",
+                columns: table => new
+                {
+                    id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    sintoma = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_sintomas", x => x.id);
                 });
 
             migrationBuilder.CreateTable(
@@ -102,20 +115,6 @@ namespace SICAU.App.Persistencia.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "sintomas",
-                columns: table => new
-                {
-                    id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    sintoma = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    EncuestaCovidid = table.Column<int>(type: "int", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_sintomas", x => x.id);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "personas",
                 columns: table => new
                 {
@@ -131,7 +130,6 @@ namespace SICAU.App.Persistencia.Migrations
                     sedeid = table.Column<int>(type: "int", nullable: true),
                     semestre = table.Column<int>(type: "int", nullable: true),
                     programaid = table.Column<int>(type: "int", nullable: true),
-                    Grupoid = table.Column<int>(type: "int", nullable: true),
                     turno = table.Column<int>(type: "int", nullable: true),
                     PersonalAseo_sedeid = table.Column<int>(type: "int", nullable: true),
                     departamento = table.Column<string>(type: "nvarchar(max)", nullable: true)
@@ -215,10 +213,82 @@ namespace SICAU.App.Persistencia.Migrations
                         onDelete: ReferentialAction.Restrict);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "encuestaCovidSintomas",
+                columns: table => new
+                {
+                    id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    encuestaCovidid = table.Column<int>(type: "int", nullable: true),
+                    sintomaid = table.Column<int>(type: "int", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_encuestaCovidSintomas", x => x.id);
+                    table.ForeignKey(
+                        name: "FK_encuestaCovidSintomas_encuestaCovids_encuestaCovidid",
+                        column: x => x.encuestaCovidid,
+                        principalTable: "encuestaCovids",
+                        principalColumn: "id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_encuestaCovidSintomas_sintomas_sintomaid",
+                        column: x => x.sintomaid,
+                        principalTable: "sintomas",
+                        principalColumn: "id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "estudianteGrupos",
+                columns: table => new
+                {
+                    id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    estudianteid = table.Column<int>(type: "int", nullable: true),
+                    grupoid = table.Column<int>(type: "int", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_estudianteGrupos", x => x.id);
+                    table.ForeignKey(
+                        name: "FK_estudianteGrupos_grupos_grupoid",
+                        column: x => x.grupoid,
+                        principalTable: "grupos",
+                        principalColumn: "id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_estudianteGrupos_personas_estudianteid",
+                        column: x => x.estudianteid,
+                        principalTable: "personas",
+                        principalColumn: "id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
             migrationBuilder.CreateIndex(
                 name: "IX_encuestaCovids_personaid",
                 table: "encuestaCovids",
                 column: "personaid");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_encuestaCovidSintomas_encuestaCovidid",
+                table: "encuestaCovidSintomas",
+                column: "encuestaCovidid");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_encuestaCovidSintomas_sintomaid",
+                table: "encuestaCovidSintomas",
+                column: "sintomaid");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_estudianteGrupos_estudianteid",
+                table: "estudianteGrupos",
+                column: "estudianteid");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_estudianteGrupos_grupoid",
+                table: "estudianteGrupos",
+                column: "grupoid");
 
             migrationBuilder.CreateIndex(
                 name: "IX_grupos_horarioid",
@@ -246,11 +316,6 @@ namespace SICAU.App.Persistencia.Migrations
                 column: "programaid");
 
             migrationBuilder.CreateIndex(
-                name: "IX_personas_Grupoid",
-                table: "personas",
-                column: "Grupoid");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_personas_PersonalAseo_sedeid",
                 table: "personas",
                 column: "PersonalAseo_sedeid");
@@ -269,43 +334,21 @@ namespace SICAU.App.Persistencia.Migrations
                 name: "IX_sedes_universidadid",
                 table: "sedes",
                 column: "universidadid");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_sintomas_EncuestaCovidid",
-                table: "sintomas",
-                column: "EncuestaCovidid");
-
-            migrationBuilder.AddForeignKey(
-                name: "FK_sintomas_encuestaCovids_EncuestaCovidid",
-                table: "sintomas",
-                column: "EncuestaCovidid",
-                principalTable: "encuestaCovids",
-                principalColumn: "id",
-                onDelete: ReferentialAction.Restrict);
-
-            migrationBuilder.AddForeignKey(
-                name: "FK_personas_grupos_Grupoid",
-                table: "personas",
-                column: "Grupoid",
-                principalTable: "grupos",
-                principalColumn: "id",
-                onDelete: ReferentialAction.Restrict);
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropForeignKey(
-                name: "FK_grupos_personas_profesorid",
-                table: "grupos");
+            migrationBuilder.DropTable(
+                name: "encuestaCovidSintomas");
 
             migrationBuilder.DropTable(
-                name: "sintomas");
+                name: "estudianteGrupos");
 
             migrationBuilder.DropTable(
                 name: "encuestaCovids");
 
             migrationBuilder.DropTable(
-                name: "personas");
+                name: "sintomas");
 
             migrationBuilder.DropTable(
                 name: "grupos");
@@ -317,10 +360,13 @@ namespace SICAU.App.Persistencia.Migrations
                 name: "materias");
 
             migrationBuilder.DropTable(
-                name: "sedes");
+                name: "personas");
 
             migrationBuilder.DropTable(
                 name: "facultades");
+
+            migrationBuilder.DropTable(
+                name: "sedes");
 
             migrationBuilder.DropTable(
                 name: "universidades");
