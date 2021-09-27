@@ -1,0 +1,43 @@
+﻿@page
+@model SICAU.App.Frontend.Pages.ListEstudianteModel
+@{
+}
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+<h1>Listado Estudiante</h1>
+
+<form method="get">
+    <p>
+        Buscar por Nombres o Apellidos: 
+        <input type="text" name="criterio" asp-for="criterio">
+        <input type="submit" value="Buscar" class="btn btn-primary table-btn"> 
+        <i class="fas fa-search"></i>
+    </p>
+</form>
+
+<table class="table table-bordered table-striped">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nombres</th>
+            <th scope="col">Apellidos</th>
+            <th scope="col"> </th>
+        </tr>
+  </thead>
+  <tbody>
+    @foreach (var estudiante in Model.estudiantes)
+    {
+        <tr>
+            <td>@estudiante.id</td>
+            <td>@estudiante.nombre</td>
+            <td>@estudiante.apellido</td>
+            <td>
+                <a class="btn btn-primary table-btn" asp-page="/DirEntidades/DetailEstudiante" asp-route-idEstudiante="@estudiante.id">
+                <i class="fas fa-info-circle"></i> 
+                    Detalle
+                </a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>

@@ -7,10 +7,34 @@ namespace SICAU.App.Persistencia
     public class RepositorioEstudiante : IRepositorioEstudiante
     {
         private readonly AppContext _appContext;
+        IEnumerable<Estudiante> estudiantes;
 
+        
         public RepositorioEstudiante(AppContext appContext)
         {
             _appContext = appContext;
+        }
+
+        public RepositorioEstudiante(IEnumerable<Estudiante> estudiantes)
+        {
+            this.estudiantes = estudiantes;
+        }
+        // public RepositorioEstudiante(AppContext appContext, IEnumerable<Estudiante> estudiantes)
+        // {
+        //     _appContext = appContext;
+        //     this.estudiantes = estudiantes;
+        // }
+
+        public IEnumerable<Estudiante> GetByNames(string criterio)
+        {
+            IEnumerable<Estudiante> estudiantes = _appContext.estudiantes;
+
+            if (estudiantes != null
+                && !string.IsNullOrEmpty(criterio))
+            {
+                estudiantes = _appContext.estudiantes.Where(p => p.nombre.Contains(criterio) || p.apellido.Contains(criterio));
+            }
+            return estudiantes;
         }
 
         Estudiante IRepositorioEstudiante.AddEstudiante(Estudiante estudiante)
@@ -52,7 +76,7 @@ namespace SICAU.App.Persistencia
                 estudianteEncontrado.estadoCovid = estudiante.estadoCovid;
                 estudianteEncontrado.semestre = estudiante.semestre;
                 estudianteEncontrado.programa = estudiante.programa;
-                 _appContext.SaveChanges();
+                _appContext.SaveChanges();
             }
             return estudianteEncontrado;
         }

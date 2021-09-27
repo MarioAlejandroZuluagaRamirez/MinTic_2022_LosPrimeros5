@@ -1,0 +1,55 @@
+﻿@page
+@model SICAU.App.Frontend.Pages.DetailEstudianteModel
+@{
+}
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+<h1> Detalle Estudiante ID: @Model.estudiante.id</h1>
+
+<h4></h4>
+
+<tr>
+    <td>
+        <a class="btn btn-primary table-btn" asp-page="/DirEntidades/ListEstudiante">
+        <i class="fas fa-arrow-circle-left"></i> 
+            Regresar
+        </a>
+    </td>
+</tr>
+
+<h4></h4>
+
+<table class="table table-bordered table-striped">
+    <tr>
+        <td class="table-dark">ID Estudiante</td>
+        <td>@Model.estudiante.id</td>
+    </tr>
+    <tr>
+        <td class="table-dark">Nombres</td>
+        <td>@Model.estudiante.nombre</td>
+    </tr>
+    <tr>
+        <td class="table-dark">Apellido </td>
+        <td>@Model.estudiante.apellido</td>
+    </tr>
+    <tr>
+        <td class="table-dark">Número de Identificacion</td>
+        <td>@Model.estudiante.identificacion</td>
+    </tr>
+    <tr>
+        <td class="table-dark">Fecha de Nacimiento</td>
+        <td>@Model.estudiante.fechaNacimiento.ToString("yyyy-MM-dd")</td>
+    </tr>
+    <tr>
+        <td class="table-dark">Estado Covid Actual</td>
+        <td>@Model.estudiante.estadoCovid</td>
+    </tr>
+    <tr>
+        <td class="table-dark">Semestre</td>
+        <td>@Model.estudiante.semestre</td>
+    </tr>
+    <tr>
+        <td class="table-dark">Programa</td>
+        <td>@Model.estudiante.programa</td>
+    </tr>
+</table>
