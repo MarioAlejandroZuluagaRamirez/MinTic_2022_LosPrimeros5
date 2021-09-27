@@ -71,5 +71,7 @@ C:\Users\mazul\Desktop\Desarrollo de Software MinTic\C#\Proyecto_SICAU\SICAU\SIC
 C:\Users\mazul\Desktop\Desarrollo de Software MinTic\C#\Proyecto_SICAU\SICAU\SICAU.App\SICAU.App.Frontend\bin\Debug\net5.0\SICAU.App.Persistencia.dll
 C:\Users\mazul\Desktop\Desarrollo de Software MinTic\C#\Proyecto_SICAU\SICAU\SICAU.App\SICAU.App.Frontend\bin\Debug\net5.0\SICAU.App.Dominio.pdb
 C:\Users\mazul\Desktop\Desarrollo de Software MinTic\C#\Proyecto_SICAU\SICAU\SICAU.App\SICAU.App.Frontend\bin\Debug\net5.0\SICAU.App.Persistencia.pdb
-C:\Users\mazul\Desktop\Desarrollo de Software MinTic\C#\Proyecto_SICAU\SICAU\SICAU.App\SICAU.App.Frontend\obj\Debug\net5.0\Razor\Pages\DirDirectivo\ListDirectivo.cshtml.g.cs
-C:\Users\mazul\Desktop\Desarrollo de Software MinTic\C#\Proyecto_SICAU\SICAU\SICAU.App\SICAU.App.Frontend\obj\Debug\net5.0\Razor\Pages\DirDirectivo\DetailDirectivo.cshtml.g.cs
+C:\Users\mazul\Desktop\Desarrollo de Software MinTic\C#\Proyecto_SICAU\SICAU\SICAU.App\SICAU.App.Frontend\obj\Debug\net5.0\Razor\Pages\DirEntidades\DetailDirectivo.cshtml.g.cs
+C:\Users\mazul\Desktop\Desarrollo de Software MinTic\C#\Proyecto_SICAU\SICAU\SICAU.App\SICAU.App.Frontend\obj\Debug\net5.0\Razor\Pages\DirEntidades\ListDirectivo.cshtml.g.cs
+C:\Users\mazul\Desktop\Desarrollo de Software MinTic\C#\Proyecto_SICAU\SICAU\SICAU.App\SICAU.App.Frontend\obj\Debug\net5.0\Razor\Pages\DirEntidades\DetailProfesor.cshtml.g.cs
+C:\Users\mazul\Desktop\Desarrollo de Software MinTic\C#\Proyecto_SICAU\SICAU\SICAU.App\SICAU.App.Frontend\obj\Debug\net5.0\Razor\Pages\DirEntidades\ListProfesor.cshtml.g.cs

@@ -6,6 +6,15 @@
 
 <h1>Listado Directivos</h1>
 
+<form method="get">
+    <p>
+        Buscar por Nombres o Apellidos: 
+        <input type="text" name="criterio" asp-for="criterio">
+        <input type="submit" value="Buscar" class="btn btn-primary table-btn"> 
+        <i class="fas fa-search"></i>
+    </p>
+</form>
+
 <table class="table table-bordered table-striped">
     <thead class="thead-dark">
         <tr>
@@ -23,7 +32,7 @@
             <td>@directivo.nombre</td>
             <td>@directivo.apellido</td>
             <td>
-                <a class="btn btn-primary table-btn" asp-page="/DirDirectivo/DetailDirectivo" asp-route-idDirectivo="@directivo.id">
+                <a class="btn btn-primary table-btn" asp-page="/DirEntidades/DetailDirectivo" asp-route-idDirectivo="@directivo.id">
                 <i class="fas fa-info-circle"></i> 
                     Detalle
                 </a>

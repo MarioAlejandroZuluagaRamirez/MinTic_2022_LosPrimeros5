@@ -7,11 +7,29 @@ namespace SICAU.App.Persistencia
     public class RepositorioProfesor : IRepositorioProfesor
     {
         private readonly AppContext _appContext;
+        IEnumerable<Profesor> profesores;
 
         public RepositorioProfesor(AppContext appContext)
         {
             _appContext = appContext;
         }
+			
+		public RepositorioProfesor(IEnumerable<Profesor> profesores)
+		{
+		    this.profesores = profesores;
+		}
+	
+		IEnumerable<Profesor> IRepositorioProfesor.GetByNames(string criterio)
+		{
+		    IEnumerable<Profesor> profesores = _appContext.profesores;
+
+		    if (profesores != null
+                && !string.IsNullOrEmpty(criterio))
+		    {
+			profesores = _appContext.profesores.Where(p => p.nombre.Contains(criterio) || p.apellido.Contains(criterio));
+		    }
+		    return profesores;
+		}
 
         Profesor IRepositorioProfesor.AddProfesor(Profesor profesor)
         {

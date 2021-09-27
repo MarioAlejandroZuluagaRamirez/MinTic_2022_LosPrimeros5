@@ -1,6 +1,8 @@
 using System.Collections.Generic;
 using SICAU.App.Dominio;
 using System.Linq;
+using System;
+using System.Diagnostics;
 
 namespace SICAU.App.Persistencia
 {
@@ -43,6 +45,18 @@ namespace SICAU.App.Persistencia
             return _appContext.directivos;
         }
 
+        IEnumerable<Directivo> IRepositorioDirectivo.GetByNames(string criterio)
+        {
+            IEnumerable<Directivo> directivos = _appContext.directivos;
+
+            if (directivos != null 
+                && !string.IsNullOrEmpty(criterio))
+            {
+                directivos = _appContext.directivos.Where(p => p.nombre.Contains(criterio) || p.apellido.Contains(criterio));
+            }
+            return directivos;
+        }
+
         Directivo IRepositorioDirectivo.GetDirectivo(int idDirectivo)
         {
             return _appContext.directivos.FirstOrDefault(p => p.id == idDirectivo);
@@ -61,7 +75,7 @@ namespace SICAU.App.Persistencia
                 directivoEncontrado.estadoCovid = directivo.estadoCovid;
                 directivoEncontrado.unidad = directivo.unidad;
                 directivoEncontrado.sede = directivo.sede;
-                 _appContext.SaveChanges();
+                _appContext.SaveChanges();
             }
             return directivoEncontrado;
         }

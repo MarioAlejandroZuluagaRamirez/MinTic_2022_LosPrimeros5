@@ -14,10 +14,12 @@ namespace SICAU.App.Frontend.Pages
         public IRepositorioDirectivo _repositorioDirectivo = new RepositorioDirectivo(new Persistencia.AppContext());
         
         public IEnumerable<Directivo> directivos {get;set;}
-
-        public void OnGet()
+        public string criterio;
+        public void OnGet(string criterio)
         {
-            directivos = _repositorioDirectivo.GetAllDirectivo();
+            // directivos = _repositorioDirectivo.GetAllDirectivo();
+            // criterio = Criterio;
+            directivos = _repositorioDirectivo.GetByNames(criterio);
         }
     }
 }

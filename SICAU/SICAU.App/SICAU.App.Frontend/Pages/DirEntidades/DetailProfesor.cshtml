@@ -1,0 +1,51 @@
+﻿@page
+@model SICAU.App.Frontend.Pages.DetailProfesorModel
+@{
+}
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+<h1> Detalle Profesor ID: @Model.profesor.id</h1>
+
+<h4></h4>
+
+<tr>
+    <td>
+        <a class="btn btn-primary table-btn" asp-page="/DirEntidades/ListProfesor">
+        <i class="fas fa-arrow-circle-left"></i> 
+            Regresar
+        </a>
+    </td>
+</tr>
+
+<h4></h4>
+
+<table class="table table-bordered table-striped">
+    <tr>
+        <td class="table-dark">ID Profesor</td>
+        <td>@Model.profesor.id</td>
+    </tr>
+    <tr>
+        <td class="table-dark">Nombres</td>
+        <td>@Model.profesor.nombre</td>
+    </tr>
+    <tr>
+        <td class="table-dark">Apellido </td>
+        <td>@Model.profesor.apellido</td>
+    </tr>
+    <tr>
+        <td class="table-dark">Número de Identificacion</td>
+        <td>@Model.profesor.identificacion</td>
+    </tr>
+    <tr>
+        <td class="table-dark">Fecha de Nacimiento</td>
+        <td>@Model.profesor.fechaNacimiento.ToString("yyyy-MM-dd")</td>
+    </tr>
+    <tr>
+        <td class="table-dark">Estado Covid Actual</td>
+        <td>@Model.profesor.estadoCovid</td>
+    </tr>
+    <tr>
+        <td class="table-dark">Departamento al que pertenece</td>
+        <td>@Model.profesor.departamento</td>
+    </tr>
+</table>
