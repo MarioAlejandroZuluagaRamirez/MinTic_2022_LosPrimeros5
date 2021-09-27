@@ -7,12 +7,17 @@ namespace SICAU.App.Persistencia
     public class RepositorioSede : IRepositorioSede
     {
         private readonly AppContext _appContext;
+        IEnumerable<Sede> sedes;
 
         public RepositorioSede(AppContext appContext)
         {
             _appContext = appContext;
         }
 
+        public RepositorioSede (IEnumerable<Sede> sedes)
+        {
+            this.sedes = sedes;
+        }
         Sede IRepositorioSede.AddSede(Sede sede)
         {
             var sedeAdicionado = _appContext.sedes.Add(sede);
@@ -32,6 +37,18 @@ namespace SICAU.App.Persistencia
         IEnumerable<Sede> IRepositorioSede.GetAllSede()
         {
             return _appContext.sedes;
+        }
+
+        IEnumerable<Sede> IRepositorioSede.GetByNames(string criterio)
+        {
+            IEnumerable<Sede> sedes = _appContext.sedes;
+
+            if (sedes != null 
+            && !string.IsNullOrEmpty(criterio))
+            {
+            sedes = _appContext.sedes.Where(p => p.sede.Contains(criterio) || p.ubicacion.Contains(criterio) );
+            }
+            return sedes;
         }
 
         Sede IRepositorioSede.GetSede(int idSede)

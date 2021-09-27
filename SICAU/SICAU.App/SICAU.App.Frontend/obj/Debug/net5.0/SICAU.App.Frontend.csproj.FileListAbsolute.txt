@@ -79,3 +79,5 @@ C:\Users\mazul\Desktop\Desarrollo de Software MinTic\C#\Proyecto_SICAU\SICAU\SIC
 C:\Users\mazul\Desktop\Desarrollo de Software MinTic\C#\Proyecto_SICAU\SICAU\SICAU.App\SICAU.App.Frontend\obj\Debug\net5.0\Razor\Pages\DirEntidades\ListEstudiante.cshtml.g.cs
 C:\Users\mazul\Desktop\Desarrollo de Software MinTic\C#\Proyecto_SICAU\SICAU\SICAU.App\SICAU.App.Frontend\obj\Debug\net5.0\Razor\Pages\DirEntidades\DetailPersonalAseo.cshtml.g.cs
 C:\Users\mazul\Desktop\Desarrollo de Software MinTic\C#\Proyecto_SICAU\SICAU\SICAU.App\SICAU.App.Frontend\obj\Debug\net5.0\Razor\Pages\DirEntidades\ListPersonalAseo.cshtml.g.cs
+C:\Users\mazul\Desktop\Desarrollo de Software MinTic\C#\Proyecto_SICAU\SICAU\SICAU.App\SICAU.App.Frontend\obj\Debug\net5.0\Razor\Pages\DirEntidades\ListSede.cshtml.g.cs
+C:\Users\mazul\Desktop\Desarrollo de Software MinTic\C#\Proyecto_SICAU\SICAU\SICAU.App\SICAU.App.Frontend\obj\Debug\net5.0\Razor\Pages\DirEntidades\ListUniversidad.cshtml.g.cs
