@@ -2,13 +2,19 @@
 @model SICAU.App.Frontend.Pages.ListProfesorModel
 @{
 }
-<script src='https://kit.fontawesome.com/a076d05399.js'></script>
-
 <h1>Listado Profesores</h1>
 
 <form method="get">
     <p>
         Buscar por Nombres o Apellidos: 
+        <input type="text" name="criterio" asp-for="criterio">
+        <input type="submit" value="Buscar" class="btn btn-primary table-btn"> 
+        <i class="fas fa-search"></i>
+    </p>
+</form>
+
+<form method="post">
+    <p>
         <input type="text" name="criterio" asp-for="criterio">
         <input type="submit" value="Buscar" class="btn btn-primary table-btn"> 
         <i class="fas fa-search"></i>
@@ -21,7 +27,8 @@
             <th scope="col">Id</th>
             <th scope="col">Nombres</th>
             <th scope="col">Apellidos</th>
-            <th scope="col"> </th>
+            <th scope="col">Detalle</th>
+            <th scope="col">Edición</th>
         </tr>
   </thead>
   <tbody>
@@ -34,7 +41,11 @@
             <td>
                 <a class="btn btn-primary table-btn" asp-page="/DirEntidades/DetailProfesor" asp-route-idProfesor="@profesor.id">
                 <i class="fas fa-info-circle"></i> 
-                    Detalle
+                </a>
+            </td>
+            <td>
+                <a class="btn btn-primary table-btn" asp-page="/DirEntidades/EditProfesor" asp-route-idProfesor="@profesor.id">
+                <i class="far fa-address-book"></i>
                 </a>
             </td>
         </tr>

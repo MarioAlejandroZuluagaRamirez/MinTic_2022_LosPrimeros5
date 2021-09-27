@@ -1,8 +1,8 @@
 ﻿@page
-@model SICAU.App.Frontend.Pages.ListDirectivoModel
+@model SICAU.App.Frontend.Pages.ListPersonalAseoModel
 @{
 }
-<h1>Listado Directivos</h1>
+<h1>Listado Personal Aseo</h1>
 
 <form method="get">
     <p>
@@ -24,19 +24,19 @@
         </tr>
   </thead>
   <tbody>
-    @foreach (var directivo in Model.directivos)
+    @foreach (var personalAseo in Model.personalAseos)
     {
         <tr>
-            <td>@directivo.id</td>
-            <td>@directivo.nombre</td>
-            <td>@directivo.apellido</td>
+            <td>@personalAseo.id</td>
+            <td>@personalAseo.nombre</td>
+            <td>@personalAseo.apellido</td>
             <td>
-                <a class="btn btn-primary table-btn" asp-page="/DirEntidades/DetailDirectivo" asp-route-idDirectivo="@directivo.id">
+                <a class="btn btn-primary table-btn" asp-page="/DirEntidades/DetailPersonalAseo" asp-route-idPersonalAseo="@personalAseo.id">
                 <i class="fas fa-info-circle"></i> 
                 </a>
             </td>
             <td>
-                <a class="btn btn-primary table-btn" asp-page="/DirEntidades/EditDirectivo" asp-route-idDirectivo="@directivo.id">
+                <a class="btn btn-primary table-btn" asp-page="/DirEntidades/EditPersonalAseo" asp-route-idPersonalAseo="@personalAseo.id">
                 <i class="far fa-address-book"></i>
                 </a>
             </td>

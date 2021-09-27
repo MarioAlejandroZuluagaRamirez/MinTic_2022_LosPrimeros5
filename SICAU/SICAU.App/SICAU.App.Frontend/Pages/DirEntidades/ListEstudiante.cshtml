@@ -2,8 +2,6 @@
 @model SICAU.App.Frontend.Pages.ListEstudianteModel
 @{
 }
-<script src='https://kit.fontawesome.com/a076d05399.js'></script>
-
 <h1>Listado Estudiante</h1>
 
 <form method="get">
@@ -21,7 +19,8 @@
             <th scope="col">Id</th>
             <th scope="col">Nombres</th>
             <th scope="col">Apellidos</th>
-            <th scope="col"> </th>
+            <th scope="col">Detalle</th>
+            <th scope="col">Edición</th>
         </tr>
   </thead>
   <tbody>
@@ -34,7 +33,11 @@
             <td>
                 <a class="btn btn-primary table-btn" asp-page="/DirEntidades/DetailEstudiante" asp-route-idEstudiante="@estudiante.id">
                 <i class="fas fa-info-circle"></i> 
-                    Detalle
+                </a>
+            </td>
+            <td>
+                <a class="btn btn-primary table-btn" asp-page="/DirEntidades/EditEstudiante" asp-route-idEstudiante="@estudiante.id">
+                <i class="far fa-address-book"></i>
                 </a>
             </td>
         </tr>

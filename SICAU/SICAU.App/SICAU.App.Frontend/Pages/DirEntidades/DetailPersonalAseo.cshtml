@@ -1,14 +1,14 @@
 ﻿@page
-@model SICAU.App.Frontend.Pages.DetailDirectivoModel
+@model SICAU.App.Frontend.Pages.DetailPersonalAseoModel
 @{
 }
-<h1> Detalle Directivo ID: @Model.directivo.id</h1>
+<h1> Detalle Personal Aseo ID: @Model.personalAseo.id</h1>
 
 <h4></h4>
 
 <tr>
     <td>
-        <a class="btn btn-primary table-btn" asp-page="/DirEntidades/ListDirectivo">
+        <a class="btn btn-primary table-btn" asp-page="/DirEntidades/ListPersonalAseo">
         <i class="fas fa-arrow-circle-left"></i> 
             Regresar
         </a>
@@ -19,35 +19,35 @@
 
 <table class="table table-bordered table-striped">
     <tr>
-        <td class="table-dark">ID Directivo</td>
-        <td>@Model.directivo.id</td>
+        <td class="table-dark">ID Pesonal Aseo</td>
+        <td>@Model.personalAseo.id</td>
     </tr>
     <tr>
         <td class="table-dark">Nombres</td>
-        <td>@Model.directivo.nombre</td>
+        <td>@Model.personalAseo.nombre</td>
     </tr>
     <tr>
         <td class="table-dark">Apellido </td>
-        <td>@Model.directivo.apellido</td>
+        <td>@Model.personalAseo.apellido</td>
     </tr>
     <tr>
         <td class="table-dark">Número de Identificacion</td>
-        <td>@Model.directivo.identificacion</td>
+        <td>@Model.personalAseo.identificacion</td>
     </tr>
     <tr>
         <td class="table-dark">Fecha de Nacimiento</td>
-        <td>@Model.directivo.fechaNacimiento.ToString("yyyy-MM-dd")</td>
+        <td>@Model.personalAseo.fechaNacimiento.ToString("yyyy-MM-dd")</td>
     </tr>
     <tr>
         <td class="table-dark">Estado Covid Actual</td>
-        <td>@Model.directivo.estadoCovid</td>
+        <td>@Model.personalAseo.estadoCovid</td>
     </tr>
     <tr>
-        <td class="table-dark">Unidad a la que pertenece</td>
-        <td>@Model.directivo.unidad</td>
+        <td class="table-dark">Turno Asignado</td>
+        <td>@Model.personalAseo.turno</td>
     </tr>
     <tr>
         <td class="table-dark">Sede a la que se encuentra asignado</td>
-        <td>@Model.directivo.sede</td>
+        <td>@Model.personalAseo.sede</td>
     </tr>
 </table>

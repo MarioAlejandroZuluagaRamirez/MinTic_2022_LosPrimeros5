@@ -7,10 +7,26 @@ namespace SICAU.App.Persistencia
     public class RepositorioPersonalAseo : IRepositorioPersonalAseo
     {
         private readonly AppContext _appContext;
-
+        IEnumerable<PersonalAseo> PersonalAseos;
         public RepositorioPersonalAseo(AppContext appContext)
         {
             _appContext = appContext;
+        }
+
+        public RepositorioPersonalAseo(IEnumerable<PersonalAseo> personalAseos)
+        {
+            PersonalAseos = personalAseos;
+        }
+        public IEnumerable<PersonalAseo> GetByNames(string criterio)
+        {
+            IEnumerable<PersonalAseo> personalAseos = _appContext.personalAseos;
+
+            if (personalAseos != null
+            && !string.IsNullOrEmpty(criterio))
+            {
+                personalAseos = _appContext.personalAseos.Where(p => p.nombre.Contains(criterio) || p.apellido.Contains(criterio));
+            }
+            return personalAseos;
         }
 
         PersonalAseo IRepositorioPersonalAseo.AddPersonalAseo(PersonalAseo personalAseo)
@@ -52,11 +68,10 @@ namespace SICAU.App.Persistencia
                 personalAseoEncontrado.estadoCovid = personalAseo.estadoCovid;
                 personalAseoEncontrado.turno = personalAseo.turno;
                 personalAseoEncontrado.sede = personalAseo.sede;
-                 _appContext.SaveChanges();
+                _appContext.SaveChanges();
             }
             return personalAseoEncontrado;
         }
-
     }
 }
 

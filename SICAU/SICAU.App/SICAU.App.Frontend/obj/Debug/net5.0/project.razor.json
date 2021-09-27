@@ -15619,6 +15619,11 @@
   "RootNamespace": "SICAU.App.Frontend",
   "Documents": [
     {
+      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Proyecto_SICAU\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\DirEntidades\\ListPersonalAseo.cshtml",
+      "TargetPath": "Pages\\DirEntidades\\ListPersonalAseo.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Proyecto_SICAU\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\NotFound.cshtml",
       "TargetPath": "Pages\\NotFound.cshtml",
       "FileKind": "mvc"
@@ -15671,6 +15676,11 @@
     {
       "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Proyecto_SICAU\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\DirEntidades\\DetailEstudiante.cshtml",
       "TargetPath": "Pages\\DirEntidades\\DetailEstudiante.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Proyecto_SICAU\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\DirEntidades\\DetailPersonalAseo.cshtml",
+      "TargetPath": "Pages\\DirEntidades\\DetailPersonalAseo.cshtml",
       "FileKind": "mvc"
     },
     {

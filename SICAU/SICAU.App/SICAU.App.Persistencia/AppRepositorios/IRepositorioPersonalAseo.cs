@@ -6,6 +6,7 @@ namespace SICAU.App.Persistencia
     public interface IRepositorioPersonalAseo
     {
         IEnumerable<PersonalAseo> GetAllPersonalAseo();
+        IEnumerable<PersonalAseo> GetByNames(string criterio);
         PersonalAseo AddPersonalAseo(PersonalAseo personalAseo);
         PersonalAseo UpdatePersonalAseo(PersonalAseo personalAseo);
         void DeletePersonalAseo(int idPersonalAseo);
