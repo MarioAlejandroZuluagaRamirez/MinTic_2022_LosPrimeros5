@@ -7,10 +7,14 @@ namespace SICAU.App.Persistencia
     public class RepositorioFacultad : IRepositorioFacultad
     {
         private readonly AppContext _appContext;
-
+        IEnumerable<Facultad> facultades;
         public RepositorioFacultad(AppContext appContext)
         {
             _appContext = appContext;
+        }
+        public RepositorioFacultad(IEnumerable<Facultad> facultades)
+        {
+            this.facultades = facultades;
         }
 
         Facultad IRepositorioFacultad.AddFacultad(Facultad facultad)
@@ -38,7 +42,17 @@ namespace SICAU.App.Persistencia
         {
             return _appContext.facultades.FirstOrDefault(p => p.id == idFacultad);
         }
+        IEnumerable<Facultad> IRepositorioFacultad.GetByNames(string criterio)
+        {
+            IEnumerable<Facultad> facultades= _appContext.facultades;
 
+            if (facultades!= null
+            && !string.IsNullOrEmpty(criterio))
+            {
+                facultades = _appContext.facultades.Where(p => p.facultad.Contains(criterio));
+            }
+            return facultades;
+        }
         Facultad IRepositorioFacultad.UpdateFacultad(Facultad facultad)
         {
             var facultadEncontrado = _appContext.facultades.FirstOrDefault(p => p.id == facultad.id);

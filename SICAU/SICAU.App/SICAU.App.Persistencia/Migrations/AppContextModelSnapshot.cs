@@ -96,18 +96,17 @@ namespace SICAU.App.Persistencia.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<string>("Discriminator")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("facultad")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int?>("universidadid")
+                        .HasColumnType("int");
+
                     b.HasKey("id");
 
-                    b.ToTable("facultades");
+                    b.HasIndex("universidadid");
 
-                    b.HasDiscriminator<string>("Discriminator").HasValue("Facultad");
+                    b.ToTable("facultades");
                 });
 
             modelBuilder.Entity("SICAU.App.Dominio.Grupo", b =>
@@ -219,16 +218,55 @@ namespace SICAU.App.Persistencia.Migrations
                     b.HasDiscriminator<string>("Discriminator").HasValue("Persona");
                 });
 
-            modelBuilder.Entity("SICAU.App.Dominio.Sede", b =>
+            modelBuilder.Entity("SICAU.App.Dominio.Programa", b =>
                 {
                     b.Property<int>("id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<string>("Discriminator")
-                        .IsRequired()
+                    b.Property<int?>("facultadid")
+                        .HasColumnType("int");
+
+                    b.Property<string>("programa")
                         .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("id");
+
+                    b.HasIndex("facultadid");
+
+                    b.ToTable("programas");
+                });
+
+            modelBuilder.Entity("SICAU.App.Dominio.Salon", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<int>("capacidad")
+                        .HasColumnType("int");
+
+                    b.Property<string>("numero")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("sedeid")
+                        .HasColumnType("int");
+
+                    b.HasKey("id");
+
+                    b.HasIndex("sedeid");
+
+                    b.ToTable("salones");
+                });
+
+            modelBuilder.Entity("SICAU.App.Dominio.Sede", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
 
                     b.Property<string>("sede")
                         .HasColumnType("nvarchar(max)");
@@ -244,8 +282,6 @@ namespace SICAU.App.Persistencia.Migrations
                     b.HasIndex("universidadid");
 
                     b.ToTable("sedes");
-
-                    b.HasDiscriminator<string>("Discriminator").HasValue("Sede");
                 });
 
             modelBuilder.Entity("SICAU.App.Dominio.Sintoma", b =>
@@ -276,16 +312,6 @@ namespace SICAU.App.Persistencia.Migrations
                     b.HasKey("id");
 
                     b.ToTable("universidades");
-                });
-
-            modelBuilder.Entity("SICAU.App.Dominio.Programa", b =>
-                {
-                    b.HasBaseType("SICAU.App.Dominio.Facultad");
-
-                    b.Property<string>("programa")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasDiscriminator().HasValue("Programa");
                 });
 
             modelBuilder.Entity("SICAU.App.Dominio.Directivo", b =>
@@ -344,19 +370,6 @@ namespace SICAU.App.Persistencia.Migrations
                     b.HasDiscriminator().HasValue("Profesor");
                 });
 
-            modelBuilder.Entity("SICAU.App.Dominio.Salon", b =>
-                {
-                    b.HasBaseType("SICAU.App.Dominio.Sede");
-
-                    b.Property<int>("capacidad")
-                        .HasColumnType("int");
-
-                    b.Property<string>("numero")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasDiscriminator().HasValue("Salon");
-                });
-
             modelBuilder.Entity("SICAU.App.Dominio.EncuestaCovid", b =>
                 {
                     b.HasOne("SICAU.App.Dominio.Persona", "persona")
@@ -396,6 +409,15 @@ namespace SICAU.App.Persistencia.Migrations
                     b.Navigation("grupo");
                 });
 
+            modelBuilder.Entity("SICAU.App.Dominio.Facultad", b =>
+                {
+                    b.HasOne("SICAU.App.Dominio.Universidad", "universidad")
+                        .WithMany()
+                        .HasForeignKey("universidadid");
+
+                    b.Navigation("universidad");
+                });
+
             modelBuilder.Entity("SICAU.App.Dominio.Grupo", b =>
                 {
                     b.HasOne("SICAU.App.Dominio.Horario", "horario")
@@ -433,6 +455,24 @@ namespace SICAU.App.Persistencia.Migrations
                         .HasForeignKey("programaid");
 
                     b.Navigation("programa");
+                });
+
+            modelBuilder.Entity("SICAU.App.Dominio.Programa", b =>
+                {
+                    b.HasOne("SICAU.App.Dominio.Facultad", "facultad")
+                        .WithMany()
+                        .HasForeignKey("facultadid");
+
+                    b.Navigation("facultad");
+                });
+
+            modelBuilder.Entity("SICAU.App.Dominio.Salon", b =>
+                {
+                    b.HasOne("SICAU.App.Dominio.Sede", "sede")
+                        .WithMany()
+                        .HasForeignKey("sedeid");
+
+                    b.Navigation("sede");
                 });
 
             modelBuilder.Entity("SICAU.App.Dominio.Sede", b =>

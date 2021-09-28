@@ -6,6 +6,7 @@ namespace SICAU.App.Persistencia
     public interface IRepositorioFacultad
     {
         IEnumerable<Facultad> GetAllFacultad();
+        IEnumerable<Facultad> GetByNames(string criterio);
         Facultad AddFacultad(Facultad facultad);
         Facultad UpdateFacultad(Facultad facultad);
         void DeleteFacultad(int idFacultad);

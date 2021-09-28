@@ -7,10 +7,14 @@ namespace SICAU.App.Persistencia
     public class RepositorioPrograma : IRepositorioPrograma
     {
         private readonly AppContext _appContext;
-
+        IEnumerable<Programa> programas;
         public RepositorioPrograma(AppContext appContext)
         {
             _appContext = appContext;
+        }
+        public RepositorioPrograma(IEnumerable<Programa> programas)
+        {
+            this.programas = programas;
         }
 
         Programa IRepositorioPrograma.AddPrograma(Programa programa)
@@ -38,7 +42,17 @@ namespace SICAU.App.Persistencia
         {
             return _appContext.programas.FirstOrDefault(p => p.id == idPrograma);
         }
+        IEnumerable<Programa> IRepositorioPrograma.GetByNames(string criterio)
+        {
+            IEnumerable<Programa> programas = _appContext.programas;
 
+            if (programas!= null
+            && !string.IsNullOrEmpty(criterio))
+            {
+                programas = _appContext.programas.Where(p => p.programa.Contains(criterio));
+            }
+            return programas;
+        }
         Programa IRepositorioPrograma.UpdatePrograma(Programa programa)
         {
             var programaEncontrado = _appContext.programas.FirstOrDefault(p => p.id == programa.id);

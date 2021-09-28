@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace SICAU.App.Dominio
 {
     public class Sede

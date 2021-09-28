@@ -7,10 +7,15 @@ namespace SICAU.App.Persistencia
     public class RepositorioSalon : IRepositorioSalon
     {
         private readonly AppContext _appContext;
+        IEnumerable<Salon> salones;
 
         public RepositorioSalon(AppContext appContext)
         {
             _appContext = appContext;
+        }
+        public RepositorioSalon(IEnumerable<Salon> salones)
+        {
+            this.salones = salones;
         }
 
         Salon IRepositorioSalon.AddSalon(Salon salon)
@@ -34,6 +39,18 @@ namespace SICAU.App.Persistencia
             return _appContext.salones;
         }
 
+        IEnumerable<Salon> IRepositorioSalon.GetByNames(string criterio)
+        {
+            IEnumerable<Salon> salones = _appContext.salones;
+
+            if (salones != null
+            && !string.IsNullOrEmpty(criterio))
+            {
+                salones = _appContext.salones.Where(p => p.numero.Contains(criterio));
+            }
+            return salones;
+        }
+
         Salon IRepositorioSalon.GetSalon(int idSalon)
         {
             return _appContext.salones.FirstOrDefault(p => p.id == idSalon);
@@ -46,8 +63,6 @@ namespace SICAU.App.Persistencia
             {
                 salonEncontrado.id = salon.id;
                 salonEncontrado.sede = salon.sede;
-                salonEncontrado.ubicacion = salon.ubicacion;
-                salonEncontrado.universidad = salon.universidad;
                 salonEncontrado.numero = salon.numero;
                 salonEncontrado.capacidad = salon.capacidad;
                 _appContext.SaveChanges();
