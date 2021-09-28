@@ -7,10 +7,15 @@ namespace SICAU.App.Persistencia
     public class RepositorioHorario : IRepositorioHorario
     {
         private readonly AppContext _appContext;
+        IEnumerable<Horario> horarios;
 
         public RepositorioHorario(AppContext appContext)
         {
             _appContext = appContext;
+        }
+        public RepositorioHorario(IEnumerable<Horario> horarios)
+        {
+            this.horarios = horarios;
         }
 
         Horario IRepositorioHorario.AddHorario(Horario horario)

@@ -7,10 +7,15 @@ namespace SICAU.App.Persistencia
     public class RepositorioMateria : IRepositorioMateria
     {
         private readonly AppContext _appContext;
+        IEnumerable<Materia> materias;
 
         public RepositorioMateria(AppContext appContext)
         {
             _appContext = appContext;
+        }
+        public RepositorioMateria(IEnumerable<Materia> materias)
+        {
+            this.materias = materias;
         }
 
         Materia IRepositorioMateria.AddMateria(Materia materia)
@@ -32,6 +37,17 @@ namespace SICAU.App.Persistencia
         IEnumerable<Materia> IRepositorioMateria.GetAllMateria()
         {
             return _appContext.materias;
+        }
+        IEnumerable<Materia> IRepositorioMateria.GetByNames(string criterio)
+        {
+            IEnumerable<Materia> materias= _appContext.materias;
+
+            if (materias!= null
+            && !string.IsNullOrEmpty(criterio))
+            {
+                materias = _appContext.materias.Where(p => p.materia.Contains(criterio));
+            }
+            return materias;
         }
 
         Materia IRepositorioMateria.GetMateria(int idMateria)

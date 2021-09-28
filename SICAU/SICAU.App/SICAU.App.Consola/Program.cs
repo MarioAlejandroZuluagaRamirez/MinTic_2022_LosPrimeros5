@@ -17,26 +17,29 @@ namespace SICAU.App.Consola
         private static IRepositorioEstudiante _repoEstudiante = new RepositorioEstudiante(new Persistencia.AppContext());
         private static IRepositorioPersonalAseo _repoPersonalAseo = new RepositorioPersonalAseo(new Persistencia.AppContext());
         private static IRepositorioSalon _repoSalon = new RepositorioSalon(new Persistencia.AppContext());
+        private static IRepositorioMateria _repoMateria = new RepositorioMateria(new Persistencia.AppContext());
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            AddUniversidad();
-            AddSede();
-            UpdateSede();
-            AddSalon();
-            UpdateSalon();
-            AddFacultad();
-            UpdateFacultad();
-            AddPrograma();
-            UpdatePrograma();
-            AddEstudiante();
-            UpdateEstudiante();
-            AddDirectivo();
-            UpdateDirectivo();
-            AddProfesor();
-            UpdateProfesor();
-            AddPersonalAseo();
-            UpdatePersonalAseo();
+            //AddUniversidad();
+            //AddSede();
+            //UpdateSede();
+            //AddSalon();
+            //UpdateSalon();
+            //AddFacultad();
+            //UpdateFacultad();
+            //AddPrograma();
+            //UpdatePrograma();
+            //AddEstudiante();
+            //UpdateEstudiante();
+            //AddDirectivo();
+            //UpdateDirectivo();
+            //AddProfesor();
+            //UpdateProfesor();
+            //AddPersonalAseo();
+            //UpdatePersonalAseo();
+            AddMateria();
+            UpdateMateria();
         }
         public static void AddUniversidad()
         {
@@ -439,6 +442,40 @@ namespace SICAU.App.Consola
             PersonalAseo personalAseo1 = _repoPersonalAseo.GetPersonalAseo(8);
             personalAseo1.sede = sede1;
             _repoPersonalAseo.UpdatePersonalAseo(personalAseo1);
+        }
+        public static void AddMateria()
+        {
+            Materia materia;
+            materia = new Materia()
+            {
+                materia = "Desarrollo de Software"
+            };
+            _repoMateria.AddMateria(materia);
+            materia = new Materia()
+            {
+                materia = "Ingles I"
+            };
+            _repoMateria.AddMateria(materia);
+            materia = new Materia()
+            {
+                materia = "Coach I"
+            };
+            _repoMateria.AddMateria(materia);
+
+        }
+        public static void UpdateMateria()
+        {
+            Materia materia;
+            Programa programa = _repoPrograma.GetPrograma(3);
+            materia = _repoMateria.GetMateria(1);
+            materia.programa = programa;
+            _repoMateria.UpdateMateria(materia);
+            materia = _repoMateria.GetMateria(2);
+            materia.programa = programa;
+            _repoMateria.UpdateMateria(materia);
+            materia = _repoMateria.GetMateria(3);
+            materia.programa = programa;
+            _repoMateria.UpdateMateria(materia);
         }
     }
 }
