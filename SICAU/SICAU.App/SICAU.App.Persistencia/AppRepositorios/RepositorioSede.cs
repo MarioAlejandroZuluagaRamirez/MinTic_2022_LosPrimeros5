@@ -41,12 +41,17 @@ namespace SICAU.App.Persistencia
 
         IEnumerable<Sede> IRepositorioSede.GetByNames(string criterio)
         {
-            IEnumerable<Sede> sedes = _appContext.sedes;
+            var sedes = _appContext.sedes.ToList();
 
-            if (sedes != null 
+            if (sedes != null
             && !string.IsNullOrEmpty(criterio))
             {
-            sedes = _appContext.sedes.Where(p => p.sede.Contains(criterio) || p.ubicacion.Contains(criterio) );
+                sedes = _appContext.sedes.Where(p => p.sede.Contains(criterio) || p.ubicacion.Contains(criterio)).ToList();
+            }
+
+            foreach (Sede sede in sedes)
+            {
+                _appContext.Entry(sede).Reference(m => m.universidad).Load();
             }
             return sedes;
         }

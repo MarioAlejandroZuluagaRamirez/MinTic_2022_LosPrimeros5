@@ -21,23 +21,23 @@ namespace SICAU.App.Consola
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            //AddUniversidad();
-            //AddSede();
-            //UpdateSede();
-            //AddSalon();
-            //UpdateSalon();
-            //AddFacultad();
-            //UpdateFacultad();
-            //AddPrograma();
-            //UpdatePrograma();
-            //AddEstudiante();
-            //UpdateEstudiante();
-            //AddDirectivo();
-            //UpdateDirectivo();
-            //AddProfesor();
-            //UpdateProfesor();
-            //AddPersonalAseo();
-            //UpdatePersonalAseo();
+            AddUniversidad();
+            AddSede();
+            UpdateSede();
+            AddSalon();
+            UpdateSalon();
+            AddFacultad();
+            UpdateFacultad();
+            AddPrograma();
+            UpdatePrograma();
+            AddEstudiante();
+            UpdateEstudiante();
+            AddDirectivo();
+            UpdateDirectivo();
+            AddProfesor();
+            UpdateProfesor();
+            AddPersonalAseo();
+            UpdatePersonalAseo();
             AddMateria();
             UpdateMateria();
         }
@@ -211,6 +211,7 @@ namespace SICAU.App.Consola
         }
         public static void AddFacultad()
         {
+            Universidad universidad = _repoUniversidad.GetUniversidad(1);
             Facultad facultad0 = new Facultad()
             {
                 facultad = "Facultad de Artes y Humanidades"
@@ -246,21 +247,27 @@ namespace SICAU.App.Consola
         {
             Universidad universidad = _repoUniversidad.GetUniversidad(1);
             Facultad facultad;
+            
             facultad = _repoFacultad.GetFacultad(1);
             facultad.universidad = universidad;
             _repoFacultad.UpdateFacultad(facultad);
+
             facultad = _repoFacultad.GetFacultad(2);
             facultad.universidad = universidad;
             _repoFacultad.UpdateFacultad(facultad);
+
             facultad = _repoFacultad.GetFacultad(3);
             facultad.universidad = universidad;
             _repoFacultad.UpdateFacultad(facultad);
+
             facultad = _repoFacultad.GetFacultad(4);
             facultad.universidad = universidad;
             _repoFacultad.UpdateFacultad(facultad);
+
             facultad = _repoFacultad.GetFacultad(5);
             facultad.universidad = universidad;
             _repoFacultad.UpdateFacultad(facultad);
+
             facultad = _repoFacultad.GetFacultad(6);
             facultad.universidad = universidad;
             _repoFacultad.UpdateFacultad(facultad);

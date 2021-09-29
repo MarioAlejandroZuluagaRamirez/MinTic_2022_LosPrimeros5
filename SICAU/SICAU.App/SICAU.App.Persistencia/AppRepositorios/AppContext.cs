@@ -30,6 +30,15 @@ namespace SICAU.App.Persistencia
                 optionsBuilder
                 .UseSqlServer("Data Source = (localdb)\\MSSQLLocalDB; Initial Catalog = ProjectSICAUData");
             }
+
         }
+        //protected override void OnModelCreating(ModelBuilder modelBuilder)
+        //{
+        //    modelBuilder.Entity<Facultad>()
+        //    .HasOne(e => e.universidad)
+        //    .WithMany(d => d.Facultades)
+        //    .HasForeignKey(e => e.universidadId)
+        //    .IsRequired(false);
+        //}
     }
 }

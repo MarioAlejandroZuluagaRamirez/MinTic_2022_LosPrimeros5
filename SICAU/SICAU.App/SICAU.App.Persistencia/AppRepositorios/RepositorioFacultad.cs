@@ -44,12 +44,17 @@ namespace SICAU.App.Persistencia
         }
         IEnumerable<Facultad> IRepositorioFacultad.GetByNames(string criterio)
         {
-            IEnumerable<Facultad> facultades= _appContext.facultades;
+            var facultades = _appContext.facultades.ToList();
 
-            if (facultades!= null
+            if (facultades != null
             && !string.IsNullOrEmpty(criterio))
             {
-                facultades = _appContext.facultades.Where(p => p.facultad.Contains(criterio));
+                facultades = _appContext.facultades.Where(p => p.facultad.Contains(criterio)).ToList();
+            }
+
+            foreach (Facultad facultad in facultades)
+            {
+                _appContext.Entry(facultad).Reference(m => m.universidad).Load();
             }
             return facultades;
         }
@@ -67,4 +72,3 @@ namespace SICAU.App.Persistencia
 
     }
 }
-

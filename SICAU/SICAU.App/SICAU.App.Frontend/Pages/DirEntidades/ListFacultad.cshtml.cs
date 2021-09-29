@@ -16,7 +16,7 @@ namespace SICAU.App.Frontend.Pages
         public string criterio;
         public void OnGet(string criterio)
         {
-            facultades= _repositorioFacultad.GetByNames(criterio);
+            facultades = _repositorioFacultad.GetByNames(criterio);
         }
     }
 }

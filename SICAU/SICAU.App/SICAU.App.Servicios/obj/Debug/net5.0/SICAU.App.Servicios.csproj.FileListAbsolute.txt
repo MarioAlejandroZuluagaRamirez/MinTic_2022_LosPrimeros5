@@ -11,7 +11,6 @@ C:\Users\mazul\Desktop\Desarrollo de Software MinTic\C#\Proyecto_SICAU\SICAU\SIC
 C:\Users\mazul\Desktop\Desarrollo de Software MinTic\C#\Proyecto_SICAU\SICAU\SICAU.App\SICAU.App.Servicios\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\mazul\Desktop\Desarrollo de Software MinTic\C#\Proyecto_SICAU\SICAU\SICAU.App\SICAU.App.Servicios\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\mazul\Desktop\Desarrollo de Software MinTic\C#\Proyecto_SICAU\SICAU\SICAU.App\SICAU.App.Servicios\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-C:\Users\mazul\Desktop\Desarrollo de Software MinTic\C#\Proyecto_SICAU\SICAU\SICAU.App\SICAU.App.Servicios\obj\Debug\net5.0\SICAU.App.Servicios.csproj.AssemblyReference.cache
 C:\Users\mazul\Desktop\Desarrollo de Software MinTic\C#\Proyecto_SICAU\SICAU\SICAU.App\SICAU.App.Servicios\obj\Debug\net5.0\SICAU.App.Servicios.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\mazul\Desktop\Desarrollo de Software MinTic\C#\Proyecto_SICAU\SICAU\SICAU.App\SICAU.App.Servicios\obj\Debug\net5.0\SICAU.App.Servicios.AssemblyInfoInputs.cache
 C:\Users\mazul\Desktop\Desarrollo de Software MinTic\C#\Proyecto_SICAU\SICAU\SICAU.App\SICAU.App.Servicios\obj\Debug\net5.0\SICAU.App.Servicios.AssemblyInfo.cs

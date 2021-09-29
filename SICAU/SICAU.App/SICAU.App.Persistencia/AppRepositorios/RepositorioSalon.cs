@@ -41,13 +41,19 @@ namespace SICAU.App.Persistencia
 
         IEnumerable<Salon> IRepositorioSalon.GetByNames(string criterio)
         {
-            IEnumerable<Salon> salones = _appContext.salones;
+            var salones = _appContext.salones.ToList();
 
             if (salones != null
             && !string.IsNullOrEmpty(criterio))
             {
-                salones = _appContext.salones.Where(p => p.numero.Contains(criterio));
+                salones = _appContext.salones.Where(p => p.numero.Contains(criterio)).ToList();
             }
+
+            foreach (Salon salon in salones)
+            {
+                _appContext.Entry(salon).Reference(m => m.sede).Load();
+            }
+
             return salones;
         }
 

@@ -10,7 +10,7 @@ using SICAU.App.Persistencia;
 namespace SICAU.App.Persistencia.Migrations
 {
     [DbContext(typeof(AppContext))]
-    [Migration("20210928202500_Initial")]
+    [Migration("20210929015920_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
