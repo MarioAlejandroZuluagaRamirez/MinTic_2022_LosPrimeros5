@@ -47,19 +47,26 @@ namespace SICAU.App.Persistencia
 
         IEnumerable<Directivo> IRepositorioDirectivo.GetByNames(string criterio)
         {
-            IEnumerable<Directivo> directivos = _appContext.directivos;
+            var directivos = _appContext.directivos.ToList();
 
             if (directivos != null 
                 && !string.IsNullOrEmpty(criterio))
             {
-                directivos = _appContext.directivos.Where(p => p.nombre.Contains(criterio) || p.apellido.Contains(criterio));
+                directivos = _appContext.directivos.Where(p => p.nombre.Contains(criterio) || p.apellido.Contains(criterio)).ToList();
+            }
+            foreach(Directivo directivo in directivos)
+            {
+                _appContext.Entry(directivo).Reference(s => s.sede).Load();
             }
             return directivos;
         }
 
         Directivo IRepositorioDirectivo.GetDirectivo(int idDirectivo)
         {
-            return _appContext.directivos.FirstOrDefault(p => p.id == idDirectivo);
+
+            Directivo directivo = _appContext.directivos.FirstOrDefault(p => p.id == idDirectivo);
+            _appContext.Entry(directivo).Reference(s => s.sede).Load();
+            return directivo;
         }
 
         Directivo IRepositorioDirectivo.UpdateDirectivo(Directivo directivo)

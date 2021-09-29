@@ -40,16 +40,22 @@ namespace SICAU.App.Persistencia
 
         Programa IRepositorioPrograma.GetPrograma(int idPrograma)
         {
-            return _appContext.programas.FirstOrDefault(p => p.id == idPrograma);
+            Programa programa = _appContext.programas.FirstOrDefault(p => p.id == idPrograma);
+            _appContext.Entry(programa).Reference(f => f.facultad).Load();
+            return programa;
         }
         IEnumerable<Programa> IRepositorioPrograma.GetByNames(string criterio)
         {
-            IEnumerable<Programa> programas = _appContext.programas;
+            var programas = _appContext.programas.ToList();
 
             if (programas!= null
             && !string.IsNullOrEmpty(criterio))
             {
-                programas = _appContext.programas.Where(p => p.programa.Contains(criterio));
+                programas = _appContext.programas.Where(p => p.programa.Contains(criterio)).ToList();
+            }
+            foreach(Programa programa in programas)
+            {
+                _appContext.Entry(programa).Reference(f => f.facultad).Load();
             }
             return programas;
         }

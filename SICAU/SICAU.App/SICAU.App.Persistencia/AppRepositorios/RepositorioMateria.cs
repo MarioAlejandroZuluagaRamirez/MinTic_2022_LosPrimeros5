@@ -40,19 +40,25 @@ namespace SICAU.App.Persistencia
         }
         IEnumerable<Materia> IRepositorioMateria.GetByNames(string criterio)
         {
-            IEnumerable<Materia> materias= _appContext.materias;
+            var materias= _appContext.materias.ToList();
 
             if (materias!= null
             && !string.IsNullOrEmpty(criterio))
             {
-                materias = _appContext.materias.Where(p => p.materia.Contains(criterio));
+                materias = _appContext.materias.Where(p => p.materia.Contains(criterio)).ToList();
+            }
+            foreach(Materia materia in materias)
+            {
+                _appContext.Entry(materia).Reference(p => p.programa).Load();
             }
             return materias;
         }
 
         Materia IRepositorioMateria.GetMateria(int idMateria)
         {
-            return _appContext.materias.FirstOrDefault(p => p.id == idMateria);
+            Materia materia = _appContext.materias.FirstOrDefault(p => p.id == idMateria);
+            _appContext.Entry(materia).Reference(p => p.programa).Load();
+            return materia;
         }
 
         Materia IRepositorioMateria.UpdateMateria(Materia materia)

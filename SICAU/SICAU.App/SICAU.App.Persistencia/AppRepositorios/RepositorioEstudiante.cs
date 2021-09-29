@@ -59,7 +59,9 @@ namespace SICAU.App.Persistencia
 
         Estudiante IRepositorioEstudiante.GetEstudiante(int idEstudiante)
         {
-            return _appContext.estudiantes.FirstOrDefault(p => p.id == idEstudiante);
+            Estudiante estudiante =  _appContext.estudiantes.FirstOrDefault(p => p.id == idEstudiante);
+            _appContext.Entry(estudiante).Reference(p => p.programa).Load();
+            return estudiante;
         }
 
         Estudiante IRepositorioEstudiante.UpdateEstudiante(Estudiante estudiante)

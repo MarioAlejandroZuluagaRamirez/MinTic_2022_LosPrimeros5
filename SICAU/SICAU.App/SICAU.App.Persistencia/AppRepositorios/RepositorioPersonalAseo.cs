@@ -12,19 +12,22 @@ namespace SICAU.App.Persistencia
         {
             _appContext = appContext;
         }
-
         public RepositorioPersonalAseo(IEnumerable<PersonalAseo> personalAseos)
         {
             PersonalAseos = personalAseos;
         }
         public IEnumerable<PersonalAseo> GetByNames(string criterio)
         {
-            IEnumerable<PersonalAseo> personalAseos = _appContext.personalAseos;
+            var personalAseos = _appContext.personalAseos.ToList();
 
             if (personalAseos != null
             && !string.IsNullOrEmpty(criterio))
             {
-                personalAseos = _appContext.personalAseos.Where(p => p.nombre.Contains(criterio) || p.apellido.Contains(criterio));
+                personalAseos = _appContext.personalAseos.Where(p => p.nombre.Contains(criterio) || p.apellido.Contains(criterio)).ToList();
+            }
+            foreach (PersonalAseo personalAseo in personalAseos)
+            {
+                _appContext.Entry(personalAseo).Reference(s => s.sede).Load();
             }
             return personalAseos;
         }
@@ -52,7 +55,9 @@ namespace SICAU.App.Persistencia
 
         PersonalAseo IRepositorioPersonalAseo.GetPersonalAseo(int idPersonalAseo)
         {
-            return _appContext.personalAseos.FirstOrDefault(p => p.id == idPersonalAseo);
+            PersonalAseo personalAseo = _appContext.personalAseos.FirstOrDefault(p => p.id == idPersonalAseo);
+            _appContext.Entry(personalAseo).Reference(s => s.sede).Load();
+            return personalAseo;
         }
 
         PersonalAseo IRepositorioPersonalAseo.UpdatePersonalAseo(PersonalAseo personalAseo)

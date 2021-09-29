@@ -19,4 +19,4 @@ namespace SICAU.App.Frontend.Pages
             estudiantes = _repositorioEstudiante.GetByNames(criterio);
         }
     }
-}
+}   
