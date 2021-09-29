@@ -165,3 +165,4 @@ C:\Users\mazul\Desktop\Desarrollo de Software MinTic\C#\Proyecto_SICAU\SICAU\SIC
 C:\Users\mazul\Desktop\Desarrollo de Software MinTic\C#\Proyecto_SICAU\SICAU\SICAU.App\SICAU.App.Frontend\obj\Debug\net5.0\Razor\Pages\DirEntidades\ListHorario.cshtml.g.cs
 C:\Users\mazul\Desktop\Desarrollo de Software MinTic\C#\Proyecto_SICAU\SICAU\SICAU.App\SICAU.App.Frontend\obj\Debug\net5.0\Razor\Pages\DirEntidades\ListMateria.cshtml.g.cs
 C:\Users\mazul\Desktop\Desarrollo de Software MinTic\C#\Proyecto_SICAU\SICAU\SICAU.App\SICAU.App.Frontend\obj\Debug\net5.0\Razor\Pages\DirEntidades\ListSintoma.cshtml.g.cs
+C:\Users\mazul\Desktop\Desarrollo de Software MinTic\C#\Proyecto_SICAU\SICAU\SICAU.App\SICAU.App.Frontend\obj\Debug\net5.0\Razor\Pages\DirEntidades\ListEncuesta.cshtml.g.cs

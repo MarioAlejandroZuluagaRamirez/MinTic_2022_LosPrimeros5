@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using SICAU.App.Dominio;
 using System.Linq;
+using System;
 
 namespace SICAU.App.Persistencia
 {
@@ -8,11 +9,17 @@ namespace SICAU.App.Persistencia
     {
         private readonly AppContext _appContext;
 
+        public IEnumerable<EncuestaCovid> encuestaCovids;
+
         public RepositorioEncuestaCovid(AppContext appContext)
         {
             _appContext = appContext;
         }
 
+        public RepositorioEncuestaCovid(IEnumerable<EncuestaCovid> encuestaCovids)
+        {
+            this.encuestaCovids = encuestaCovids;
+        }
         EncuestaCovid IRepositorioEncuestaCovid.AddEncuestaCovid(EncuestaCovid encuestaCovid)
         {
             var encuestaCovidAdicionado = _appContext.encuestaCovids.Add(encuestaCovid);
@@ -36,7 +43,25 @@ namespace SICAU.App.Persistencia
 
         EncuestaCovid IRepositorioEncuestaCovid.GetEncuestaCovid(int idEncuestaCovid)
         {
-            return _appContext.encuestaCovids.FirstOrDefault(p => p.id == idEncuestaCovid);
+            EncuestaCovid encuestaCovid = _appContext.encuestaCovids.FirstOrDefault(p => p.id == idEncuestaCovid);
+            _appContext.Entry(encuestaCovid).Reference(p => p.persona).Load();
+            return encuestaCovid;
+        }
+
+        IEnumerable<EncuestaCovid> IRepositorioEncuestaCovid.GetByDate(DateTime criterio)
+        {
+            var encuestaCovids = _appContext.encuestaCovids.ToList();
+
+            if (encuestaCovids != null
+            && criterio > DateTime.Parse("2020-01-01"))
+            {
+                encuestaCovids = _appContext.encuestaCovids.Where(p => p.fechaEncuesta.Equals(criterio) || p.fechaDiagnostico.Equals(criterio)).ToList();
+            }
+            foreach(EncuestaCovid encuestaCovid in encuestaCovids)
+            {
+                _appContext.Entry(encuestaCovid).Reference(p => p.persona).Load();
+            }
+            return encuestaCovids;
         }
 
         EncuestaCovid IRepositorioEncuestaCovid.UpdateEncuestaCovid(EncuestaCovid encuestaCovid)
@@ -49,7 +74,7 @@ namespace SICAU.App.Persistencia
                 encuestaCovidEncontrado.estadoCovid = encuestaCovid.estadoCovid;
                 encuestaCovidEncontrado.fechaDiagnostico = encuestaCovid.fechaDiagnostico;
                 encuestaCovidEncontrado.persona = encuestaCovid.persona;
-                 _appContext.SaveChanges();
+                _appContext.SaveChanges();
             }
             return encuestaCovidEncontrado;
         }

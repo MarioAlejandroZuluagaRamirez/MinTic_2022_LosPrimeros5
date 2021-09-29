@@ -4,9 +4,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MinTic 2022 - Desarrollo de Software</title>
-    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/menu.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 
 </head>
 <body>
@@ -22,23 +23,37 @@
                     <ul class="navbar-nav flex-grow-1">
                         <li> 
                             <b> 
-                                <a class="nav-link text-dark" href="">Entidades</a>
+                                <a class="nav-link text-dark" href="">Personas</a>
                             </b>
                             <ul>
                                 <li> <a class="nav-link text-dark" asp-page="/DirEntidades/ListProfesor">Profesor</a> </li>
                                 <li> <a class="nav-link text-dark" asp-page="/DirEntidades/ListEstudiante">Estudiante</a> </li>
                                 <li> <a class="nav-link text-dark" asp-page="/DirEntidades/ListDirectivo">Directivos</a> </li>
                                 <li> <a class="nav-link text-dark" asp-page="/DirEntidades/ListPersonalAseo">Personal Aseo</a> </li>
-                                @* <li> <hr /> </li> *@
+                            </ul>
+                        </li>
+                        <li> 
+                            <b> 
+                                <a class="nav-link text-dark" href="">Universidad</a>
+                            </b>
+                            <ul>
                                 <li> <a class="nav-link text-dark" asp-page="/DirEntidades/ListUniversidad">Universidades</a> </li>
-                                @* <li> <hr /> </li> *@
+                                <li> <hr /> </li>
+                                <li> <a class="nav-link text-dark" asp-page="/DirEntidades/ListSede">Sedes</a> </li>
+                                <li> <hr /> </li>
                                 <li> <a class="nav-link text-dark" asp-page="/DirEntidades/ListFacultad">Facultades</a> </li>
+                                <li> <a class="nav-link text-dark" asp-page="/DirEntidades/ListSalon">Salones</a> </li>
+                                <li> <hr /> </li>
                                 <li> <a class="nav-link text-dark" asp-page="/DirEntidades/ListPrograma">Programas</a> </li>
                                 <li> <a class="nav-link text-dark" asp-page="/DirEntidades/ListMateria">Materias</a> </li>
-                                @* <li> <hr /> </li> *@
-                                <li> <a class="nav-link text-dark" asp-page="/DirEntidades/ListSede">Sedes</a> </li>
-                                <li> <a class="nav-link text-dark" asp-page="/DirEntidades/ListSalon">Salones</a> </li>
-                                @* <li> <hr /> </li> *@
+                            </ul>
+                        </li>
+                        <li> 
+                            <b> 
+                                <a class="nav-link text-dark" href="">Covid</a>
+                            </b>
+                            <ul>
+                                <li> <a class="nav-link text-dark" asp-page="/DirEntidades/ListEncuesta">Encuestas</a> </li>
                                 <li> <a class="nav-link text-dark" asp-page="/DirEntidades/ListSintoma">Sintomas</a> </li>
                             </ul>
                         </li>

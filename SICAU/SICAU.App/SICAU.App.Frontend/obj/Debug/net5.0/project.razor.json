@@ -15714,6 +15714,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Proyecto_SICAU\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\DirEntidades\\ListEncuesta.cshtml",
+      "TargetPath": "Pages\\DirEntidades\\ListEncuesta.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Proyecto_SICAU\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\DirEntidades\\ListEstudiante.cshtml",
       "TargetPath": "Pages\\DirEntidades\\ListEstudiante.cshtml",
       "FileKind": "mvc"

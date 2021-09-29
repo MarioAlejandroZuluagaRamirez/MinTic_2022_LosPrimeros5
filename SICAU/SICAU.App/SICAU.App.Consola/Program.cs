@@ -19,29 +19,32 @@ namespace SICAU.App.Consola
         private static IRepositorioSalon _repoSalon = new RepositorioSalon(new Persistencia.AppContext());
         private static IRepositorioMateria _repoMateria = new RepositorioMateria(new Persistencia.AppContext());
         private static IRepositorioSintoma _repoSintoma = new RepositorioSintoma(new Persistencia.AppContext());
+        private static IRepositorioEncuestaCovid _repoEncuesta = new RepositorioEncuestaCovid(new Persistencia.AppContext());
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            AddUniversidad();
-            AddSede();
-            UpdateSede();
-            AddSalon();
-            UpdateSalon();
-            AddFacultad();
-            UpdateFacultad();
-            AddPrograma();
-            UpdatePrograma();
-            AddEstudiante();
-            UpdateEstudiante();
-            AddDirectivo();
-            UpdateDirectivo();
-            AddProfesor();
-            UpdateProfesor();
-            AddPersonalAseo();
-            UpdatePersonalAseo();
-            AddMateria();
-            UpdateMateria();
-            AddSintoma();
+            // AddUniversidad();
+            // AddSede();
+            // UpdateSede();
+            // AddSalon();
+            // UpdateSalon();
+            // AddFacultad();
+            // UpdateFacultad();
+            // AddPrograma();
+            // UpdatePrograma();
+            // AddEstudiante();
+            // UpdateEstudiante();
+            // AddDirectivo();
+            // UpdateDirectivo();
+            // AddProfesor();
+            // UpdateProfesor();
+            // AddPersonalAseo();
+            // UpdatePersonalAseo();
+            // AddMateria();
+            // UpdateMateria();
+            // AddSintoma();
+            // AddEncuesta();
+            UpdateEncuesta();
         }
         public static void AddUniversidad()
         {
@@ -541,6 +544,51 @@ namespace SICAU.App.Consola
                 sintoma = "Perdida del gusto o del olfato"
             };
             _repoSintoma.AddSintoma(sintoma);
+        }
+
+        public static void AddEncuesta()
+        {
+            EncuestaCovid encuestaCovid;
+            encuestaCovid = new EncuestaCovid()
+            {
+                fechaEncuesta = DateTime.Parse("2021-09-28"),
+                estadoCovid = EstadoCovid.Negativo,
+                fechaDiagnostico = DateTime.Parse("2021-09-28"),
+            };
+            _repoEncuesta.AddEncuestaCovid(encuestaCovid);
+            encuestaCovid = new EncuestaCovid()
+            {
+                fechaEncuesta = DateTime.Parse("2021-09-28"),
+                estadoCovid = EstadoCovid.Negativo,
+                fechaDiagnostico = DateTime.Parse("2021-09-28"),
+            };
+            _repoEncuesta.AddEncuestaCovid(encuestaCovid);
+            encuestaCovid = new EncuestaCovid()
+            {
+                fechaEncuesta = DateTime.Parse("2021-09-28"),
+                estadoCovid = EstadoCovid.Positivo,
+                fechaDiagnostico = DateTime.Parse("2021-09-27"),
+            };
+            _repoEncuesta.AddEncuestaCovid(encuestaCovid);
+        }
+        public static void UpdateEncuesta()
+        {
+            Persona persona;
+            EncuestaCovid encuestaCovid;
+            persona = _repoEstudiante.GetEstudiante(4);
+            encuestaCovid = _repoEncuesta.GetEncuestaCovid(3);
+            encuestaCovid.persona = persona;
+            _repoEncuesta.UpdateEncuestaCovid(encuestaCovid);
+
+            persona = _repoEstudiante.GetEstudiante(3);
+            encuestaCovid = _repoEncuesta.GetEncuestaCovid(2);
+            encuestaCovid.persona = persona;
+            _repoEncuesta.UpdateEncuestaCovid(encuestaCovid);
+
+            persona = _repoEstudiante.GetEstudiante(2);
+            encuestaCovid = _repoEncuesta.GetEncuestaCovid(1);
+            encuestaCovid.persona = persona;
+            _repoEncuesta.UpdateEncuestaCovid(encuestaCovid);
         }
     }
 }

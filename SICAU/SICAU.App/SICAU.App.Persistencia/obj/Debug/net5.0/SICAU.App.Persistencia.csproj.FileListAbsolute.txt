@@ -6,7 +6,6 @@ C:\Users\mazul\Desktop\Desarrollo de Software MinTic\C#\Proyecto_SICAU\SICAU\SIC
 C:\Users\mazul\Desktop\Desarrollo de Software MinTic\C#\Proyecto_SICAU\SICAU\SICAU.App\SICAU.App.Persistencia\bin\Debug\net5.0\SICAU.App.Persistencia.pdb
 C:\Users\mazul\Desktop\Desarrollo de Software MinTic\C#\Proyecto_SICAU\SICAU\SICAU.App\SICAU.App.Persistencia\bin\Debug\net5.0\SICAU.App.Dominio.dll
 C:\Users\mazul\Desktop\Desarrollo de Software MinTic\C#\Proyecto_SICAU\SICAU\SICAU.App\SICAU.App.Persistencia\bin\Debug\net5.0\SICAU.App.Dominio.pdb
-C:\Users\mazul\Desktop\Desarrollo de Software MinTic\C#\Proyecto_SICAU\SICAU\SICAU.App\SICAU.App.Persistencia\obj\Debug\net5.0\SICAU.App.Persistencia.csproj.AssemblyReference.cache
 C:\Users\mazul\Desktop\Desarrollo de Software MinTic\C#\Proyecto_SICAU\SICAU\SICAU.App\SICAU.App.Persistencia\obj\Debug\net5.0\SICAU.App.Persistencia.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\mazul\Desktop\Desarrollo de Software MinTic\C#\Proyecto_SICAU\SICAU\SICAU.App\SICAU.App.Persistencia\obj\Debug\net5.0\SICAU.App.Persistencia.AssemblyInfoInputs.cache
 C:\Users\mazul\Desktop\Desarrollo de Software MinTic\C#\Proyecto_SICAU\SICAU\SICAU.App\SICAU.App.Persistencia\obj\Debug\net5.0\SICAU.App.Persistencia.AssemblyInfo.cs
@@ -16,3 +15,4 @@ C:\Users\mazul\Desktop\Desarrollo de Software MinTic\C#\Proyecto_SICAU\SICAU\SIC
 C:\Users\mazul\Desktop\Desarrollo de Software MinTic\C#\Proyecto_SICAU\SICAU\SICAU.App\SICAU.App.Persistencia\obj\Debug\net5.0\ref\SICAU.App.Persistencia.dll
 C:\Users\mazul\Desktop\Desarrollo de Software MinTic\C#\Proyecto_SICAU\SICAU\SICAU.App\SICAU.App.Persistencia\obj\Debug\net5.0\SICAU.App.Persistencia.pdb
 C:\Users\mazul\Desktop\Desarrollo de Software MinTic\C#\Proyecto_SICAU\SICAU\SICAU.App\SICAU.App.Persistencia\obj\Debug\net5.0\SICAU.App.Persistencia.genruntimeconfig.cache
+C:\Users\mazul\Desktop\Desarrollo de Software MinTic\C#\Proyecto_SICAU\SICAU\SICAU.App\SICAU.App.Persistencia\obj\Debug\net5.0\SICAU.App.Persistencia.csproj.AssemblyReference.cache
