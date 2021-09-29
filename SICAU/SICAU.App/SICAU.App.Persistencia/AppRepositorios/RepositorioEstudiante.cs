@@ -9,7 +9,6 @@ namespace SICAU.App.Persistencia
         private readonly AppContext _appContext;
         IEnumerable<Estudiante> estudiantes;
 
-        
         public RepositorioEstudiante(AppContext appContext)
         {
             _appContext = appContext;
@@ -19,20 +18,20 @@ namespace SICAU.App.Persistencia
         {
             this.estudiantes = estudiantes;
         }
-        // public RepositorioEstudiante(AppContext appContext, IEnumerable<Estudiante> estudiantes)
-        // {
-        //     _appContext = appContext;
-        //     this.estudiantes = estudiantes;
-        // }
 
         public IEnumerable<Estudiante> GetByNames(string criterio)
         {
-            IEnumerable<Estudiante> estudiantes = _appContext.estudiantes;
+            var estudiantes = _appContext.estudiantes.ToList();
 
             if (estudiantes != null
                 && !string.IsNullOrEmpty(criterio))
             {
-                estudiantes = _appContext.estudiantes.Where(p => p.nombre.Contains(criterio) || p.apellido.Contains(criterio));
+                estudiantes = _appContext.estudiantes.Where(p  => p.nombre.Contains(criterio) || p.apellido.Contains(criterio)).ToList();
+            }
+
+            foreach (Estudiante estudiante in estudiantes)
+            {
+                _appContext.Entry(estudiante).Reference(p => p.programa).Load();
             }
             return estudiantes;
         }

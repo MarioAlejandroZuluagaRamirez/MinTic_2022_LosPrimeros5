@@ -21,25 +21,25 @@ namespace SICAU.App.Consola
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            AddUniversidad();
-            AddSede();
-            UpdateSede();
-            AddSalon();
-            UpdateSalon();
-            AddFacultad();
-            UpdateFacultad();
-            AddPrograma();
-            UpdatePrograma();
-            AddEstudiante();
-            UpdateEstudiante();
-            AddDirectivo();
-            UpdateDirectivo();
-            AddProfesor();
-            UpdateProfesor();
-            AddPersonalAseo();
-            UpdatePersonalAseo();
-            AddMateria();
-            UpdateMateria();
+            // AddUniversidad();
+            // AddSede();
+            // UpdateSede();
+            // AddSalon();
+            // UpdateSalon();
+            // AddFacultad();
+            // UpdateFacultad();
+            // AddPrograma();
+            // UpdatePrograma();
+            // AddEstudiante();
+            // UpdateEstudiante();
+            // AddDirectivo();
+            // UpdateDirectivo();
+            // AddProfesor();
+            // UpdateProfesor();
+            // AddPersonalAseo();
+            // UpdatePersonalAseo();
+            // AddMateria();
+            // UpdateMateria();
         }
         public static void AddUniversidad()
         {

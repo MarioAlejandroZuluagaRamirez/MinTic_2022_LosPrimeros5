@@ -12,7 +12,6 @@ namespace SICAU.App.Frontend.Pages
     public class ListSedeModel : PageModel
     {
         public IRepositorioSede _repositorioSede = new RepositorioSede(new Persistencia.AppContext());
-        
         public IEnumerable<Sede> sedes {get;set;}
         public string criterio;
         public void OnGet(string criterio)

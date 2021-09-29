@@ -26,3 +26,4 @@ C:\Users\mazul\Desktop\Desarrollo de Software MinTic\C#\Proyecto_SICAU\SICAU\SIC
 C:\Users\mazul\Desktop\Desarrollo de Software MinTic\C#\Proyecto_SICAU\SICAU\SICAU.App\SICAU.App.Servicios\obj\Debug\net5.0\ref\SICAU.App.Servicios.dll
 C:\Users\mazul\Desktop\Desarrollo de Software MinTic\C#\Proyecto_SICAU\SICAU\SICAU.App\SICAU.App.Servicios\obj\Debug\net5.0\SICAU.App.Servicios.pdb
 C:\Users\mazul\Desktop\Desarrollo de Software MinTic\C#\Proyecto_SICAU\SICAU\SICAU.App\SICAU.App.Servicios\obj\Debug\net5.0\SICAU.App.Servicios.genruntimeconfig.cache
+C:\Users\mazul\Desktop\Desarrollo de Software MinTic\C#\Proyecto_SICAU\SICAU\SICAU.App\SICAU.App.Servicios\obj\Debug\net5.0\SICAU.App.Servicios.csproj.AssemblyReference.cache
