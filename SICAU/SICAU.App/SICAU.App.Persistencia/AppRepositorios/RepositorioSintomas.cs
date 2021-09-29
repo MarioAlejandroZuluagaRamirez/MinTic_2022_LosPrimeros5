@@ -7,10 +7,14 @@ namespace SICAU.App.Persistencia
     public class RepositorioSintoma : IRepositorioSintoma
     {
         private readonly AppContext _appContext;
-
+        IEnumerable<Sintoma> sintomas;
         public RepositorioSintoma(AppContext appContext)
         {
             _appContext = appContext;
+        }
+        public RepositorioSintoma(IEnumerable<Sintoma> sintomas)
+        {
+            this.sintomas = sintomas;
         }
 
         Sintoma IRepositorioSintoma.AddSintoma(Sintoma sintoma)
@@ -37,6 +41,17 @@ namespace SICAU.App.Persistencia
         Sintoma IRepositorioSintoma.GetSintoma(int idSintoma)
         {
             return _appContext.sintomas.FirstOrDefault(p => p.id == idSintoma);
+        }
+        IEnumerable<Sintoma> IRepositorioSintoma.GetByNames(string criterio)
+        {
+            var sintomas = _appContext.sintomas.ToList();
+
+            if (sintomas != null 
+            && !string.IsNullOrEmpty(criterio))
+            {
+                sintomas = _appContext.sintomas.Where(p => p.sintoma.Contains(criterio)).ToList();
+            }
+            return sintomas;
         }
 
         Sintoma IRepositorioSintoma.UpdateSintoma(Sintoma sintoma)

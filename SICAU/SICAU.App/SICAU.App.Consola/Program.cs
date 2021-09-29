@@ -18,6 +18,7 @@ namespace SICAU.App.Consola
         private static IRepositorioPersonalAseo _repoPersonalAseo = new RepositorioPersonalAseo(new Persistencia.AppContext());
         private static IRepositorioSalon _repoSalon = new RepositorioSalon(new Persistencia.AppContext());
         private static IRepositorioMateria _repoMateria = new RepositorioMateria(new Persistencia.AppContext());
+        private static IRepositorioSintoma _repoSintoma = new RepositorioSintoma(new Persistencia.AppContext());
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
@@ -40,6 +41,7 @@ namespace SICAU.App.Consola
             // UpdatePersonalAseo();
             // AddMateria();
             // UpdateMateria();
+            // AddSintoma();
         }
         public static void AddUniversidad()
         {
@@ -483,6 +485,30 @@ namespace SICAU.App.Consola
             materia = _repoMateria.GetMateria(3);
             materia.programa = programa;
             _repoMateria.UpdateMateria(materia);
+        }
+        public static void AddSintoma()
+        {
+            Sintoma sintoma;
+            sintoma = new Sintoma()
+            {
+                sintoma = "Fiebre"
+            };
+            _repoSintoma.AddSintoma(sintoma);
+            sintoma = new Sintoma()
+            {
+                sintoma = "Tos"
+            };
+            _repoSintoma.AddSintoma(sintoma);
+            sintoma = new Sintoma()
+            {
+                sintoma = "Cansancio"
+            };
+            _repoSintoma.AddSintoma(sintoma);
+            sintoma = new Sintoma()
+            {
+                sintoma = "Perdida del gusto o del olfato"
+            };
+            _repoSintoma.AddSintoma(sintoma);
         }
     }
 }

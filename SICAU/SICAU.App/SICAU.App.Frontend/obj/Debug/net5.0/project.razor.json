@@ -15659,6 +15659,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Proyecto_SICAU\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\DirEntidades\\ListSintoma.cshtml",
+      "TargetPath": "Pages\\DirEntidades\\ListSintoma.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Proyecto_SICAU\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\DirEntidades\\ListUniversidad.cshtml",
       "TargetPath": "Pages\\DirEntidades\\ListUniversidad.cshtml",
       "FileKind": "mvc"
