@@ -99,12 +99,12 @@ namespace SICAU.App.Persistencia.Migrations
                     b.Property<string>("facultad")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("universidadid")
+                    b.Property<int?>("sedeid")
                         .HasColumnType("int");
 
                     b.HasKey("id");
 
-                    b.HasIndex("universidadid");
+                    b.HasIndex("sedeid");
 
                     b.ToTable("facultades");
                 });
@@ -197,7 +197,8 @@ namespace SICAU.App.Persistencia.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("apellido")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<int>("estadoCovid")
                         .HasColumnType("int");
@@ -206,10 +207,14 @@ namespace SICAU.App.Persistencia.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("identificacion")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasMaxLength(15)
+                        .HasColumnType("nvarchar(15)");
 
                     b.Property<string>("nombre")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.HasKey("id");
 
@@ -411,11 +416,11 @@ namespace SICAU.App.Persistencia.Migrations
 
             modelBuilder.Entity("SICAU.App.Dominio.Facultad", b =>
                 {
-                    b.HasOne("SICAU.App.Dominio.Universidad", "universidad")
+                    b.HasOne("SICAU.App.Dominio.Sede", "sede")
                         .WithMany()
-                        .HasForeignKey("universidadid");
+                        .HasForeignKey("sedeid");
 
-                    b.Navigation("universidad");
+                    b.Navigation("sede");
                 });
 
             modelBuilder.Entity("SICAU.App.Dominio.Grupo", b =>

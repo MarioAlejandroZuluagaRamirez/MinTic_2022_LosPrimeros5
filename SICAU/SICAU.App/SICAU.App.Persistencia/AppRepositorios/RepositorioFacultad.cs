@@ -54,7 +54,7 @@ namespace SICAU.App.Persistencia
 
             foreach (Facultad facultad in facultades)
             {
-                _appContext.Entry(facultad).Reference(m => m.universidad).Load();
+                _appContext.Entry(facultad).Reference(s => s.sede).Load();
             }
             return facultades;
         }

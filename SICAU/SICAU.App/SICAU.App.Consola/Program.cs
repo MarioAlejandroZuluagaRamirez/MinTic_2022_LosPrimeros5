@@ -22,26 +22,26 @@ namespace SICAU.App.Consola
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            // AddUniversidad();
-            // AddSede();
-            // UpdateSede();
-            // AddSalon();
-            // UpdateSalon();
-            // AddFacultad();
-            // UpdateFacultad();
-            // AddPrograma();
-            // UpdatePrograma();
-            // AddEstudiante();
-            // UpdateEstudiante();
-            // AddDirectivo();
-            // UpdateDirectivo();
-            // AddProfesor();
-            // UpdateProfesor();
-            // AddPersonalAseo();
-            // UpdatePersonalAseo();
-            // AddMateria();
-            // UpdateMateria();
-            // AddSintoma();
+            AddUniversidad();
+            AddSede();
+            UpdateSede();
+            AddSalon();
+            UpdateSalon();
+            AddFacultad();
+            UpdateFacultad();
+            AddPrograma();
+            UpdatePrograma();
+            AddEstudiante();
+            UpdateEstudiante();
+            AddDirectivo();
+            UpdateDirectivo();
+            AddProfesor();
+            UpdateProfesor();
+            AddPersonalAseo();
+            UpdatePersonalAseo();
+            AddMateria();
+            UpdateMateria();
+            AddSintoma();
         }
         public static void AddUniversidad()
         {
@@ -247,31 +247,31 @@ namespace SICAU.App.Consola
         }
         public static void UpdateFacultad()
         {
-            Universidad universidad = _repoUniversidad.GetUniversidad(1);
+            Sede sede = _repoSede.GetSede(1);
             Facultad facultad;
             
             facultad = _repoFacultad.GetFacultad(1);
-            facultad.universidad = universidad;
+            facultad.sede = sede;
             _repoFacultad.UpdateFacultad(facultad);
 
             facultad = _repoFacultad.GetFacultad(2);
-            facultad.universidad = universidad;
+            facultad.sede = sede;
             _repoFacultad.UpdateFacultad(facultad);
 
             facultad = _repoFacultad.GetFacultad(3);
-            facultad.universidad = universidad;
+            facultad.sede = sede;
             _repoFacultad.UpdateFacultad(facultad);
 
             facultad = _repoFacultad.GetFacultad(4);
-            facultad.universidad = universidad;
+            facultad.sede = sede;
             _repoFacultad.UpdateFacultad(facultad);
 
             facultad = _repoFacultad.GetFacultad(5);
-            facultad.universidad = universidad;
+            facultad.sede = sede;
             _repoFacultad.UpdateFacultad(facultad);
 
             facultad = _repoFacultad.GetFacultad(6);
-            facultad.universidad = universidad;
+            facultad.sede = sede;
             _repoFacultad.UpdateFacultad(facultad);
         }
         public static void AddPrograma()
@@ -313,7 +313,7 @@ namespace SICAU.App.Consola
             {
                 nombre = "Mario Alejandro",
                 apellido = "Zuluaga Ramirez",
-                identificacion = "16070445",
+                identificacion = "12345672",
                 fechaNacimiento = DateTime.Parse("1982-03-01"),
                 estadoCovid = EstadoCovid.Negativo,
                 semestre = Semestre.I,
@@ -322,26 +322,58 @@ namespace SICAU.App.Consola
             _repoEstudiante.AddEstudiante(estudiante0);
             Estudiante estudiante1 = new Estudiante()
             {
-                nombre = "Jenny Bibiana",
-                apellido = "Garcia Bohorquez",
-                identificacion = "12345678",
-                fechaNacimiento = DateTime.Parse("1986-07-15"),
+                nombre = "Roberto",
+                apellido = "Martinez",
+                identificacion = "6789012",
+                fechaNacimiento = DateTime.Parse("1970-05-20"),
                 estadoCovid = EstadoCovid.Negativo,
                 semestre = Semestre.II,
                 programa = null
             };
             _repoEstudiante.AddEstudiante(estudiante1);
+            Estudiante estudiante2 = new Estudiante()
+            {
+                nombre = "Biron Alirio",
+                apellido = "Cuesta Renteria",
+                identificacion = "4356787",
+                fechaNacimiento = DateTime.Parse("1990-11-23"),
+                estadoCovid = EstadoCovid.Negativo,
+                semestre = Semestre.III,
+                programa = null
+            };
+            _repoEstudiante.AddEstudiante(estudiante2);
+            Estudiante estudiante3 = new Estudiante()
+            {
+                nombre = "Juan David",
+                apellido = "Salas Melo",
+                identificacion = "98765452",
+                fechaNacimiento = DateTime.Parse("1987-01-31"),
+                estadoCovid = EstadoCovid.Positivo,
+                semestre = Semestre.V,
+                programa = null
+            };
+            _repoEstudiante.AddEstudiante(estudiante3);
         }
         public static void UpdateEstudiante()
         {
             Programa programa = _repoPrograma.GetPrograma(3);
-            Estudiante estudiante0 = _repoEstudiante.GetEstudiante(1);
-            estudiante0.programa = programa;
-            _repoEstudiante.UpdateEstudiante(estudiante0);
+            Estudiante estudiante;
 
-            Estudiante estudiante1 = _repoEstudiante.GetEstudiante(2);
-            estudiante1.programa = programa;
-            _repoEstudiante.UpdateEstudiante(estudiante1);
+            estudiante = _repoEstudiante.GetEstudiante(1);
+            estudiante.programa = programa;
+            _repoEstudiante.UpdateEstudiante(estudiante);
+
+            estudiante = _repoEstudiante.GetEstudiante(2);
+            estudiante.programa = programa;
+            _repoEstudiante.UpdateEstudiante(estudiante);
+
+            estudiante = _repoEstudiante.GetEstudiante(3);
+            estudiante.programa = programa;
+            _repoEstudiante.UpdateEstudiante(estudiante);
+
+            estudiante = _repoEstudiante.GetEstudiante(4);
+            estudiante.programa = programa;
+            _repoEstudiante.UpdateEstudiante(estudiante);
         }
         public static void AddDirectivo()
         {
@@ -349,7 +381,7 @@ namespace SICAU.App.Consola
             {
                 nombre = "Mario Alejandro",
                 apellido = "Zuluaga Ramirez",
-                identificacion = "16070445",
+                identificacion = "12345672",
                 fechaNacimiento = DateTime.Parse("1982-03-01"),
                 estadoCovid = EstadoCovid.Negativo,
                 unidad = "",
@@ -358,10 +390,10 @@ namespace SICAU.App.Consola
            _repoDirectivo.AddDirectivo(directivo0);
             Directivo directivo1 = new Directivo()
             {
-                nombre = "Jenny Bibiana",
-                apellido = "Garcia Bohorquez",
-                identificacion = "12345678",
-                fechaNacimiento = DateTime.Parse("1986-07-15"),
+                nombre = "Juan David",
+                apellido = "Salas Melo",
+                identificacion = "98765452",
+                fechaNacimiento = DateTime.Parse("1987-01-31"),
                 estadoCovid = EstadoCovid.Negativo,
                 unidad = "",
                 sede = null
@@ -371,13 +403,13 @@ namespace SICAU.App.Consola
         public static void UpdateDirectivo()
         {
             Sede sede = _repoSede.GetSede(1);
-            Directivo directivo = _repoDirectivo.GetDirectivo(3);
+            Directivo directivo = _repoDirectivo.GetDirectivo(5);
             directivo.unidad = "Investigacion";
             directivo.sede = sede;
             _repoDirectivo.UpdateDirectivo(directivo);
 
             sede = _repoSede.GetSede(2);
-            directivo = _repoDirectivo.GetDirectivo(4);
+            directivo = _repoDirectivo.GetDirectivo(6);
             directivo.unidad = "Admisiones";
             directivo.sede = sede;
             _repoDirectivo.UpdateDirectivo(directivo);
@@ -386,20 +418,20 @@ namespace SICAU.App.Consola
         {
             Profesor profesor0 = new Profesor()
             {
-                nombre = "Mario Alejandro",
-                apellido = "Zuluaga Ramirez",
-                identificacion = "16070445",
-                fechaNacimiento = DateTime.Parse("1982-03-01"),
+                nombre = "Roberto",
+                apellido = "Martinez",
+                identificacion = "6789012",
+                fechaNacimiento = DateTime.Parse("1970-05-20"),
                 estadoCovid = EstadoCovid.Negativo,
                 departamento = ""
             };
            _repoProfesor.AddProfesor(profesor0);
             Profesor profesor1 = new Profesor()
             {
-                nombre = "Jenny Bibiana",
-                apellido = "Garcia Bohorquez",
-                identificacion = "12345678",
-                fechaNacimiento = DateTime.Parse("1986-07-15"),
+                nombre = "Biron Alirio",
+                apellido = "Cuesta Renteria",
+                identificacion = "4356787",
+                fechaNacimiento = DateTime.Parse("1990-11-23"),
                 estadoCovid = EstadoCovid.Negativo,
                 departamento = ""
             };
@@ -408,10 +440,10 @@ namespace SICAU.App.Consola
         public static void UpdateProfesor()
         {
             Profesor profesor;
-            profesor = _repoProfesor.GetProfesor(5);
+            profesor = _repoProfesor.GetProfesor(7);
             profesor.departamento = "Investigación";
             _repoProfesor.UpdateProfesor(profesor);
-            profesor = _repoProfesor.GetProfesor(6);
+            profesor = _repoProfesor.GetProfesor(8);
             profesor.departamento = "Admisiones";
             _repoProfesor.UpdateProfesor(profesor);
         }
@@ -419,21 +451,21 @@ namespace SICAU.App.Consola
         {
             PersonalAseo personalAseo0 = new PersonalAseo()
             {
-                nombre = "Mario Alejandro",
-                apellido= "Zuluaga Ramirez",
-                identificacion= "16070445",
-                fechaNacimiento = DateTime.Parse("1982-03-01"),
-                estadoCovid= EstadoCovid.Negativo,
+                nombre = "Roberto",
+                apellido = "Martinez",
+                identificacion = "6789012",
+                fechaNacimiento = DateTime.Parse("1970-05-20"),
+                estadoCovid = EstadoCovid.Negativo,
                 turno = Turno.Mañana,
                 sede = null
             };
            _repoPersonalAseo.AddPersonalAseo(personalAseo0);
             PersonalAseo personalAseo1 = new PersonalAseo()
             {
-                nombre = "Jenny Bibiana",
-                apellido= "Garcia Bohorquez",
-                identificacion= "12345678",
-                fechaNacimiento = DateTime.Parse("1986-07-15"),
+                nombre = "Juan David",
+                apellido = "Salas Melo",
+                identificacion = "98765452",
+                fechaNacimiento = DateTime.Parse("1987-01-31"),
                 estadoCovid= EstadoCovid.Negativo,
                 turno = Turno.Tarde,
                 sede = null
@@ -443,12 +475,12 @@ namespace SICAU.App.Consola
         public static void UpdatePersonalAseo()
         {
             Sede sede0 = _repoSede.GetSede(1);
-            PersonalAseo personalAseo0 = _repoPersonalAseo.GetPersonalAseo(7);
+            PersonalAseo personalAseo0 = _repoPersonalAseo.GetPersonalAseo(9);
             personalAseo0.sede = sede0;
             _repoPersonalAseo.UpdatePersonalAseo(personalAseo0);
             
             Sede sede1 = _repoSede.GetSede(2);
-            PersonalAseo personalAseo1 = _repoPersonalAseo.GetPersonalAseo(8);
+            PersonalAseo personalAseo1 = _repoPersonalAseo.GetPersonalAseo(10);
             personalAseo1.sede = sede1;
             _repoPersonalAseo.UpdatePersonalAseo(personalAseo1);
         }

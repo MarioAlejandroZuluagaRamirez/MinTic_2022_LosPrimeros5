@@ -34,26 +34,6 @@ namespace SICAU.App.Persistencia.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "facultades",
-                columns: table => new
-                {
-                    id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    facultad = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    universidadid = table.Column<int>(type: "int", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_facultades", x => x.id);
-                    table.ForeignKey(
-                        name: "FK_facultades_universidades_universidadid",
-                        column: x => x.universidadid,
-                        principalTable: "universidades",
-                        principalColumn: "id",
-                        onDelete: ReferentialAction.Restrict);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "sedes",
                 columns: table => new
                 {
@@ -70,6 +50,47 @@ namespace SICAU.App.Persistencia.Migrations
                         name: "FK_sedes_universidades_universidadid",
                         column: x => x.universidadid,
                         principalTable: "universidades",
+                        principalColumn: "id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "facultades",
+                columns: table => new
+                {
+                    id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    facultad = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    sedeid = table.Column<int>(type: "int", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_facultades", x => x.id);
+                    table.ForeignKey(
+                        name: "FK_facultades_sedes_sedeid",
+                        column: x => x.sedeid,
+                        principalTable: "sedes",
+                        principalColumn: "id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "salones",
+                columns: table => new
+                {
+                    id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    numero = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    capacidad = table.Column<int>(type: "int", nullable: false),
+                    sedeid = table.Column<int>(type: "int", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_salones", x => x.id);
+                    table.ForeignKey(
+                        name: "FK_salones_sedes_sedeid",
+                        column: x => x.sedeid,
+                        principalTable: "sedes",
                         principalColumn: "id",
                         onDelete: ReferentialAction.Restrict);
                 });
@@ -95,22 +116,23 @@ namespace SICAU.App.Persistencia.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "salones",
+                name: "horarios",
                 columns: table => new
                 {
                     id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    numero = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    capacidad = table.Column<int>(type: "int", nullable: false),
-                    sedeid = table.Column<int>(type: "int", nullable: true)
+                    horaIngreso = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    duracion = table.Column<int>(type: "int", nullable: false),
+                    diaSemana = table.Column<int>(type: "int", nullable: false),
+                    salonid = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_salones", x => x.id);
+                    table.PrimaryKey("PK_horarios", x => x.id);
                     table.ForeignKey(
-                        name: "FK_salones_sedes_sedeid",
-                        column: x => x.sedeid,
-                        principalTable: "sedes",
+                        name: "FK_horarios_salones_salonid",
+                        column: x => x.salonid,
+                        principalTable: "salones",
                         principalColumn: "id",
                         onDelete: ReferentialAction.Restrict);
                 });
@@ -141,9 +163,9 @@ namespace SICAU.App.Persistencia.Migrations
                 {
                     id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    nombre = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    apellido = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    identificacion = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    nombre = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    apellido = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true),
+                    identificacion = table.Column<string>(type: "nvarchar(15)", maxLength: 15, nullable: false),
                     fechaNacimiento = table.Column<DateTime>(type: "datetime2", nullable: false),
                     estadoCovid = table.Column<int>(type: "int", nullable: false),
                     Discriminator = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -174,28 +196,6 @@ namespace SICAU.App.Persistencia.Migrations
                         name: "FK_personas_sedes_sedeid",
                         column: x => x.sedeid,
                         principalTable: "sedes",
-                        principalColumn: "id",
-                        onDelete: ReferentialAction.Restrict);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "horarios",
-                columns: table => new
-                {
-                    id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    horaIngreso = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    duracion = table.Column<int>(type: "int", nullable: false),
-                    diaSemana = table.Column<int>(type: "int", nullable: false),
-                    salonid = table.Column<int>(type: "int", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_horarios", x => x.id);
-                    table.ForeignKey(
-                        name: "FK_horarios_salones_salonid",
-                        column: x => x.salonid,
-                        principalTable: "salones",
                         principalColumn: "id",
                         onDelete: ReferentialAction.Restrict);
                 });
@@ -334,9 +334,9 @@ namespace SICAU.App.Persistencia.Migrations
                 column: "grupoid");
 
             migrationBuilder.CreateIndex(
-                name: "IX_facultades_universidadid",
+                name: "IX_facultades_sedeid",
                 table: "facultades",
-                column: "universidadid");
+                column: "sedeid");
 
             migrationBuilder.CreateIndex(
                 name: "IX_grupos_horarioid",
@@ -427,10 +427,10 @@ namespace SICAU.App.Persistencia.Migrations
                 name: "programas");
 
             migrationBuilder.DropTable(
-                name: "sedes");
+                name: "facultades");
 
             migrationBuilder.DropTable(
-                name: "facultades");
+                name: "sedes");
 
             migrationBuilder.DropTable(
                 name: "universidades");

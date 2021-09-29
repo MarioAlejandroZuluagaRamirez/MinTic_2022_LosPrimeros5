@@ -4,6 +4,6 @@ namespace SICAU.App.Dominio
     {
         public int id {get;set;}
         public string facultad {get;set;}
-        public Universidad universidad { get; set; }
+        public Sede sede { get; set; }
     }
 }
