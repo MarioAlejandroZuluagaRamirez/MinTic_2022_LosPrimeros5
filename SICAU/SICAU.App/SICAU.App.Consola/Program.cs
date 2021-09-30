@@ -20,31 +20,34 @@ namespace SICAU.App.Consola
         private static IRepositorioMateria _repoMateria = new RepositorioMateria(new Persistencia.AppContext());
         private static IRepositorioSintoma _repoSintoma = new RepositorioSintoma(new Persistencia.AppContext());
         private static IRepositorioEncuestaCovid _repoEncuesta = new RepositorioEncuestaCovid(new Persistencia.AppContext());
+        private static IRepositorioHorario _repoHorario = new RepositorioHorario(new Persistencia.AppContext());
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            // AddUniversidad();
-            // AddSede();
-            // UpdateSede();
-            // AddSalon();
-            // UpdateSalon();
-            // AddFacultad();
-            // UpdateFacultad();
-            // AddPrograma();
-            // UpdatePrograma();
-            // AddEstudiante();
-            // UpdateEstudiante();
-            // AddDirectivo();
-            // UpdateDirectivo();
-            // AddProfesor();
-            // UpdateProfesor();
-            // AddPersonalAseo();
-            // UpdatePersonalAseo();
-            // AddMateria();
-            // UpdateMateria();
-            // AddSintoma();
-            // AddEncuesta();
+            AddUniversidad();
+            AddSede();
+            UpdateSede();
+            AddSalon();
+            UpdateSalon();
+            AddFacultad();
+            UpdateFacultad();
+            AddPrograma();
+            UpdatePrograma();
+            AddEstudiante();
+            UpdateEstudiante();
+            AddDirectivo();
+            UpdateDirectivo();
+            AddProfesor();
+            UpdateProfesor();
+            AddPersonalAseo();
+            UpdatePersonalAseo();
+            AddMateria();
+            UpdateMateria();
+            AddSintoma();
+            AddEncuesta();
             UpdateEncuesta();
+            AddHorario();
+            UpdateHorario();
         }
         public static void AddUniversidad()
         {
@@ -589,6 +592,107 @@ namespace SICAU.App.Consola
             encuestaCovid = _repoEncuesta.GetEncuestaCovid(1);
             encuestaCovid.persona = persona;
             _repoEncuesta.UpdateEncuestaCovid(encuestaCovid);
+        }
+
+        public static void AddHorario()
+        {
+            Horario horario;
+            horario = new Horario()
+            {
+                horaIngreso = DateTime.Parse("18:00:00"),
+                duracion = 180,
+                diaSemana = DiaSemana.Lunes
+            };
+            _repoHorario.AddHorario(horario);
+            horario = new Horario()
+            {
+                horaIngreso = DateTime.Parse("21:00:00"),
+                duracion = 60,
+                diaSemana = DiaSemana.Lunes
+            };
+            _repoHorario.AddHorario(horario);
+            horario = new Horario()
+            {
+                horaIngreso = DateTime.Parse("18:00:00"),
+                duracion = 120,
+                diaSemana = DiaSemana.Martes
+            };
+            _repoHorario.AddHorario(horario);
+            horario = new Horario()
+            {
+                horaIngreso = DateTime.Parse("20:00:00"),
+                duracion = 120,
+                diaSemana = DiaSemana.Martes
+            };
+            _repoHorario.AddHorario(horario);
+            horario = new Horario()
+            {
+                horaIngreso = DateTime.Parse("18:00:00"),
+                duracion = 180,
+                diaSemana = DiaSemana.Miercoles
+            };
+            _repoHorario.AddHorario(horario);
+            horario = new Horario()
+            {
+                horaIngreso = DateTime.Parse("18:00:00"),
+                duracion = 120,
+                diaSemana = DiaSemana.Jueves
+            };
+            _repoHorario.AddHorario(horario);
+            horario = new Horario()
+            {
+                horaIngreso = DateTime.Parse("20:00:00"),
+                duracion = 120,
+                diaSemana = DiaSemana.Jueves
+            };
+            _repoHorario.AddHorario(horario);
+            horario = new Horario()
+            {
+                horaIngreso = DateTime.Parse("18:00:00"),
+                duracion = 120,
+                diaSemana = DiaSemana.Viernes
+            };
+            _repoHorario.AddHorario(horario);
+            horario = new Horario()
+            {
+                horaIngreso = DateTime.Parse("20:00:00"),
+                duracion = 120,
+                diaSemana = DiaSemana.Viernes
+            };
+            _repoHorario.AddHorario(horario);
+        }
+
+        public static void UpdateHorario()
+        {
+            Salon salon = _repoSalon.GetSalon(1);
+            Horario horario; 
+            horario = _repoHorario.GetHorario(1);
+            horario.salon = salon;
+            _repoHorario.UpdateHorario(horario);
+            horario = _repoHorario.GetHorario(2);
+            horario.salon = salon;
+            _repoHorario.UpdateHorario(horario);
+            horario = _repoHorario.GetHorario(3);
+            horario.salon = salon;
+            _repoHorario.UpdateHorario(horario);
+            horario = _repoHorario.GetHorario(4);
+            horario.salon = salon;
+            _repoHorario.UpdateHorario(horario);
+            horario = _repoHorario.GetHorario(5);
+            horario.salon = salon;
+            _repoHorario.UpdateHorario(horario);
+            horario = _repoHorario.GetHorario(6);
+            horario.salon = salon;
+            _repoHorario.UpdateHorario(horario);
+            horario = _repoHorario.GetHorario(7);
+            horario.salon = salon;
+            _repoHorario.UpdateHorario(horario);
+            horario = _repoHorario.GetHorario(8);
+            horario.salon = salon;
+            _repoHorario.UpdateHorario(horario);
+            horario = _repoHorario.GetHorario(9);
+            horario.salon = salon;
+            _repoHorario.UpdateHorario(horario);
         }
     }
 }

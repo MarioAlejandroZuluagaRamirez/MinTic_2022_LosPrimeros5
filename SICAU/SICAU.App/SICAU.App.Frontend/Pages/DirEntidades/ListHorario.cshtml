@@ -2,3 +2,56 @@
 @model SICAU.App.Frontend.Pages.ListHorarioModel
 @{
 }
+<h1>Listado Horarios </h1>
+
+@* <form method="get">
+    <p>
+        Buscar Dia:
+        <input type="text" name="criterio" asp-for="criterio">
+        <input type="submit" value="Buscar" class="btn btn-primary table-btn">
+        <i class="fas fa-search"></i>
+    </p>
+</form> *@
+
+<p></p>
+
+<button type="button" class="btn btn-primary">
+    <i class="far fa-file"></i>
+    Adicionar Nuevo Registro
+</button>
+
+<p></p>
+
+<table class="table table-bordered table-striped">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Dia de la semana</th>
+            <th scope="col">Hora Ingreso</th>
+            <th scope="col">Duracion (mins)</th>
+            <th scope="col">Edición</th>
+            <th scope="col">Eliminar</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var horario in Model.horarios)
+        {
+            <tr>
+                <td>@horario.id</td>
+                <td>@horario.diaSemana</td>
+                <td>@horario.horaIngreso.ToString("HH:mm tt") </td>
+                <td>@horario.duracion</td>
+                <td>
+                    <a class="btn btn-primary table-btn" asp-page="/DirEntidades/EditFacultad" asp-route-idSalon="@horario.id">
+                    <i class="far fa-address-book"></i>
+                    </a>
+                </td>
+                <td>
+                    <a class="btn btn-warning table-btn">
+                    <i class="far fa-trash-alt"></i>
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

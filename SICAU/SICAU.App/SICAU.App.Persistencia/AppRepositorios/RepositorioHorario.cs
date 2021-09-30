@@ -18,6 +18,16 @@ namespace SICAU.App.Persistencia
             this.horarios = horarios;
         }
 
+        public IEnumerable<Horario> GetBySalon(int salon)
+        {
+            var horarios = _appContext.horarios.ToList();
+            foreach (Horario horario in horarios)
+            {
+                _appContext.Entry(horario).Reference(s => s.salon).Load();
+            }
+            return horarios.Where( s => s.salon.id == salon);
+        }
+
         Horario IRepositorioHorario.AddHorario(Horario horario)
         {
             var horarioAdicionado = _appContext.horarios.Add(horario);
