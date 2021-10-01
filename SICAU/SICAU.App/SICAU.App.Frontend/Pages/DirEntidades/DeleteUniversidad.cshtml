@@ -1,0 +1,41 @@
+﻿@page
+@model SICAU.App.Frontend.Pages.DeleteUniversidadModel
+@{
+}
+<h3>Eliminando Universidad</h3>
+
+<p></p>
+
+<tr>
+    <td>
+        <a class="btn btn-primary table-btn" asp-page="/DirEntidades/ListUniversidad">
+        <i class="fas fa-arrow-circle-left"></i> 
+            Regresar
+        </a>
+    </td>
+</tr>
+
+<p></p>
+
+<table class="table table-bordered table-striped">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Universidad</th>
+        </tr>
+  </thead>
+  <tbody>
+    <tr>
+        <td>@Model.universidad.id</td>
+        <td>@Model.universidad.universidad</td>
+    </tr>
+    </tbody>
+</table>
+
+<p></p>
+
+<form method="post">
+    <input type="hidden" asp-for="universidad.id">
+    <button type="submit" class="btn btn-primary">Eliminar</button>
+    <i class="far fa-trash-alt"></i>
+</form>
