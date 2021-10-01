@@ -1,0 +1,24 @@
+﻿@page
+@model SICAU.App.Frontend.Pages.EditUniversidadModel
+@{
+}
+<h1>Editar Universidad</h1>
+<p></p>
+
+<a class="btn btn-primary table-btn" asp-page="/DirEntidades/ListUniversidad">
+<i class="fas fa-arrow-circle-left"></i> 
+    Regresar
+</a>
+
+<p></p>
+<form method="post">
+    <input type="hidden" asp-for="universidad.id">
+    <div class="form-group">
+        <label for="universidad.universidad">Nombre Universidad</label>
+        <input asp-for="universidad.universidad" class="form-control">
+        <span class="text_danger" asp-validation.for="Universidad.Universidad"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Guardar Cambios
+        <i class="far fa-save"></i>
+    </button>
+</form>

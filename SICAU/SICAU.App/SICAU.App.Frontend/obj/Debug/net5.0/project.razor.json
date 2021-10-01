@@ -15624,6 +15624,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Proyecto_SICAU\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\DirEntidades\\EditUniversidad.cshtml",
+      "TargetPath": "Pages\\DirEntidades\\EditUniversidad.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Proyecto_SICAU\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\NotFound.cshtml",
       "TargetPath": "Pages\\NotFound.cshtml",
       "FileKind": "mvc"
