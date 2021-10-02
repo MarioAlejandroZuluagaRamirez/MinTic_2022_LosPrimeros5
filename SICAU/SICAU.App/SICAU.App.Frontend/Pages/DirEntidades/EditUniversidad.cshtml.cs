@@ -23,7 +23,7 @@ namespace SICAU.App.Frontend.Pages
                 universidad = new Universidad();
             
             if (universidad == null)
-                return RedirectToPage("./Personas");
+                return RedirectToPage("./ListUniversidad");
             else
                 return Page(); 
         }

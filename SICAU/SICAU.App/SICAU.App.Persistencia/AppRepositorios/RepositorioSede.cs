@@ -18,6 +18,16 @@ namespace SICAU.App.Persistencia
         {
             this.sedes = sedes;
         }
+
+        public Sede AsignaUniversidad(int idSede, int idUniversidad)
+        {
+            Sede sede = _appContext.sedes.FirstOrDefault(p => p.id == idSede);
+            Universidad universidad = _appContext.universidades.FirstOrDefault(u => u.id == idUniversidad);
+            sede.universidad = universidad;
+            _appContext.SaveChanges();
+            return sede;
+        }
+
         Sede IRepositorioSede.AddSede(Sede sede)
         {
             var sedeAdicionado = _appContext.sedes.Add(sede);
@@ -58,7 +68,9 @@ namespace SICAU.App.Persistencia
 
         Sede IRepositorioSede.GetSede(int idSede)
         {
-            return _appContext.sedes.FirstOrDefault(p => p.id == idSede);
+            Sede sede =  _appContext.sedes.FirstOrDefault(p => p.id == idSede);
+            _appContext.Entry(sede).Reference(u => u.universidad).Load();
+            return sede;
         }
 
         Sede IRepositorioSede.UpdateSede(Sede sede)

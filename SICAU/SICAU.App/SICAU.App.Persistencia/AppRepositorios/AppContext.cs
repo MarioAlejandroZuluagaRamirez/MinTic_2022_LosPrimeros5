@@ -28,9 +28,9 @@ namespace SICAU.App.Persistencia
             if (!optionsBuilder.IsConfigured)
             {
                 optionsBuilder
-                .UseSqlServer("Data Source = (localdb)\\MSSQLLocalDB; Initial Catalog = ProjectSICAUData");
+                .UseSqlServer("Data Source = (localdb)\\MSSQLLocalDB; Initial Catalog = ProjectSICAUData")
+                .EnableSensitiveDataLogging(true);
             }
-
         }
         //protected override void OnModelCreating(ModelBuilder modelBuilder)
         //{

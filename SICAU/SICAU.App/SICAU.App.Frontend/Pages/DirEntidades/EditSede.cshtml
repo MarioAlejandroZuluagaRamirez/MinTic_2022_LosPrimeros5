@@ -1,0 +1,48 @@
+﻿@page
+@model SICAU.App.Frontend.Pages.EditSedeModel
+@{
+}
+<h1>Editar Sede</h1>
+<p></p>
+
+<a class="btn btn-primary table-btn" asp-page="/DirEntidades/ListSede">
+    <i class="fas fa-arrow-circle-left"></i>
+    Regresar
+</a>
+
+<p></p>
+<form method="post">
+    <input type="hidden" asp-for="sede.id">
+
+    <div class="form-group">
+        <label for="sede">Nombre de la Sede</label>
+        <input asp-for="sede.sede" class="form-control">
+        <span class="text_danger" asp-validation.for="sede.sede"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="ubicacion">Direccion de la Sede</label>
+        <input asp-for="sede.ubicacion" class="form-control">
+        <span class="text_danger" asp-validation.for="sede.ubicacion"></span>
+    </div>
+
+    <div class="form-group">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="universidad">Universidad</label>
+            </div>
+            <select class="custom-select" asp-for="idUniversidad">
+                @foreach (var universidad in Model.universidades)
+                {
+                    <option value=@universidad.id label=@universidad.universidad>text</option>
+                }
+            </select>
+        </div>
+        <span class="text_danger" asp-validation.for="sede.universidad"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">
+        Guardar Cambios
+        <i class="far fa-save"></i>
+    </button>
+</form>

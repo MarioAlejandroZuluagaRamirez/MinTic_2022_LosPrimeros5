@@ -11,5 +11,6 @@ namespace SICAU.App.Persistencia
         Sede UpdateSede(Sede sede);
         void DeleteSede(int idSede);
         Sede GetSede(int idSede);
+        Sede AsignaUniversidad(int idSede, int idUniversidad);
     }
 }
