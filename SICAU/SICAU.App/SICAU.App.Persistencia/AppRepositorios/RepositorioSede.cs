@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using SICAU.App.Dominio;
 using System.Linq;
+using Microsoft.EntityFrameworkCore;
 
 namespace SICAU.App.Persistencia
 {
@@ -75,7 +76,7 @@ namespace SICAU.App.Persistencia
 
         Sede IRepositorioSede.UpdateSede(Sede sede)
         {
-            var sedeEncontrado = _appContext.sedes.FirstOrDefault(p => p.id == sede.id);
+            Sede sedeEncontrado = _appContext.sedes.FirstOrDefault(p => p.id == sede.id);
             if (sedeEncontrado != null)
             {
                 sedeEncontrado.id = sede.id;
@@ -83,6 +84,11 @@ namespace SICAU.App.Persistencia
                 sedeEncontrado.ubicacion = sede.ubicacion;
                 sedeEncontrado.universidad = sede.universidad;
                 _appContext.SaveChanges();
+
+                foreach (var entity in _appContext.ChangeTracker.Entries())
+                {
+                    entity.State = EntityState.Detached;
+                }
             }
             return sedeEncontrado;
         }

@@ -1,0 +1,47 @@
+﻿@page
+@model SICAU.App.Frontend.Pages.DeleteSedeModel
+@{
+}
+<h3>Eliminar Sede</h3>
+
+<p></p>
+
+<tr>
+    <td>
+        <a class="btn btn-primary table-btn" asp-page="/DirEntidades/ListSede">
+            <i class="fas fa-arrow-circle-left"></i>
+            Regresar
+        </a>
+    </td>
+</tr>
+
+<p></p>
+
+<table class="table table-bordered table-striped">
+    <tr>
+        <td class="table-dark">ID Sede</td>
+        <td>@Model.sede.id</td>
+    </tr>
+    <tr>
+        <td class="table-dark">Nombre sede</td>
+        <td>@Model.sede.sede</td>
+    </tr>
+    <tr>
+        <td class="table-dark">Ubicación sede</td>
+        <td>@Model.sede.ubicacion</td>
+    </tr>
+    <tr>
+        <td class="table-dark">Universidad</td>
+        <td>@Model.sede.universidad.universidad</td>
+    </tr>
+</table>
+
+<p></p>
+
+<form method="post">
+    <input type="hidden" asp-for="sede.id">
+    <button type="submit" class="btn btn-primary">
+        <i class="far fa-trash-alt"></i>
+        Eliminar
+    </button>
+</form>

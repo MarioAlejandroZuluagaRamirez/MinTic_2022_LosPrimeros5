@@ -26,6 +26,7 @@ namespace SICAU.App.Frontend
         {
             services.AddRazorPages();
             //Oscar
+            //services.AddScoped<IRepositorioSede,RepositorioSede>();
             //services.AddSingleton<IRepositorioDirectivo, RepositorioDirectivo>();
         }
 

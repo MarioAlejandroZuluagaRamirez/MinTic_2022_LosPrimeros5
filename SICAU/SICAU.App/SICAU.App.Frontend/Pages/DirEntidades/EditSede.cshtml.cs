@@ -46,7 +46,6 @@ namespace SICAU.App.Frontend.Pages
                 sede.universidad = universidad;
                 sede = _repoSede.UpdateSede(sede);
             }
-
             return RedirectToPage("./ListSede");
         }
     }

@@ -169,3 +169,4 @@ C:\Users\mazul\Desktop\Desarrollo de Software MinTic\C#\Proyecto_SICAU\SICAU\SIC
 C:\Users\mazul\Desktop\Desarrollo de Software MinTic\C#\Proyecto_SICAU\SICAU\SICAU.App\SICAU.App.Frontend\obj\Debug\net5.0\Razor\Pages\DirEntidades\DeleteUniversidad.cshtml.g.cs
 C:\Users\mazul\Desktop\Desarrollo de Software MinTic\C#\Proyecto_SICAU\SICAU\SICAU.App\SICAU.App.Frontend\obj\Debug\net5.0\Razor\Pages\DirEntidades\EditUniversidad.cshtml.g.cs
 C:\Users\mazul\Desktop\Desarrollo de Software MinTic\C#\Proyecto_SICAU\SICAU\SICAU.App\SICAU.App.Frontend\obj\Debug\net5.0\Razor\Pages\DirEntidades\EditSede.cshtml.g.cs
+C:\Users\mazul\Desktop\Desarrollo de Software MinTic\C#\Proyecto_SICAU\SICAU\SICAU.App\SICAU.App.Frontend\obj\Debug\net5.0\Razor\Pages\DirEntidades\DeleteSede.cshtml.g.cs

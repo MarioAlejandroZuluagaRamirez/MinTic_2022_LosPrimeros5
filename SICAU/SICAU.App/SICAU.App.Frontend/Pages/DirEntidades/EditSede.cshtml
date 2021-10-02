@@ -34,7 +34,14 @@
             <select class="custom-select" asp-for="idUniversidad">
                 @foreach (var universidad in Model.universidades)
                 {
-                    <option value=@universidad.id label=@universidad.universidad>text</option>
+                    if (@Model.sede.id > 0 && @universidad.id == Model.sede.universidad.id)
+                    {
+                        <option value=@universidad.id label=@universidad.universidad selected>text</option>
+                    }
+                    else
+                    {
+                        <option value=@universidad.id label=@universidad.universidad>text</option>
+                    }
                 }
             </select>
         </div>
