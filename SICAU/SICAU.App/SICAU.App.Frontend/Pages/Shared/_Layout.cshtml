@@ -6,56 +6,56 @@
     <title>@ViewData["Title"] - Desarrollo de Software</title>
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    @* <link rel="stylesheet" href="~/css/site.css" /> *@
-    <link rel="stylesheet" href="~/css/menu.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    @* <link rel="stylesheet" href="~/css/menu.css" /> *@
 </head>
 <body>
     <header>
         <nav id="menu" class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
                 <a class="navbar-brand" asp-area="" asp-page="/Index">Desarrollo de Software</a>
+                <div class="btn-group">
+                    <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Personas
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" asp-page="/DirEntidades/ListProfesor">Profesor</a>
+                        <a class="dropdown-item" asp-page="/DirEntidades/ListEstudiante">Estudiante</a>
+                        <a class="dropdown-item" asp-page="/DirEntidades/ListDirectivo">Directivos</a>
+                        <a class="dropdown-item" asp-page="/DirEntidades/ListPersonalAseo">Personal Aseo</a>
+                    </div>
+                </div>
+                <div class="btn-group">
+                     <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Universidad
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" asp-page="/DirEntidades/ListUniversidad">Universidades</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" asp-page="/DirEntidades/ListFacultad">Facultades</a>
+                        <a class="dropdown-item" asp-page="/DirEntidades/ListPrograma">Programas</a> 
+                        <a class="dropdown-item" asp-page="/DirEntidades/ListMateria">Materias</a> 
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" asp-page="/DirEntidades/ListSede">Sedes</a>
+                        <a class="dropdown-item" asp-page="/DirEntidades/ListSalon">Salones</a> 
+                    </div>
+                </div>
+                <div class="btn-group">
+                     <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Covid
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" asp-page="/DirEntidades/ListEncuesta">Encuestas</a>
+                        <a class="dropdown-item" asp-page="/DirEntidades/ListSintoma">Sintomas</a>
+                    </div>
+                </div>
+
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     <ul class="navbar-nav flex-grow-1">
-                        <li> 
-                            <b> 
-                                <a class="text-dark" href="">Personas</a>
-                            </b>
-                            <ul>
-                                <li> <a class="text-dark" asp-page="/DirEntidades/ListProfesor">Profesor</a> </li>
-                                <li> <a class="text-dark" asp-page="/DirEntidades/ListEstudiante">Estudiante</a> </li>
-                                <li> <a class="text-dark" asp-page="/DirEntidades/ListDirectivo">Directivos</a> </li>
-                                <li> <a class="text-dark" asp-page="/DirEntidades/ListPersonalAseo">Personal Aseo</a> </li>
-                            </ul>
-                        </li>
-                        <li> 
-                            <b> 
-                                <a class="text-dark" href="">Universidad</a>
-                            </b>
-                            <ul>
-                                <li> <a class="text-dark" asp-page="/DirEntidades/ListUniversidad">Universidades</a> </li>
-                                @* <li> <hr /> </li> *@
-                                <li> <a class="text-dark" asp-page="/DirEntidades/ListSede">Sedes</a> </li>
-                                @* <li> <hr /> </li> *@
-                                <li> <a class="text-dark" asp-page="/DirEntidades/ListFacultad">Facultades</a> </li>
-                                <li> <a class="text-dark" asp-page="/DirEntidades/ListSalon">Salones</a> </li>
-                                @* <li> <hr /> </li> *@
-                                <li> <a class="text-dark" asp-page="/DirEntidades/ListPrograma">Programas</a> </li>
-                                <li> <a class="text-dark" asp-page="/DirEntidades/ListMateria">Materias</a> </li>
-                            </ul>
-                        </li>
-                        <li> 
-                            <b> 
-                                <a class="text-dark" href="">Covid</a>
-                            </b>
-                            <ul>
-                                <li> <a class="text-dark" asp-page="/DirEntidades/ListEncuesta">Encuestas</a> </li>
-                                <li> <a class="text-dark" asp-page="/DirEntidades/ListSintoma">Sintomas</a> </li>
-                            </ul>
-                        </li>
                         <li class="nav-item">
                             <a class="text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
                         </li>
