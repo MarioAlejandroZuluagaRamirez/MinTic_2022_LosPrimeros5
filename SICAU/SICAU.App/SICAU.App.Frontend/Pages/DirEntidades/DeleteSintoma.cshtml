@@ -1,0 +1,39 @@
+﻿@page
+@model SICAU.App.Frontend.Pages.DeleteSintomaModel
+@{
+}
+<h3>Eliminar Sintoma</h3>
+
+<p></p>
+
+<tr>
+    <td>
+        <a class="btn btn-primary table-btn" asp-page="/DirEntidades/ListSintoma">
+            <i class="fas fa-arrow-circle-left"></i>
+            Regresar
+        </a>
+    </td>
+</tr>
+
+<p></p>
+
+<table class="table table-bordered table-striped">
+    <tr>
+        <td class="table-dark">ID Sintoma</td>
+        <td>@Model.sintoma.id</td>
+    </tr>
+    <tr>
+        <td class="table-dark">Sintoma</td>
+        <td>@Model.sintoma.sintoma</td>
+    </tr>
+</table>
+
+<p></p>
+
+<form method="post">
+    <input type="hidden" asp-for="sintoma.id">
+    <button type="submit" class="btn btn-primary">
+        <i class="far fa-trash-alt"></i>
+        Eliminar
+    </button>
+</form>

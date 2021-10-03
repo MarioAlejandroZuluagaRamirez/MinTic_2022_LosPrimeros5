@@ -1,0 +1,52 @@
+﻿@page
+@model SICAU.App.Frontend.Pages.EditEncuestaModel
+@{
+}
+
+<h1>Editar Encuesta</h1>
+<p></p>
+
+<a class="btn btn-primary table-btn" asp-page="/DirEntidades/ListEncuesta">
+    <i class="fas fa-arrow-circle-left"></i>
+    Regresar
+</a>
+
+<p></p>
+<form method="post">
+    <input type="hidden" asp-for="EncuestaCovid.id">
+
+    <div class="form-group">
+        <label type="hidden" for="Encuesta">Fecha Encuesta</label>
+        <input asp-for="EncuestaCovid.fechaEncuesta" class="form-control"
+               value=@if(Model.EncuestaCovid.id ==0) @DateTime.Today.ToString("yyyy-MM-dd") else @Model.EncuestaCovid.fechaEncuesta.ToString("yyyy-MM-dd")
+               disabled />
+
+        <span class="text_danger" asp-validation.for="EncuestaCovid.fechaEncuesta"></span>
+    </div>
+
+
+    <div class="form-group" id="EstadoCovid" onchange="Ocultar()">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="EstadoCovid">Estado Covid</label>
+            </div>
+            <select class="form-control" 
+                    asp-for="EncuestaCovid.estadoCovid"  
+                    asp-items="@Html.GetEnumSelectList<Dominio.EstadoCovid>()">
+            </select>
+        </div>
+        <span class="text_danger" asp-validation.for=""></span>
+    </div>
+
+    <div class="form-group" id="fechaDiagnostico">
+        <label type="hidden" for="Encuesta">Fecha Diagnostico</label>
+        <input asp-for="EncuestaCovid.fechaDiagnostico" class="form-control"
+               value=@if(Model.EncuestaCovid.id ==0) @DateTime.Today.ToString("yyyy-MM-dd") else @Model.EncuestaCovid.fechaDiagnostico.ToString("yyyy-MM-dd") />
+        <span class="text_danger" asp-validation.for="EncuestaCovid.fechaDiagnostico"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">
+        Guardar Cambios
+        <i class="far fa-save"></i>
+    </button>
+</form>

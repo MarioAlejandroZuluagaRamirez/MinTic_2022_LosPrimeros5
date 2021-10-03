@@ -12,5 +12,6 @@ namespace SICAU.App.Persistencia
         EncuestaCovid UpdateEncuestaCovid(EncuestaCovid encuestaCovid);
         void DeleteEncuestaCovid(int idEncuestaCovid);
         EncuestaCovid GetEncuestaCovid(int idEncuestaCovid);
+        EncuestaCovid AsignarPersona(int idEncuestaCovid, int idPersona);
     }
 }

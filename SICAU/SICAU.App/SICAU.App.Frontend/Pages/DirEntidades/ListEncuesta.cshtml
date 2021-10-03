@@ -16,10 +16,10 @@
 
 <p></p>
 
-<button type="button" class="btn btn-primary">
-    <i class="far fa-file"></i>
+<a type="button" class="btn btn-primary" asp-page="/DirEntidades/EditEncuesta">
     Adicionar Nuevo Registro
-</button>
+    <i class="far fa-file"></i>
+</a>
 
 <p></p>
 
@@ -49,7 +49,7 @@
                 </td>
                 <td>@encuesta.persona.nombre  @encuesta.persona.apellido</td>
                 <td>
-                    <a class="btn btn-primary table-btn" asp-page="/DirEntidades/EditMateria" asp-route-idEncuesta="@encuesta.id">
+                    <a class="btn btn-primary table-btn" asp-page="/DirEntidades/EditEncuesta" asp-route-idEncuestaCovid="@encuesta.id">
                     <i class="far fa-address-book"></i>
                     </a>
                 </td>

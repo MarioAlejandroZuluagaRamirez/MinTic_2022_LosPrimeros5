@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using SICAU.App.Dominio;
 using System.Linq;
 using System;
+using Microsoft.EntityFrameworkCore;
 
 namespace SICAU.App.Persistencia
 {
@@ -38,7 +39,12 @@ namespace SICAU.App.Persistencia
 
         IEnumerable<EncuestaCovid> IRepositorioEncuestaCovid.GetAllEncuestaCovid()
         {
-            return _appContext.encuestaCovids;
+            var encuestas = _appContext.encuestaCovids.ToList();
+            foreach (EncuestaCovid encuesta in encuestas)
+            {
+                _appContext.Entry(encuesta).Reference(p => p.persona).Load();
+            }
+            return encuestas;
         }
 
         EncuestaCovid IRepositorioEncuestaCovid.GetEncuestaCovid(int idEncuestaCovid)
@@ -75,9 +81,23 @@ namespace SICAU.App.Persistencia
                 encuestaCovidEncontrado.fechaDiagnostico = encuestaCovid.fechaDiagnostico;
                 encuestaCovidEncontrado.persona = encuestaCovid.persona;
                 _appContext.SaveChanges();
+
+                foreach (var entity in _appContext.ChangeTracker.Entries())
+                {
+                    entity.State = EntityState.Detached;
+                }
             }
             return encuestaCovidEncontrado;
         }
 
+        public EncuestaCovid AsignarPersona(int idEncuestaCovid, int idPersona)
+        {
+            EncuestaCovid encuestaCovid = _appContext.encuestaCovids.FirstOrDefault(e => e.id == idEncuestaCovid);
+            Persona persona = _appContext.personas.FirstOrDefault(p => p.id == idPersona);
+            encuestaCovid.persona = persona;
+            _appContext.SaveChanges();
+
+            return encuestaCovid;
+        }
     }
 }

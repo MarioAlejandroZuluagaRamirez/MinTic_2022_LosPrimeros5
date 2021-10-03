@@ -1,0 +1,25 @@
+﻿@page
+@model SICAU.App.Frontend.Pages.EditSintomaModel
+@{
+}
+<h1>Editar Sintoma</h1>
+<p></p>
+
+<a class="btn btn-primary table-btn" asp-page="/DirEntidades/ListSintoma">
+    <i class="fas fa-arrow-circle-left"></i>
+    Regresar
+</a>
+
+<p></p>
+<form method="post">
+    <input type="hidden" asp-for="sintoma.id">
+    <div class="form-group">
+        <label for="universidad.universidad">Sintoma</label>
+        <input asp-for="sintoma.sintoma" class="form-control">
+        <span class="text_danger" asp-validation.for="sintoma.sintoma"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">
+        Guardar Cambios
+        <i class="far fa-save"></i>
+    </button>
+</form>
