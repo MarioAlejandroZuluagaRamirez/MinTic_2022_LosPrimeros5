@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq.Expressions;
 using SICAU.App.Dominio;
 using SICAU.App.Persistencia;
-
+//programs
 namespace SICAU.App.Consola
 {
     class Program
