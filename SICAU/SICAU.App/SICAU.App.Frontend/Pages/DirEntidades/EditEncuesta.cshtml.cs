@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using SICAU.App.Dominio;
 using SICAU.App.Persistencia;
 
@@ -20,14 +21,21 @@ namespace SICAU.App.Frontend.Pages
         [BindProperty]
         public Persona Persona { get; set; }
         [BindProperty]
-        public Sintoma Sintoma { get; set; }
-        [BindProperty]
-        public IEnumerable<Sintoma> Sintomas { get; set; }
+        public Sintoma Sintoma { get; set; }        
         public IEnumerable<Persona> Personas { get; set; }
         public IEnumerable<EstadoCovid> EstadoCovids { get; set; }
+        public List<SelectListItem> Sintomas { get; set; }
         public string IdPersona { get; set; }
         public IActionResult OnGet(int? idEncuestaCovid)
         {
+
+            Sintomas = _repoSintoma.GetAllSintoma().Select(a =>
+                                  new SelectListItem
+                                  {
+                                      Value = a.id.ToString(),
+                                      Text = a.sintoma
+                                  }).ToList();
+
             if (idEncuestaCovid.HasValue)
                 EncuestaCovid = _repoEncuestaCovid.GetEncuestaCovid(idEncuestaCovid.Value);
             else

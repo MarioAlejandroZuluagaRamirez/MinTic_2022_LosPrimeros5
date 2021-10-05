@@ -33,6 +33,12 @@ namespace SICAU.App.Persistencia
         {
             var sedeAdicionado = _appContext.sedes.Add(sede);
             _appContext.SaveChanges();
+
+            foreach (var entity in _appContext.ChangeTracker.Entries())
+            {
+                entity.State = EntityState.Detached;
+            }
+
             return sedeAdicionado.Entity;
         }
 

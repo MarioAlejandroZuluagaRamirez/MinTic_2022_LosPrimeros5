@@ -15649,6 +15649,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Proyecto_SICAU\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\DirEntidades\\EditSintoma.cshtml",
+      "TargetPath": "Pages\\DirEntidades\\EditSintoma.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Proyecto_SICAU\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\DirEntidades\\ListProfesor.cshtml",
       "TargetPath": "Pages\\DirEntidades\\ListProfesor.cshtml",
       "FileKind": "mvc"
@@ -15666,6 +15671,11 @@
     {
       "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Proyecto_SICAU\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\Privacy.cshtml",
       "TargetPath": "Pages\\Privacy.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Proyecto_SICAU\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\DirEntidades\\DeleteSintoma.cshtml",
+      "TargetPath": "Pages\\DirEntidades\\DeleteSintoma.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -15736,6 +15746,11 @@
     {
       "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Proyecto_SICAU\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\DirEntidades\\ListEstudiante.cshtml",
       "TargetPath": "Pages\\DirEntidades\\ListEstudiante.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Proyecto_SICAU\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\DirEntidades\\EditEncuesta.cshtml",
+      "TargetPath": "Pages\\DirEntidades\\EditEncuesta.cshtml",
       "FileKind": "mvc"
     },
     {

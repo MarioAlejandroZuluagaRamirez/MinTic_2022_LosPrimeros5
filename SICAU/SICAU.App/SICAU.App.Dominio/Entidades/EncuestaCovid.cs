@@ -11,7 +11,7 @@ namespace SICAU.App.Dominio
         public DateTime fechaEncuesta { get; set; }
         [Required]
         public EstadoCovid estadoCovid { get; set; }
-        [DisplayFormat(DataFormatString = "yyy-MM-dd", ApplyFormatInEditMode = true)]
+        [DataType(DataType.Date),DisplayFormat(DataFormatString = "yyy-MM-dd", ApplyFormatInEditMode = true)]
         public DateTime fechaDiagnostico { get; set; }
         [Required]
         public Persona persona { get; set; }
