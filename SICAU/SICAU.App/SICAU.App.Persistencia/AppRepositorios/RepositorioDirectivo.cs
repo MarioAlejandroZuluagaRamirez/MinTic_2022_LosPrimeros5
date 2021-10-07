@@ -1,8 +1,6 @@
 using System.Collections.Generic;
-using SICAU.App.Dominio;
 using System.Linq;
-using System;
-using System.Diagnostics;
+using SICAU.App.Dominio;
 
 namespace SICAU.App.Persistencia
 {
@@ -11,7 +9,7 @@ namespace SICAU.App.Persistencia
         private readonly AppContext _appContext;
 
         //Oscar
-        IEnumerable<Directivo> directivos;
+        public IEnumerable<Directivo> directivos;
 
         public RepositorioDirectivo(AppContext appContext)
         {

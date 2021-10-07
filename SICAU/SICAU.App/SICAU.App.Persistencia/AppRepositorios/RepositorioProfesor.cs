@@ -1,24 +1,22 @@
 using System.Collections.Generic;
-using SICAU.App.Dominio;
 using System.Linq;
+using SICAU.App.Dominio;
 
 namespace SICAU.App.Persistencia
 {
     public class RepositorioProfesor : IRepositorioProfesor
     {
         private readonly AppContext _appContext;
-        IEnumerable<Profesor> profesores;
+        public IEnumerable<Profesor> profesores;
 
         public RepositorioProfesor(AppContext appContext)
         {
             _appContext = appContext;
         }
-			
 		public RepositorioProfesor(IEnumerable<Profesor> profesores)
 		{
 		    this.profesores = profesores;
 		}
-	
 		IEnumerable<Profesor> IRepositorioProfesor.GetByNames(string criterio)
 		{
 		    IEnumerable<Profesor> profesores = _appContext.profesores;

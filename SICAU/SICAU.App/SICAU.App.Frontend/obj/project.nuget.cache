@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Vg5MPgPBVffplFR+J9ELck5B3FLWueaRrCcFIvLgr8ZDFAv9XiATeO9vVjql6G/u4AypOro3EgxQxLL41Q2nxA==",
+  "dgSpecHash": "d0Tturo+zs1LQzJeDYp8pclwDd26EvIYA2yoaApF8I8Snn7Esr0HrNJpLbxDZYSasOCrZ5KI1qVMfjGBK+hyFQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Proyecto_SICAU\\SICAU\\SICAU.App\\SICAU.App.Frontend\\SICAU.App.Frontend.csproj",
+  "projectFilePath": "C:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto\\SICAU\\SICAU.App\\SICAU.App.Frontend\\SICAU.App.Frontend.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mazul\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\mazul\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",

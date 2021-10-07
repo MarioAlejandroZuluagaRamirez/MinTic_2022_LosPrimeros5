@@ -1,13 +1,13 @@
 using System.Collections.Generic;
-using SICAU.App.Dominio;
 using System.Linq;
+using SICAU.App.Dominio;
 
 namespace SICAU.App.Persistencia
 {
     public class RepositorioHorario : IRepositorioHorario
     {
         private readonly AppContext _appContext;
-        IEnumerable<Horario> horarios;
+        public IEnumerable<Horario> horarios;
 
         public RepositorioHorario(AppContext appContext)
         {

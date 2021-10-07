@@ -10,7 +10,7 @@ using SICAU.App.Persistencia;
 namespace SICAU.App.Persistencia.Migrations
 {
     [DbContext(typeof(AppContext))]
-    [Migration("20210929183743_Initial")]
+    [Migration("20211007154915_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -69,7 +69,7 @@ namespace SICAU.App.Persistencia.Migrations
                     b.ToTable("encuestaCovidSintomas");
                 });
 
-            modelBuilder.Entity("SICAU.App.Dominio.Entidades.EstudianteGrupo", b =>
+            modelBuilder.Entity("SICAU.App.Dominio.EstudianteGrupo", b =>
                 {
                     b.Property<int>("id")
                         .ValueGeneratedOnAdd()
@@ -98,6 +98,9 @@ namespace SICAU.App.Persistencia.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
+                    b.Property<int?>("Universidadid")
+                        .HasColumnType("int");
+
                     b.Property<string>("facultad")
                         .HasColumnType("nvarchar(max)");
 
@@ -105,6 +108,8 @@ namespace SICAU.App.Persistencia.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("id");
+
+                    b.HasIndex("Universidadid");
 
                     b.HasIndex("sedeid");
 
@@ -276,12 +281,15 @@ namespace SICAU.App.Persistencia.Migrations
                         .UseIdentityColumn();
 
                     b.Property<string>("sede")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("ubicacion")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
-                    b.Property<int?>("universidadid")
+                    b.Property<int>("universidadid")
                         .HasColumnType("int");
 
                     b.HasKey("id");
@@ -299,7 +307,9 @@ namespace SICAU.App.Persistencia.Migrations
                         .UseIdentityColumn();
 
                     b.Property<string>("sintoma")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.HasKey("id");
 
@@ -314,7 +324,9 @@ namespace SICAU.App.Persistencia.Migrations
                         .UseIdentityColumn();
 
                     b.Property<string>("universidad")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.HasKey("id");
 
@@ -401,7 +413,7 @@ namespace SICAU.App.Persistencia.Migrations
                     b.Navigation("sintoma");
                 });
 
-            modelBuilder.Entity("SICAU.App.Dominio.Entidades.EstudianteGrupo", b =>
+            modelBuilder.Entity("SICAU.App.Dominio.EstudianteGrupo", b =>
                 {
                     b.HasOne("SICAU.App.Dominio.Estudiante", "estudiante")
                         .WithMany()
@@ -418,6 +430,10 @@ namespace SICAU.App.Persistencia.Migrations
 
             modelBuilder.Entity("SICAU.App.Dominio.Facultad", b =>
                 {
+                    b.HasOne("SICAU.App.Dominio.Universidad", null)
+                        .WithMany("facultades")
+                        .HasForeignKey("Universidadid");
+
                     b.HasOne("SICAU.App.Dominio.Sede", "sede")
                         .WithMany()
                         .HasForeignKey("sedeid");
@@ -485,8 +501,10 @@ namespace SICAU.App.Persistencia.Migrations
             modelBuilder.Entity("SICAU.App.Dominio.Sede", b =>
                 {
                     b.HasOne("SICAU.App.Dominio.Universidad", "universidad")
-                        .WithMany()
-                        .HasForeignKey("universidadid");
+                        .WithMany("sedes")
+                        .HasForeignKey("universidadid")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("universidad");
                 });
@@ -516,6 +534,13 @@ namespace SICAU.App.Persistencia.Migrations
                         .HasForeignKey("sedeid");
 
                     b.Navigation("sede");
+                });
+
+            modelBuilder.Entity("SICAU.App.Dominio.Universidad", b =>
+                {
+                    b.Navigation("facultades");
+
+                    b.Navigation("sedes");
                 });
 #pragma warning restore 612, 618
         }

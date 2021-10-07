@@ -1,6 +1,5 @@
 using Microsoft.EntityFrameworkCore;
 using SICAU.App.Dominio;
-using SICAU.App.Dominio.Entidades;
 
 namespace SICAU.App.Persistencia
 {
@@ -28,17 +27,9 @@ namespace SICAU.App.Persistencia
             if (!optionsBuilder.IsConfigured)
             {
                 optionsBuilder
-                .UseSqlServer("Data Source = (localdb)\\MSSQLLocalDB; Initial Catalog = ProjectSICAUData")
-                .EnableSensitiveDataLogging(true);
+                .UseSqlServer("Data Source = (localdb)\\MSSQLLocalDB; Initial Catalog = ProjectSICAUData");
+                // .EnableSensitiveDataLogging(true);
             }
         }
-        //protected override void OnModelCreating(ModelBuilder modelBuilder)
-        //{
-        //    modelBuilder.Entity<Facultad>()
-        //    .HasOne(e => e.universidad)
-        //    .WithMany(d => d.Facultades)
-        //    .HasForeignKey(e => e.universidadId)
-        //    .IsRequired(false);
-        //}
     }
 }

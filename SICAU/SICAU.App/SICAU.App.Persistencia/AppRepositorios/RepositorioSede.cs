@@ -1,43 +1,33 @@
 using System.Collections.Generic;
-using SICAU.App.Dominio;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
+using SICAU.App.Dominio;
 
 namespace SICAU.App.Persistencia
 {
     public class RepositorioSede : IRepositorioSede
     {
         private readonly AppContext _appContext;
-        IEnumerable<Sede> sedes;
-
         public RepositorioSede(AppContext appContext)
         {
             _appContext = appContext;
         }
 
-        public RepositorioSede (IEnumerable<Sede> sedes)
-        {
-            this.sedes = sedes;
-        }
-
         public Sede AsignaUniversidad(int idSede, int idUniversidad)
         {
-            Sede sede = _appContext.sedes.FirstOrDefault(p => p.id == idSede);
-            Universidad universidad = _appContext.universidades.FirstOrDefault(u => u.id == idUniversidad);
+            Sede sede = _appContext.sedes.First(p => p.id == idSede);
+            Universidad universidad = _appContext.universidades.First(u => u.id == idUniversidad);
             sede.universidad = universidad;
             _appContext.SaveChanges();
             return sede;
         }
-
-        Sede IRepositorioSede.AddSede(Sede sede)
+        Sede IRepositorioSede.AddSede(Sede sede, Universidad universidad)
         {
+            if (universidad != null)
+                sede.universidad = universidad;
+
             var sedeAdicionado = _appContext.sedes.Add(sede);
             _appContext.SaveChanges();
-
-            foreach (var entity in _appContext.ChangeTracker.Entries())
-            {
-                entity.State = EntityState.Detached;
-            }
 
             return sedeAdicionado.Entity;
         }
@@ -50,12 +40,10 @@ namespace SICAU.App.Persistencia
             _appContext.sedes.Remove(sedeEncontrado);
             _appContext.SaveChanges();
         }
-
         IEnumerable<Sede> IRepositorioSede.GetAllSede()
         {
             return _appContext.sedes;
         }
-
         IEnumerable<Sede> IRepositorioSede.GetByNames(string criterio)
         {
             var sedes = _appContext.sedes.ToList();
@@ -72,7 +60,6 @@ namespace SICAU.App.Persistencia
             }
             return sedes;
         }
-
         Sede IRepositorioSede.GetSede(int idSede)
         {
             Sede sede =  _appContext.sedes.FirstOrDefault(p => p.id == idSede);
@@ -82,22 +69,16 @@ namespace SICAU.App.Persistencia
 
         Sede IRepositorioSede.UpdateSede(Sede sede)
         {
-            Sede sedeEncontrado = _appContext.sedes.FirstOrDefault(p => p.id == sede.id);
+            var sedeEncontrado = _appContext.sedes.Include(u => u.universidad).First(p => p.id == sede.id);
             if (sedeEncontrado != null)
             {
                 sedeEncontrado.id = sede.id;
                 sedeEncontrado.sede = sede.sede;
                 sedeEncontrado.ubicacion = sede.ubicacion;
-                sedeEncontrado.universidad = sede.universidad;
+                //sedeEncontrado.universidad = sede.universidad;
                 _appContext.SaveChanges();
-
-                foreach (var entity in _appContext.ChangeTracker.Entries())
-                {
-                    entity.State = EntityState.Detached;
-                }
             }
             return sedeEncontrado;
         }
-
     }
 }

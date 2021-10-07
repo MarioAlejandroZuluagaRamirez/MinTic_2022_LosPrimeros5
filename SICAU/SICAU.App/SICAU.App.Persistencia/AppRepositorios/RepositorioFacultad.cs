@@ -1,13 +1,13 @@
 using System.Collections.Generic;
-using SICAU.App.Dominio;
 using System.Linq;
+using SICAU.App.Dominio;
 
 namespace SICAU.App.Persistencia
 {
     public class RepositorioFacultad : IRepositorioFacultad
     {
         private readonly AppContext _appContext;
-        IEnumerable<Facultad> facultades;
+        public IEnumerable<Facultad> facultades;
         public RepositorioFacultad(AppContext appContext)
         {
             _appContext = appContext;

@@ -13,7 +13,7 @@ namespace SICAU.App.Persistencia.Migrations
                 {
                     id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    sintoma = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    sintoma = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false)
                 },
                 constraints: table =>
                 {
@@ -26,7 +26,7 @@ namespace SICAU.App.Persistencia.Migrations
                 {
                     id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    universidad = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    universidad = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false)
                 },
                 constraints: table =>
                 {
@@ -39,9 +39,9 @@ namespace SICAU.App.Persistencia.Migrations
                 {
                     id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    sede = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    ubicacion = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    universidadid = table.Column<int>(type: "int", nullable: true)
+                    sede = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    ubicacion = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
+                    universidadid = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -51,7 +51,7 @@ namespace SICAU.App.Persistencia.Migrations
                         column: x => x.universidadid,
                         principalTable: "universidades",
                         principalColumn: "id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -61,7 +61,8 @@ namespace SICAU.App.Persistencia.Migrations
                     id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     facultad = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    sedeid = table.Column<int>(type: "int", nullable: true)
+                    sedeid = table.Column<int>(type: "int", nullable: true),
+                    Universidadid = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -70,6 +71,12 @@ namespace SICAU.App.Persistencia.Migrations
                         name: "FK_facultades_sedes_sedeid",
                         column: x => x.sedeid,
                         principalTable: "sedes",
+                        principalColumn: "id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_facultades_universidades_Universidadid",
+                        column: x => x.Universidadid,
+                        principalTable: "universidades",
                         principalColumn: "id",
                         onDelete: ReferentialAction.Restrict);
                 });
@@ -337,6 +344,11 @@ namespace SICAU.App.Persistencia.Migrations
                 name: "IX_facultades_sedeid",
                 table: "facultades",
                 column: "sedeid");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_facultades_Universidadid",
+                table: "facultades",
+                column: "Universidadid");
 
             migrationBuilder.CreateIndex(
                 name: "IX_grupos_horarioid",

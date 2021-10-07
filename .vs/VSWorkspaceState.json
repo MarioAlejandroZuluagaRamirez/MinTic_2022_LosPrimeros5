@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\SICAU"
+    "\\SICAU",
+    "\\SICAU\\SICAU.App",
+    "\\SICAU\\SICAU.App\\SICAU.App.Consola"
   ],
-  "SelectedNode": "\\SICAU\\SICAU.App",
+  "SelectedNode": "\\SICAU\\SICAU.App\\SICAU.App.Consola\\SICAU.App.Consola.csproj",
   "PreviewInSolutionExplorer": false
 }

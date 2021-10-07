@@ -1,23 +1,23 @@
 using System.Collections.Generic;
-using SICAU.App.Dominio;
 using System.Linq;
+using SICAU.App.Dominio;
 
 namespace SICAU.App.Persistencia
 {
     public class RepositorioUniversidad : IRepositorioUniversidad
     {
         private readonly AppContext _appContext;
-        IEnumerable<Universidad> universidades;
+        // public readonly IEnumerable<Universidad> universidades;
 
         public RepositorioUniversidad(AppContext appContext)
         {
             _appContext = appContext;
         }
 
-        public RepositorioUniversidad(IEnumerable<Universidad> universidades)
-        {
-            this.universidades = universidades;
-        }
+        // public RepositorioUniversidad(IEnumerable<Universidad> universidades)
+        // {
+        //     this.universidades = universidades;
+        // }
         Universidad IRepositorioUniversidad.AddUniversidad(Universidad universidad)
         {
             var universidadAdicionado = _appContext.universidades.Add(universidad);
@@ -27,7 +27,7 @@ namespace SICAU.App.Persistencia
 
         void IRepositorioUniversidad.DeleteUniversidad(int idUniversidad)
         {
-            var universidadEncontrado = _appContext.universidades.FirstOrDefault(p => p.id == idUniversidad);
+            var universidadEncontrado = _appContext.universidades.First(p => p.id == idUniversidad);
             if (universidadEncontrado == null)
                 return;
             _appContext.universidades.Remove(universidadEncontrado);
@@ -53,12 +53,12 @@ namespace SICAU.App.Persistencia
 
         Universidad IRepositorioUniversidad.GetUniversidad(int idUniversidad)
         {
-            return _appContext.universidades.FirstOrDefault(p => p.id == idUniversidad);
+            return _appContext.universidades.First(p => p.id == idUniversidad);
         }
 
         Universidad IRepositorioUniversidad.UpdateUniversidad(Universidad universidad)
         {
-            var universidadEncontrado = _appContext.universidades.FirstOrDefault(p => p.id == universidad.id);
+            var universidadEncontrado = _appContext.universidades.First(p => p.id == universidad.id);
             if (universidadEncontrado != null)
             {
                 universidadEncontrado.id = universidad.id;
@@ -68,5 +68,24 @@ namespace SICAU.App.Persistencia
             return universidadEncontrado;
         }
 
+        //Universidad IRepositorioUniversidad.AdicionarSede(Universidad universidad, Sede sede)
+        //{
+        //    var universidadEncontrado = _appContext.universidades.First(p => p.id == universidad.id);
+        //    (universidadEncontrado.sedes ??= new List<Sede>()).Add(sede);
+        //    _appContext.Update(universidadEncontrado);
+        //    _appContext.SaveChanges();
+        //    return universidadEncontrado;
+        //}
+
+        Universidad IRepositorioUniversidad.AdicionarSede(int idUniversidad, Sede sede)
+        {
+            var universidadEncontrado = _appContext.universidades.First(p => p.id == idUniversidad);
+            Sede nuevaSede = new ();
+            nuevaSede = sede;
+            (universidadEncontrado.sedes ??= new List<Sede>()).Add(sede);
+            _appContext.Update(universidadEncontrado);
+            _appContext.SaveChanges();
+            return universidadEncontrado;
+        }
     }
 }

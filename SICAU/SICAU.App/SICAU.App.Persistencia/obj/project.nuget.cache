@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8I878LgHpBaihsSi87MfvPcW5V7y/pmv5JOEMN/AyEBb4O14qnuV8CjfEKN903DNDUWR3YjLpnty0tY8uSs4Cw==",
+  "dgSpecHash": "/0pie+aVCNE7vAi3R4qMOnTLYzH3bDJ3TBWBqvL1KXtsOiQOix9HIckj/Fx0egv9HLopIH5I2rpS7EQh3BGdZQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Proyecto_SICAU\\SICAU\\SICAU.App\\SICAU.App.Persistencia\\SICAU.App.Persistencia.csproj",
+  "projectFilePath": "C:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto\\SICAU\\SICAU.App\\SICAU.App.Persistencia\\SICAU.App.Persistencia.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mazul\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\mazul\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

@@ -37,14 +37,15 @@ namespace SICAU.App.Frontend.Pages
         {
             if (sede.id == 0)
             {
-                sede = _repoSede.AddSede(sede);
-                _repoSede.AsignaUniversidad(sede.id, idUniversidad.Value);
+                _repoUniversidad.AdicionarSede(idUniversidad.Value, sede);
             }
             else
             {
-                universidad = _repoUniversidad.GetUniversidad(idUniversidad.Value);
-                sede.universidad = universidad;
-                sede = _repoSede.UpdateSede(sede);
+                _repoSede.AsignaUniversidad(sede.id, idUniversidad.Value);
+                _repoSede.UpdateSede(sede);      
+                    //universidad = _repoUniversidad.GetUniversidad(idUniversidad.Value);
+                //sede.universidad = universidad;
+                //sede = _repoSede.UpdateSede(sede);
             }
             return RedirectToPage("./ListSede");
         }

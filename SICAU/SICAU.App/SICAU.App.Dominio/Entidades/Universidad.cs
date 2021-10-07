@@ -8,5 +8,7 @@ namespace SICAU.App.Dominio
         public int id {get;set;}
         [Required,StringLength(50,ErrorMessage ="El campo solo admite hasta 50 caracteres")]
         public string universidad {get;set;}
+        public List<Sede> sedes {get;set;}
+        public List<Facultad> facultades {get;set;}
     }
 }

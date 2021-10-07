@@ -1,8 +1,8 @@
 using System.Collections.Generic;
-using SICAU.App.Dominio;
 using System.Linq;
 using System;
 using Microsoft.EntityFrameworkCore;
+using SICAU.App.Dominio;
 
 namespace SICAU.App.Persistencia
 {

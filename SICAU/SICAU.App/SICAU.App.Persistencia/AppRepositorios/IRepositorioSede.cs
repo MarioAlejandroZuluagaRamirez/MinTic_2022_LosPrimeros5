@@ -7,7 +7,7 @@ namespace SICAU.App.Persistencia
     {
         IEnumerable<Sede> GetAllSede();
         IEnumerable<Sede> GetByNames(string criterio);
-        Sede AddSede(Sede sede);
+        Sede AddSede(Sede sede, Universidad Universidad);
         Sede UpdateSede(Sede sede);
         void DeleteSede(int idSede);
         Sede GetSede(int idSede);

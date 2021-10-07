@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using SICAU.App.Dominio.Entidades;
+using SICAU.App.Dominio;
 
 namespace SICAU.App.Persistencia
 {

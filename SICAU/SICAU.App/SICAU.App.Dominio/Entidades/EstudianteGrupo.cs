@@ -1,6 +1,4 @@
-using System.Text.RegularExpressions;
-
-namespace SICAU.App.Dominio.Entidades
+namespace SICAU.App.Dominio
 {
     public class EstudianteGrupo
     {

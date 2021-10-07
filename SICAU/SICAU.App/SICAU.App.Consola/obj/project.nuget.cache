@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "z6jcncEyAX1cApuJiv9Wp567VbhDBuRplJ3FmZxwVpxfNGCTFyt3jkVVX4jdDqeb2OEiPKHnqqy2C3zfFdgrRg==",
+  "dgSpecHash": "rVdEwBGjnW1+eYKElzciSNdAVa9xnvb8F0QOzeA09K8+9x9jTZIq+5rGSVIyYxzMNxekfeqzDa6uPul+hAgnYw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Proyecto_SICAU\\SICAU\\SICAU.App\\SICAU.App.Consola\\SICAU.App.Consola.csproj",
+  "projectFilePath": "C:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto\\SICAU\\SICAU.App\\SICAU.App.Consola\\SICAU.App.Consola.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mazul\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\mazul\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
