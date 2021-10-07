@@ -67,16 +67,6 @@ namespace SICAU.App.Persistencia
             }
             return universidadEncontrado;
         }
-
-        //Universidad IRepositorioUniversidad.AdicionarSede(Universidad universidad, Sede sede)
-        //{
-        //    var universidadEncontrado = _appContext.universidades.First(p => p.id == universidad.id);
-        //    (universidadEncontrado.sedes ??= new List<Sede>()).Add(sede);
-        //    _appContext.Update(universidadEncontrado);
-        //    _appContext.SaveChanges();
-        //    return universidadEncontrado;
-        //}
-
         Universidad IRepositorioUniversidad.AdicionarSede(int idUniversidad, Sede sede)
         {
             var universidadEncontrado = _appContext.universidades.First(p => p.id == idUniversidad);

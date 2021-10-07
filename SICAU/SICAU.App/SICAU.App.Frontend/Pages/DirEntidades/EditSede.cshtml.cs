@@ -42,10 +42,7 @@ namespace SICAU.App.Frontend.Pages
             else
             {
                 _repoSede.AsignaUniversidad(sede.id, idUniversidad.Value);
-                _repoSede.UpdateSede(sede);      
-                    //universidad = _repoUniversidad.GetUniversidad(idUniversidad.Value);
-                //sede.universidad = universidad;
-                //sede = _repoSede.UpdateSede(sede);
+                _repoSede.UpdateSede(sede);
             }
             return RedirectToPage("./ListSede");
         }
