@@ -1,0 +1,49 @@
+﻿@page
+@model SICAU.App.FrontEnd.Pages.DeleteEstudianteModel
+@{
+}
+
+<h3>Eliminar Estudiante</h3>
+
+<p></p>
+
+<tr>
+    <td>
+        <a class="btn btn-primary table-btn" asp-page="/DirEntidades/ListEstudiante">
+        <i class="fas fa-arrow-circle-left"></i> 
+            Regresar
+        </a>
+    </td>
+</tr>
+
+<p></p>
+
+<table class="table table-bordered table-striped">
+    <tr>
+        <td class="table-dark">ID Estudiante</td>
+        <td>@Model.estudiante.id</td>
+    </tr>
+    <tr>
+        <td class="table-dark">Nombre Estudiante</td>  
+         <td>@Model.estudiante.nombre</td>      
+    </tr>
+    <tr>
+   
+        <td class="table-dark">Apellido Estudiante</td>
+        <td>@Model.estudiante.apellido</td>
+    </tr>
+    <tr>    
+        <td class="table-dark">Identificacion Estudiante</td>
+        <td>@Model.estudiante.identificacion</td>
+    </tr>     
+</table>
+
+<p></p>
+
+<form method="post">
+    <input type="hidden" asp-for="estudiante.id">
+    <button type="submit" class="btn btn-primary">
+        <i class="far fa-trash-alt"></i>
+        Eliminar
+    </button>
+</form>

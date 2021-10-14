@@ -1,0 +1,44 @@
+﻿@page
+@model SICAU.App.FrontEnd.Pages.EditProfesorModel
+@{
+}
+          
+   <h1>Editar Profesor</h1>
+
+ @* <h1>Crear Nuevo Profesor</h1> *@
+
+<p></p>
+
+<a class="btn btn-primary table-btn" asp-page="/DirEntidades/ListProfesor">
+<i class="fas fa-arrow-circle-left"></i> 
+    Regresar
+</a>
+
+<p></p>
+<form method="post">
+    <input type="hidden" asp-for="profesor.id">
+  
+    <div class="form-group">
+        <label for="nombre">Nombre Profesor</label>
+         <input asp-for="profesor.nombre" class="form-control"> 
+        <label for="apellido">Apellido Profesor</label> 
+         <input asp-for="profesor.apellido" class="form-control">  
+        <label for="identificacion">Identificación Profesor</label> 
+         <input asp-for="profesor.identificacion" class="form-control"> 
+        <label for="fechaNacimiento">Fecha Nacimiento Profesor</label> 
+         <input asp-for="profesor.fechaNacimiento" class="form-control">   
+        <label for="estadoCovid">Estado Covid Profesor</label> 
+         <input asp-for="profesor.estadoCovid" class="form-control"> 
+        <label for="departamento">Departamento Profesor</label> 
+         <input asp-for="profesor.departamento" class="form-control"> 
+         @* <label for="sede">Sede Profesor</label> 
+         <input asp-for="profesor.sede.sede" class="form-control">   *@
+                
+        <span class="text_danger" asp-validation.for="Profesor.nombre"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Guardar Cambios
+        <i class="far fa-save"></i>
+    </button>
+</form>
+
+

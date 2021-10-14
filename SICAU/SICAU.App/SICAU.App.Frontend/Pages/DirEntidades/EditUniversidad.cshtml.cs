@@ -30,14 +30,16 @@ namespace SICAU.App.Frontend.Pages
 
         public IActionResult OnPost()
         {
-            if(!ModelState.IsValid)
+            if(!ModelState.IsValid) 
+             {                    
                 return Page();                
-            else
-            {
+            }else
+            {                 
                 if(universidad.id > 0)
+                {                                          
                     universidad = _repoUniversidad.UpdateUniversidad(universidad);
-                else
-                {
+                }else
+                {                  
                     _repoUniversidad.AddUniversidad(universidad);
                 }     
                 return RedirectToPage("./ListUniversidad");

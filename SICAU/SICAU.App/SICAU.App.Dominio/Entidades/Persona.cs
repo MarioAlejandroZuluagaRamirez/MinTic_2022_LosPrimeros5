@@ -7,9 +7,10 @@ namespace SICAU.App.Dominio
     public class Persona
     {
         public int id {get;set;}
-        [Required]
-        [StringLength(50)]
-        [Display(Name = "Nombres")]
+        [Required,StringLength(50,ErrorMessage ="El campo solo admite hasta 50 caracteres")]
+        // [Required]
+        // [StringLength(50)]
+        // [Display(Name = "Nombres")]
         public string nombre {get;set;}
         [StringLength(50)]
         [Display(Name = "Apellidos")]

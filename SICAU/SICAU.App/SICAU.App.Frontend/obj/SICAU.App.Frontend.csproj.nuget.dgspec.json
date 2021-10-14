@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto\\SICAU\\SICAU.App\\SICAU.App.Frontend\\SICAU.App.Frontend.csproj": {}
+    "C:\\SICAU\\MinTic_2022_LosPrimeros5\\SICAU\\SICAU.App\\SICAU.App.Frontend\\SICAU.App.Frontend.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto\\SICAU\\SICAU.App\\SICAU.App.Dominio\\SICAU.App.Dominio.csproj": {
+    "C:\\SICAU\\MinTic_2022_LosPrimeros5\\SICAU\\SICAU.App\\SICAU.App.Dominio\\SICAU.App.Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto\\SICAU\\SICAU.App\\SICAU.App.Dominio\\SICAU.App.Dominio.csproj",
+        "projectUniqueName": "C:\\SICAU\\MinTic_2022_LosPrimeros5\\SICAU\\SICAU.App\\SICAU.App.Dominio\\SICAU.App.Dominio.csproj",
         "projectName": "SICAU.App.Dominio",
-        "projectPath": "C:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto\\SICAU\\SICAU.App\\SICAU.App.Dominio\\SICAU.App.Dominio.csproj",
-        "packagesPath": "C:\\Users\\mazul\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto\\SICAU\\SICAU.App\\SICAU.App.Dominio\\obj\\",
+        "projectPath": "C:\\SICAU\\MinTic_2022_LosPrimeros5\\SICAU\\SICAU.App\\SICAU.App.Dominio\\SICAU.App.Dominio.csproj",
+        "packagesPath": "C:\\Users\\Yo\\.nuget\\packages\\",
+        "outputPath": "C:\\SICAU\\MinTic_2022_LosPrimeros5\\SICAU\\SICAU.App\\SICAU.App.Dominio\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\mazul\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Yo\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -54,39 +52,37 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto\\SICAU\\SICAU.App\\SICAU.App.Frontend\\SICAU.App.Frontend.csproj": {
+    "C:\\SICAU\\MinTic_2022_LosPrimeros5\\SICAU\\SICAU.App\\SICAU.App.Frontend\\SICAU.App.Frontend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto\\SICAU\\SICAU.App\\SICAU.App.Frontend\\SICAU.App.Frontend.csproj",
+        "projectUniqueName": "C:\\SICAU\\MinTic_2022_LosPrimeros5\\SICAU\\SICAU.App\\SICAU.App.Frontend\\SICAU.App.Frontend.csproj",
         "projectName": "SICAU.App.Frontend",
-        "projectPath": "C:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto\\SICAU\\SICAU.App\\SICAU.App.Frontend\\SICAU.App.Frontend.csproj",
-        "packagesPath": "C:\\Users\\mazul\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto\\SICAU\\SICAU.App\\SICAU.App.Frontend\\obj\\",
+        "projectPath": "C:\\SICAU\\MinTic_2022_LosPrimeros5\\SICAU\\SICAU.App\\SICAU.App.Frontend\\SICAU.App.Frontend.csproj",
+        "packagesPath": "C:\\Users\\Yo\\.nuget\\packages\\",
+        "outputPath": "C:\\SICAU\\MinTic_2022_LosPrimeros5\\SICAU\\SICAU.App\\SICAU.App.Frontend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\mazul\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Yo\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto\\SICAU\\SICAU.App\\SICAU.App.Dominio\\SICAU.App.Dominio.csproj": {
-                "projectPath": "C:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto\\SICAU\\SICAU.App\\SICAU.App.Dominio\\SICAU.App.Dominio.csproj"
+              "C:\\SICAU\\MinTic_2022_LosPrimeros5\\SICAU\\SICAU.App\\SICAU.App.Dominio\\SICAU.App.Dominio.csproj": {
+                "projectPath": "C:\\SICAU\\MinTic_2022_LosPrimeros5\\SICAU\\SICAU.App\\SICAU.App.Dominio\\SICAU.App.Dominio.csproj"
               },
-              "C:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto\\SICAU\\SICAU.App\\SICAU.App.Persistencia\\SICAU.App.Persistencia.csproj": {
-                "projectPath": "C:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto\\SICAU\\SICAU.App\\SICAU.App.Persistencia\\SICAU.App.Persistencia.csproj"
+              "C:\\SICAU\\MinTic_2022_LosPrimeros5\\SICAU\\SICAU.App\\SICAU.App.Persistencia\\SICAU.App.Persistencia.csproj": {
+                "projectPath": "C:\\SICAU\\MinTic_2022_LosPrimeros5\\SICAU\\SICAU.App\\SICAU.App.Persistencia\\SICAU.App.Persistencia.csproj"
               }
             }
           }
@@ -134,36 +130,34 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto\\SICAU\\SICAU.App\\SICAU.App.Persistencia\\SICAU.App.Persistencia.csproj": {
+    "C:\\SICAU\\MinTic_2022_LosPrimeros5\\SICAU\\SICAU.App\\SICAU.App.Persistencia\\SICAU.App.Persistencia.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto\\SICAU\\SICAU.App\\SICAU.App.Persistencia\\SICAU.App.Persistencia.csproj",
+        "projectUniqueName": "C:\\SICAU\\MinTic_2022_LosPrimeros5\\SICAU\\SICAU.App\\SICAU.App.Persistencia\\SICAU.App.Persistencia.csproj",
         "projectName": "SICAU.App.Persistencia",
-        "projectPath": "C:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto\\SICAU\\SICAU.App\\SICAU.App.Persistencia\\SICAU.App.Persistencia.csproj",
-        "packagesPath": "C:\\Users\\mazul\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto\\SICAU\\SICAU.App\\SICAU.App.Persistencia\\obj\\",
+        "projectPath": "C:\\SICAU\\MinTic_2022_LosPrimeros5\\SICAU\\SICAU.App\\SICAU.App.Persistencia\\SICAU.App.Persistencia.csproj",
+        "packagesPath": "C:\\Users\\Yo\\.nuget\\packages\\",
+        "outputPath": "C:\\SICAU\\MinTic_2022_LosPrimeros5\\SICAU\\SICAU.App\\SICAU.App.Persistencia\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\mazul\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Yo\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto\\SICAU\\SICAU.App\\SICAU.App.Dominio\\SICAU.App.Dominio.csproj": {
-                "projectPath": "C:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto\\SICAU\\SICAU.App\\SICAU.App.Dominio\\SICAU.App.Dominio.csproj"
+              "C:\\SICAU\\MinTic_2022_LosPrimeros5\\SICAU\\SICAU.App\\SICAU.App.Dominio\\SICAU.App.Dominio.csproj": {
+                "projectPath": "C:\\SICAU\\MinTic_2022_LosPrimeros5\\SICAU\\SICAU.App\\SICAU.App.Dominio\\SICAU.App.Dominio.csproj"
               }
             }
           }
@@ -214,7 +208,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -16,10 +16,9 @@
 
 <p></p>
 
-<button type="button" class="btn btn-primary">
-    <i class="far fa-file"></i>
-    Adicionar Nuevo Registro
-</button>
+<a type="button" class="btn btn-primary" asp-page="/DirEntidades/EditDirectivo">Adicionar Nuevo Registro
+<i class="far fa-file"></i>
+</a>
 
 <p></p>
 
@@ -52,7 +51,7 @@
                 </a>
             </td>
             <td>
-                <a class="btn btn-warning table-btn">
+                <a class="btn btn-warning table-btn" asp-page="/DirEntidades/DeleteDirectivo" asp-route-idDirectivo="@directivo.id">
                 <i class="far fa-trash-alt"></i>
                 </a>
             </td>

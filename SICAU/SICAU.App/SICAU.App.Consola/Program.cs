@@ -35,10 +35,10 @@ namespace SICAU.App.Consola
             // UpdatePrograma();
             // AddEstudiante();
             // UpdateEstudiante();
-            //AddDirectivo();
-            // UpdateDirectivo();
-            // AddProfesor();
-            // UpdateProfesor();
+            // AddDirectivo();
+            //  UpdateDirectivo();
+             AddProfesor();
+             UpdateProfesor();
             // AddPersonalAseo();
             // UpdatePersonalAseo();
             // AddMateria();
@@ -368,136 +368,136 @@ namespace SICAU.App.Consola
             };
             _repoEstudiante.AddEstudiante(estudiante3);
         }
-        //    public static void UpdateEstudiante()
-        //    {
-        //        Programa programa = _repoPrograma.GetPrograma(3);
-        //        Estudiante estudiante;
+           public static void UpdateEstudiante()
+           {
+               Programa programa = _repoPrograma.GetPrograma(3);
+               Estudiante estudiante;
 
-        //        estudiante = _repoEstudiante.GetEstudiante(1);
-        //        estudiante.programa = programa;
-        //        _repoEstudiante.UpdateEstudiante(estudiante);
+               estudiante = _repoEstudiante.GetEstudiante(1);
+               estudiante.programa = programa;
+               _repoEstudiante.UpdateEstudiante(estudiante);
 
-        //        estudiante = _repoEstudiante.GetEstudiante(2);
-        //        estudiante.programa = programa;
-        //        _repoEstudiante.UpdateEstudiante(estudiante);
+               estudiante = _repoEstudiante.GetEstudiante(2);
+               estudiante.programa = programa;
+               _repoEstudiante.UpdateEstudiante(estudiante);
 
-        //        estudiante = _repoEstudiante.GetEstudiante(3);
-        //        estudiante.programa = programa;
-        //        _repoEstudiante.UpdateEstudiante(estudiante);
+               estudiante = _repoEstudiante.GetEstudiante(3);
+               estudiante.programa = programa;
+               _repoEstudiante.UpdateEstudiante(estudiante);
 
-        //        estudiante = _repoEstudiante.GetEstudiante(4);
-        //        estudiante.programa = programa;
-        //        _repoEstudiante.UpdateEstudiante(estudiante);
-        //    }
-        //    public static void AddDirectivo()
-        //    {
-        //        Directivo directivo0 = new Directivo()
-        //        {
-        //            nombre = "Mario Alejandro",
-        //            apellido = "Zuluaga Ramirez",
-        //            identificacion = "12345672",
-        //            fechaNacimiento = DateTime.Parse("1982-03-01"),
-        //            estadoCovid = EstadoCovid.Negativo,
-        //            unidad = "",
-        //            sede = null
-        //        };
-        //       _repoDirectivo.AddDirectivo(directivo0);
-        //        Directivo directivo1 = new Directivo()
-        //        {
-        //            nombre = "Juan David",
-        //            apellido = "Salas Melo",
-        //            identificacion = "98765452",
-        //            fechaNacimiento = DateTime.Parse("1987-01-31"),
-        //            estadoCovid = EstadoCovid.Negativo,
-        //            unidad = "",
-        //            sede = null
-        //        };
-        //       _repoDirectivo.AddDirectivo(directivo1);
-        //    }
-        //    public static void UpdateDirectivo()
-        //    {
-        //        Sede sede = _repoSede.GetSede(1);
-        //        Directivo directivo = _repoDirectivo.GetDirectivo(5);
-        //        directivo.unidad = "Investigacion";
-        //        directivo.sede = sede;
-        //        _repoDirectivo.UpdateDirectivo(directivo);
+               estudiante = _repoEstudiante.GetEstudiante(4);
+               estudiante.programa = programa;
+               _repoEstudiante.UpdateEstudiante(estudiante);
+           }
+           public static void AddDirectivo()
+           {
+               Directivo directivo0 = new Directivo()
+               {
+                   nombre = "Mario Alejandro",
+                   apellido = "Zuluaga Ramirez",
+                   identificacion = "12345672",
+                   fechaNacimiento = DateTime.Parse("1982-03-01"),
+                   estadoCovid = EstadoCovid.Negativo,
+                   unidad = "",
+                   sede = null
+               };
+              _repoDirectivo.AddDirectivo(directivo0);
+               Directivo directivo1 = new Directivo()
+               {
+                   nombre = "Juan David",
+                   apellido = "Salas Melo",
+                   identificacion = "98765452",
+                   fechaNacimiento = DateTime.Parse("1987-01-31"),
+                   estadoCovid = EstadoCovid.Negativo,
+                   unidad = "",
+                   sede = null
+               };
+              _repoDirectivo.AddDirectivo(directivo1);
+           }
+           public static void UpdateDirectivo()
+           {
+               Sede sede = _repoSede.GetSede(1);
+               Directivo directivo = _repoDirectivo.GetDirectivo(5);
+               directivo.unidad = "Investigacion";
+               directivo.sede = sede;
+               _repoDirectivo.UpdateDirectivo(directivo);
 
-        //        sede = _repoSede.GetSede(2);
-        //        directivo = _repoDirectivo.GetDirectivo(6);
-        //        directivo.unidad = "Admisiones";
-        //        directivo.sede = sede;
-        //        _repoDirectivo.UpdateDirectivo(directivo);
-        //    }
-        //    public static void AddProfesor()
-        //    {
-        //        Profesor profesor0 = new Profesor()
-        //        {
-        //            nombre = "Roberto",
-        //            apellido = "Martinez",
-        //            identificacion = "6789012",
-        //            fechaNacimiento = DateTime.Parse("1970-05-20"),
-        //            estadoCovid = EstadoCovid.Negativo,
-        //            departamento = ""
-        //        };
-        //       _repoProfesor.AddProfesor(profesor0);
-        //        Profesor profesor1 = new Profesor()
-        //        {
-        //            nombre = "Biron Alirio",
-        //            apellido = "Cuesta Renteria",
-        //            identificacion = "4356787",
-        //            fechaNacimiento = DateTime.Parse("1990-11-23"),
-        //            estadoCovid = EstadoCovid.Negativo,
-        //            departamento = ""
-        //        };
-        //       _repoProfesor.AddProfesor(profesor1);
-        //    }
-        //    public static void UpdateProfesor()
-        //    {
-        //        Profesor profesor;
-        //        profesor = _repoProfesor.GetProfesor(7);
-        //        profesor.departamento = "Investigación";
-        //        _repoProfesor.UpdateProfesor(profesor);
-        //        profesor = _repoProfesor.GetProfesor(8);
-        //        profesor.departamento = "Admisiones";
-        //        _repoProfesor.UpdateProfesor(profesor);
-        //    }
-        //    public static void AddPersonalAseo()
-        //    {
-        //        PersonalAseo personalAseo0 = new PersonalAseo()
-        //        {
-        //            nombre = "Roberto",
-        //            apellido = "Martinez",
-        //            identificacion = "6789012",
-        //            fechaNacimiento = DateTime.Parse("1970-05-20"),
-        //            estadoCovid = EstadoCovid.Negativo,
-        //            turno = Turno.Mañana,
-        //            sede = null
-        //        };
-        //       _repoPersonalAseo.AddPersonalAseo(personalAseo0);
-        //        PersonalAseo personalAseo1 = new PersonalAseo()
-        //        {
-        //            nombre = "Juan David",
-        //            apellido = "Salas Melo",
-        //            identificacion = "98765452",
-        //            fechaNacimiento = DateTime.Parse("1987-01-31"),
-        //            estadoCovid= EstadoCovid.Negativo,
-        //            turno = Turno.Tarde,
-        //            sede = null
-        //        };
-        //       _repoPersonalAseo.AddPersonalAseo(personalAseo1);
-        //    }
-        //    public static void UpdatePersonalAseo()
-        //    {
-        //        Sede sede0 = _repoSede.GetSede(1);
-        //        PersonalAseo personalAseo0 = _repoPersonalAseo.GetPersonalAseo(9);
-        //        personalAseo0.sede = sede0;
-        //        _repoPersonalAseo.UpdatePersonalAseo(personalAseo0);
+               sede = _repoSede.GetSede(2);
+               directivo = _repoDirectivo.GetDirectivo(6);
+               directivo.unidad = "Admisiones";
+               directivo.sede = sede;
+               _repoDirectivo.UpdateDirectivo(directivo);
+           }
+           public static void AddProfesor()
+           {
+               Profesor profesor0 = new Profesor()
+               {
+                   nombre = "Roberto",
+                   apellido = "Martinez",
+                   identificacion = "6789012",
+                   fechaNacimiento = DateTime.Parse("1970-05-20"),
+                   estadoCovid = EstadoCovid.Negativo,
+                   departamento = ""
+               };
+              _repoProfesor.AddProfesor(profesor0);
+               Profesor profesor1 = new Profesor()
+               {
+                   nombre = "Bairon Alirio",
+                   apellido = "Cuesta Renteria",
+                   identificacion = "4356787",
+                   fechaNacimiento = DateTime.Parse("1990-11-23"),
+                   estadoCovid = EstadoCovid.Negativo,
+                   departamento = ""
+               };
+              _repoProfesor.AddProfesor(profesor1);
+           }
+           public static void UpdateProfesor()
+           {
+               Profesor profesor;
+               profesor = _repoProfesor.GetProfesor(7);
+               profesor.departamento = "Investigación";
+               _repoProfesor.UpdateProfesor(profesor);
+               profesor = _repoProfesor.GetProfesor(8);
+               profesor.departamento = "Admisiones";
+               _repoProfesor.UpdateProfesor(profesor);
+           }
+           public static void AddPersonalAseo()
+           {
+               PersonalAseo personalAseo0 = new PersonalAseo()
+               {
+                   nombre = "Roberto",
+                   apellido = "Martinez",
+                   identificacion = "6789012",
+                   fechaNacimiento = DateTime.Parse("1970-05-20"),
+                   estadoCovid = EstadoCovid.Negativo,
+                   turno = Turno.Mañana,
+                   sede = null
+               };
+              _repoPersonalAseo.AddPersonalAseo(personalAseo0);
+               PersonalAseo personalAseo1 = new PersonalAseo()
+               {
+                   nombre = "Juan David",
+                   apellido = "Salas Melo",
+                   identificacion = "98765452",
+                   fechaNacimiento = DateTime.Parse("1987-01-31"),
+                   estadoCovid= EstadoCovid.Negativo,
+                   turno = Turno.Tarde,
+                   sede = null
+               };
+              _repoPersonalAseo.AddPersonalAseo(personalAseo1);
+           }
+           public static void UpdatePersonalAseo()
+           {
+               Sede sede0 = _repoSede.GetSede(1);
+               PersonalAseo personalAseo0 = _repoPersonalAseo.GetPersonalAseo(9);
+               personalAseo0.sede = sede0;
+               _repoPersonalAseo.UpdatePersonalAseo(personalAseo0);
 
-        //        Sede sede1 = _repoSede.GetSede(2);
-        //        PersonalAseo personalAseo1 = _repoPersonalAseo.GetPersonalAseo(10);
-        //        personalAseo1.sede = sede1;
-        //        _repoPersonalAseo.UpdatePersonalAseo(personalAseo1);
-        //    }
+               Sede sede1 = _repoSede.GetSede(2);
+               PersonalAseo personalAseo1 = _repoPersonalAseo.GetPersonalAseo(10);
+               personalAseo1.sede = sede1;
+               _repoPersonalAseo.UpdatePersonalAseo(personalAseo1);
+           }
         //    public static void AddMateria()
         //    {
         //        Materia materia;
