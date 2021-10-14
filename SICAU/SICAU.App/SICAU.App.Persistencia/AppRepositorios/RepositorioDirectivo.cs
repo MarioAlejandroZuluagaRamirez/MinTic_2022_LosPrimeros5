@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using SICAU.App.Dominio;
+using System;
 
 namespace SICAU.App.Persistencia
 {
@@ -60,15 +61,14 @@ namespace SICAU.App.Persistencia
         }
 
         Directivo IRepositorioDirectivo.GetDirectivo(int idDirectivo)
-        {
-
+        {           
             Directivo directivo = _appContext.directivos.FirstOrDefault(p => p.id == idDirectivo);
             _appContext.Entry(directivo).Reference(s => s.sede).Load();
             return directivo;
         }
 
         Directivo IRepositorioDirectivo.UpdateDirectivo(Directivo directivo)
-        {
+        {           
             var directivoEncontrado = _appContext.directivos.FirstOrDefault(p => p.id == directivo.id);
             if (directivoEncontrado != null)
             {
@@ -79,7 +79,7 @@ namespace SICAU.App.Persistencia
                 directivoEncontrado.fechaNacimiento = directivo.fechaNacimiento;
                 directivoEncontrado.estadoCovid = directivo.estadoCovid;
                 directivoEncontrado.unidad = directivo.unidad;
-                directivoEncontrado.sede = directivo.sede;
+               // directivoEncontrado.sede = directivo.sede;
                 _appContext.SaveChanges();
             }
             return directivoEncontrado;

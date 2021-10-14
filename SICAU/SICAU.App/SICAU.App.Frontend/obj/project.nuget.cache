@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "IopC55ZaQ+gLPVS1A+Kch+SGTfNIVSwJftEg3k15ro3nTMyCxD3ery1Xds4UvmRme3OT7ujwBCuAkRN7pDpeXA==",
+  "dgSpecHash": "iAUgFaIHPxwueuqt50CCLbu291R+rzDTSjeBloixt5zjKOJHiOZ4ChAxlXFAJ1lXdY3PNCo5bNG/VYOmQ81HdA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto\\SICAU\\SICAU.App\\SICAU.App.Frontend\\SICAU.App.Frontend.csproj",
+  "projectFilePath": "C:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto - copia\\SICAU\\SICAU.App\\SICAU.App.Frontend\\SICAU.App.Frontend.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mazul\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\mazul\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.9\\microsoft.aspnetcore.cryptography.internal.5.0.9.nupkg.sha512",

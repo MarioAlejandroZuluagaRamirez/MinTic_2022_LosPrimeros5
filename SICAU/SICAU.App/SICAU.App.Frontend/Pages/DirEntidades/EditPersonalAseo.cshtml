@@ -1,0 +1,43 @@
+﻿@page
+@model SICAU.App.FrontEnd.Pages.EditPersonalAseoModel
+@{
+}
+<h1>Editar Personal de Aseo</h1>
+
+ @* <h1>Crear Nuevo personalAseo</h1> *@
+
+<p></p>
+
+<a class="btn btn-primary table-btn" asp-page="/DirEntidades/ListPersonalAseo">
+<i class="fas fa-arrow-circle-left"></i> 
+    Regresar
+</a>
+
+<p></p>
+<form method="post">
+    <input type="hidden" asp-for="personalAseo.id">
+  
+    <div class="form-group">
+        <label for="nombre">Nombre Personal Aseo</label>
+         <input asp-for="personalAseo.nombre" class="form-control"> 
+        <label for="apellido">Apellido Personal Aseo</label> 
+         <input asp-for="personalAseo.apellido" class="form-control">  
+        <label for="identificacion">Identificación Personal Aseo</label> 
+         <input asp-for="personalAseo.identificacion" class="form-control"> 
+        <label for="fechaNacimiento">Fecha Nacimiento Personal Aseo</label> 
+         <input asp-for="personalAseo.fechaNacimiento" class="form-control">   
+        <label for="estadoCovid">Estado Covid Personal Aseo</label> 
+         <input asp-for="personalAseo.estadoCovid" class="form-control"> 
+        <label for="turno">Turno Personal Aseo</label> 
+         <input asp-for="personalAseo.turno" class="form-control"> 
+         @* <label for="sede">Sede personalAseo</label> 
+         <input asp-for="personalAseo.sede.sede" class="form-control">   *@
+                
+        <span class="text_danger" asp-validation.for="PersonalAseo.nombre"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Guardar Cambios
+        <i class="far fa-save"></i>
+    </button>
+</form>
+
+

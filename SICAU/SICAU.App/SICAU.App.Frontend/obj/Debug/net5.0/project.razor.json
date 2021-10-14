@@ -1,5 +1,5 @@
 {
-  "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto\\SICAU\\SICAU.App\\SICAU.App.Frontend\\SICAU.App.Frontend.csproj",
+  "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto - copia\\SICAU\\SICAU.App\\SICAU.App.Frontend\\SICAU.App.Frontend.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "5.0",
@@ -15619,218 +15619,258 @@
   "RootNamespace": "SICAU.App.Frontend",
   "Documents": [
     {
-      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\DirEntidades\\ListHorario.cshtml",
-      "TargetPath": "Pages\\DirEntidades\\ListHorario.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\Shared\\_ValidationScriptsPartial.cshtml",
-      "TargetPath": "Pages\\Shared\\_ValidationScriptsPartial.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\DirEntidades\\ListFacultad.cshtml",
-      "TargetPath": "Pages\\DirEntidades\\ListFacultad.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\DirEntidades\\ListEstudiante.cshtml",
-      "TargetPath": "Pages\\DirEntidades\\ListEstudiante.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\_ViewImports.cshtml",
-      "TargetPath": "Pages\\_ViewImports.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\DirEntidades\\DeleteSede.cshtml",
-      "TargetPath": "Pages\\DirEntidades\\DeleteSede.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\DirEntidades\\DeleteSintoma.cshtml",
-      "TargetPath": "Pages\\DirEntidades\\DeleteSintoma.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\DirEntidades\\ListDetailSede.cshtml",
-      "TargetPath": "Pages\\DirEntidades\\ListDetailSede.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\DirEntidades\\DetailDirectivo.cshtml",
-      "TargetPath": "Pages\\DirEntidades\\DetailDirectivo.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\DirEntidades\\ListSede.cshtml",
-      "TargetPath": "Pages\\DirEntidades\\ListSede.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\DirEntidades\\ListPrograma.cshtml",
-      "TargetPath": "Pages\\DirEntidades\\ListPrograma.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\DirEntidades\\EditSede.cshtml",
-      "TargetPath": "Pages\\DirEntidades\\EditSede.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\DirEntidades\\ListMateria.cshtml",
-      "TargetPath": "Pages\\DirEntidades\\ListMateria.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\Account\\Login.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\DirEntidades\\EditEncuesta.cshtml",
-      "TargetPath": "Pages\\DirEntidades\\EditEncuesta.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\DirEntidades\\DetailEstudiante.cshtml",
-      "TargetPath": "Pages\\DirEntidades\\DetailEstudiante.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\DirEntidades\\ListEncuesta.cshtml",
-      "TargetPath": "Pages\\DirEntidades\\ListEncuesta.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\DirEntidades\\EditUniversidad.cshtml",
-      "TargetPath": "Pages\\DirEntidades\\EditUniversidad.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\DirEntidades\\ListSintoma.cshtml",
-      "TargetPath": "Pages\\DirEntidades\\ListSintoma.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\DirEntidades\\DetailPersonalAseo.cshtml",
-      "TargetPath": "Pages\\DirEntidades\\DetailPersonalAseo.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\Shared\\_Layout.cshtml",
-      "TargetPath": "Pages\\Shared\\_Layout.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\DirEntidades\\ListDirectivo.cshtml",
-      "TargetPath": "Pages\\DirEntidades\\ListDirectivo.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\DirEntidades\\ListSalon.cshtml",
-      "TargetPath": "Pages\\DirEntidades\\ListSalon.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\DirEntidades\\DetailProfesor.cshtml",
-      "TargetPath": "Pages\\DirEntidades\\DetailProfesor.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\Account\\Register.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\Index.cshtml",
-      "TargetPath": "Pages\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\_ViewStart.cshtml",
-      "TargetPath": "Pages\\_ViewStart.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\DirEntidades\\EditSintoma.cshtml",
+      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto - copia\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\DirEntidades\\EditSintoma.cshtml",
       "TargetPath": "Pages\\DirEntidades\\EditSintoma.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\DirEntidades\\ListPersonalAseo.cshtml",
-      "TargetPath": "Pages\\DirEntidades\\ListPersonalAseo.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\DirEntidades\\DeleteUniversidad.cshtml",
-      "TargetPath": "Pages\\DirEntidades\\DeleteUniversidad.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Areas\\Identity\\Pages\\_ViewStart.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\_ViewStart.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\DirEntidades\\ListProfesor.cshtml",
-      "TargetPath": "Pages\\DirEntidades\\ListProfesor.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Areas\\Identity\\Pages\\Account\\_ViewImports.cshtml",
+      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto - copia\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Areas\\Identity\\Pages\\Account\\_ViewImports.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\_ViewImports.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\Error.cshtml",
-      "TargetPath": "Pages\\Error.cshtml",
+      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto - copia\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\DirEntidades\\EditUniversidad.cshtml",
+      "TargetPath": "Pages\\DirEntidades\\EditUniversidad.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Areas\\Identity\\Pages\\_ViewImports.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\_ViewImports.cshtml",
+      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto - copia\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\DirEntidades\\DetailPersonalAseo.cshtml",
+      "TargetPath": "Pages\\DirEntidades\\DetailPersonalAseo.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Areas\\Identity\\Pages\\Account\\Logout.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\Account\\Logout.cshtml",
+      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto - copia\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\DirEntidades\\DetailDirectivo.cshtml",
+      "TargetPath": "Pages\\DirEntidades\\DetailDirectivo.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\DirEntidades\\ListUniversidad.cshtml",
-      "TargetPath": "Pages\\DirEntidades\\ListUniversidad.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\DirEntidades\\DeleteFacultad.cshtml",
-      "TargetPath": "Pages\\DirEntidades\\DeleteFacultad.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\Shared\\_LoginPartial.cshtml",
+      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto - copia\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\Shared\\_LoginPartial.cshtml",
       "TargetPath": "Pages\\Shared\\_LoginPartial.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\DirEntidades\\EditFacultad.cshtml",
-      "TargetPath": "Pages\\DirEntidades\\EditFacultad.cshtml",
+      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto - copia\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\DirEntidades\\EditEncuesta.cshtml",
+      "TargetPath": "Pages\\DirEntidades\\EditEncuesta.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Areas\\Identity\\Pages\\_ValidationScriptsPartial.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\_ValidationScriptsPartial.cshtml",
+      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto - copia\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\DirEntidades\\DeletePersonalAseo.cshtml",
+      "TargetPath": "Pages\\DirEntidades\\DeletePersonalAseo.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\Privacy.cshtml",
+      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto - copia\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\DirEntidades\\DeleteDirectivo.cshtml",
+      "TargetPath": "Pages\\DirEntidades\\DeleteDirectivo.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto - copia\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\DirEntidades\\EditPersonalAseo.cshtml",
+      "TargetPath": "Pages\\DirEntidades\\EditPersonalAseo.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto - copia\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\DirEntidades\\ListSalon.cshtml",
+      "TargetPath": "Pages\\DirEntidades\\ListSalon.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto - copia\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\DirEntidades\\ListDirectivo.cshtml",
+      "TargetPath": "Pages\\DirEntidades\\ListDirectivo.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto - copia\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\Privacy.cshtml",
       "TargetPath": "Pages\\Privacy.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\NotFound.cshtml",
+      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto - copia\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\DirEntidades\\DeleteProfesor.cshtml",
+      "TargetPath": "Pages\\DirEntidades\\DeleteProfesor.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto - copia\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\DirEntidades\\EditFacultad.cshtml",
+      "TargetPath": "Pages\\DirEntidades\\EditFacultad.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto - copia\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\DirEntidades\\DeleteSintoma.cshtml",
+      "TargetPath": "Pages\\DirEntidades\\DeleteSintoma.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto - copia\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Areas\\Identity\\Pages\\_ViewImports.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto - copia\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\DirEntidades\\ListUniversidad.cshtml",
+      "TargetPath": "Pages\\DirEntidades\\ListUniversidad.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto - copia\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\DirEntidades\\ListEncuesta.cshtml",
+      "TargetPath": "Pages\\DirEntidades\\ListEncuesta.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto - copia\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\DirEntidades\\ListSintoma.cshtml",
+      "TargetPath": "Pages\\DirEntidades\\ListSintoma.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto - copia\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\DirEntidades\\ListHorario.cshtml",
+      "TargetPath": "Pages\\DirEntidades\\ListHorario.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto - copia\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\DirEntidades\\ListProfesor.cshtml",
+      "TargetPath": "Pages\\DirEntidades\\ListProfesor.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto - copia\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\DirEntidades\\ListMateria.cshtml",
+      "TargetPath": "Pages\\DirEntidades\\ListMateria.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto - copia\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\DirEntidades\\ListPrograma.cshtml",
+      "TargetPath": "Pages\\DirEntidades\\ListPrograma.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto - copia\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\DirEntidades\\DeleteEstudiante.cshtml",
+      "TargetPath": "Pages\\DirEntidades\\DeleteEstudiante.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto - copia\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\Index.cshtml",
+      "TargetPath": "Pages\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto - copia\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Areas\\Identity\\Pages\\_ValidationScriptsPartial.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\_ValidationScriptsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto - copia\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\DirEntidades\\DetailProfesor.cshtml",
+      "TargetPath": "Pages\\DirEntidades\\DetailProfesor.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto - copia\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\DirEntidades\\ListEstudiante.cshtml",
+      "TargetPath": "Pages\\DirEntidades\\ListEstudiante.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto - copia\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\DirEntidades\\DeleteSede.cshtml",
+      "TargetPath": "Pages\\DirEntidades\\DeleteSede.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto - copia\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Areas\\Identity\\Pages\\_ViewStart.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto - copia\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\Shared\\_ValidationScriptsPartial.cshtml",
+      "TargetPath": "Pages\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto - copia\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\DirEntidades\\ListSede.cshtml",
+      "TargetPath": "Pages\\DirEntidades\\ListSede.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto - copia\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Login.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto - copia\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\DirEntidades\\ListDetailSede.cshtml",
+      "TargetPath": "Pages\\DirEntidades\\ListDetailSede.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto - copia\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\DirEntidades\\EditDirectivo.cshtml",
+      "TargetPath": "Pages\\DirEntidades\\EditDirectivo.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto - copia\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\DirEntidades\\DeleteUniversidad.cshtml",
+      "TargetPath": "Pages\\DirEntidades\\DeleteUniversidad.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto - copia\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\_ViewStart.cshtml",
+      "TargetPath": "Pages\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto - copia\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\DirEntidades\\DeleteFacultad.cshtml",
+      "TargetPath": "Pages\\DirEntidades\\DeleteFacultad.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto - copia\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\DirEntidades\\EditProfesor.cshtml",
+      "TargetPath": "Pages\\DirEntidades\\EditProfesor.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto - copia\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\Error.cshtml",
+      "TargetPath": "Pages\\Error.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto - copia\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\DirEntidades\\ListPersonalAseo.cshtml",
+      "TargetPath": "Pages\\DirEntidades\\ListPersonalAseo.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto - copia\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\DirEntidades\\ListFacultad.cshtml",
+      "TargetPath": "Pages\\DirEntidades\\ListFacultad.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto - copia\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\DirEntidades\\EditEstudiante.cshtml",
+      "TargetPath": "Pages\\DirEntidades\\EditEstudiante.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto - copia\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Areas\\Identity\\Pages\\Account\\Logout.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Logout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto - copia\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\DirEntidades\\DetailEstudiante.cshtml",
+      "TargetPath": "Pages\\DirEntidades\\DetailEstudiante.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto - copia\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\DirEntidades\\EditSede.cshtml",
+      "TargetPath": "Pages\\DirEntidades\\EditSede.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto - copia\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Register.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto - copia\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\NotFound.cshtml",
       "TargetPath": "Pages\\NotFound.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto - copia\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\_ViewImports.cshtml",
+      "TargetPath": "Pages\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto - copia\\SICAU\\SICAU.App\\SICAU.App.Frontend\\Pages\\Shared\\_Layout.cshtml",
+      "TargetPath": "Pages\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"
     }
   ],

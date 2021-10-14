@@ -47,7 +47,10 @@
         <td>@Model.directivo.unidad</td>
     </tr>
     <tr>
-        <td class="table-dark">Sede a la que se encuentra asignado</td>
-        <td>@if (@Model.directivo.sede != null)@Model.directivo.sede.sede</td>
+        <td class="table-dark">Sede a la que se encuentra asignado</td>       
+        <td>
+            @if (Model.directivo.sede!=null)
+               @Model.directivo.sede.sede
+         </td>
     </tr>
 </table>

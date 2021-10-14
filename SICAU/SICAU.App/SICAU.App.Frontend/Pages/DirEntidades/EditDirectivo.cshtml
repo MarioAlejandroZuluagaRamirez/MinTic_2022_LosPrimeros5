@@ -1,0 +1,43 @@
+﻿@page
+@model SICAU.App.Frontend.Pages.EditDirectivoModel
+@{
+}
+             
+   <h1>Editar Directivo</h1>
+
+ @* <h1>Crear Nuevo Directivo</h1> *@
+
+<p></p>
+
+<a class="btn btn-primary table-btn" asp-page="/DirEntidades/ListDirectivo">
+<i class="fas fa-arrow-circle-left"></i> 
+    Regresar
+</a>
+
+<p></p>
+<form method="post">
+    <input type="hidden" asp-for="directivo.id">
+  
+    <div class="form-group">
+        <label for="nombre">Nombre Directivo</label>
+         <input asp-for="directivo.nombre" class="form-control"> 
+        <label for="apellido">Apellido Directivo</label> 
+         <input asp-for="directivo.apellido" class="form-control">  
+        <label for="identificacion">Identificación Directivo</label> 
+         <input asp-for="directivo.identificacion" class="form-control"> 
+        <label for="fechaNacimiento">Fecha Nacimiento Directivo</label> 
+         <input asp-for="directivo.fechaNacimiento" class="form-control">   
+        <label for="estadoCovid">Estado Covid Directivo</label> 
+         <input asp-for="directivo.estadoCovid" class="form-control"> 
+        <label for="unidad">Unidad Directivo</label> 
+         <input asp-for="directivo.unidad" class="form-control"> 
+         @* <label for="sede">Sede Directivo</label> 
+         <input asp-for="directivo.sede.sede" class="form-control">   *@
+                
+        <span class="text_danger" asp-validation.for="Directivo.nombre"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Guardar Cambios
+        <i class="far fa-save"></i>
+    </button>
+</form>
+

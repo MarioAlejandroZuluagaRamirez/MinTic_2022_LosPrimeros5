@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto\\SICAU\\SICAU.App\\SICAU.App.Dominio\\SICAU.App.Dominio.csproj",
+      "projectUniqueName": "C:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto - copia\\SICAU\\SICAU.App\\SICAU.App.Dominio\\SICAU.App.Dominio.csproj",
       "projectName": "SICAU.App.Dominio",
-      "projectPath": "C:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto\\SICAU\\SICAU.App\\SICAU.App.Dominio\\SICAU.App.Dominio.csproj",
+      "projectPath": "C:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto - copia\\SICAU\\SICAU.App\\SICAU.App.Dominio\\SICAU.App.Dominio.csproj",
       "packagesPath": "C:\\Users\\mazul\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto\\SICAU\\SICAU.App\\SICAU.App.Dominio\\obj\\",
+      "outputPath": "C:\\Users\\mazul\\Desktop\\Desarrollo de Software MinTic\\C#\\Projecto - copia\\SICAU\\SICAU.App\\SICAU.App.Dominio\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\mazul\\AppData\\Roaming\\NuGet\\NuGet.Config",

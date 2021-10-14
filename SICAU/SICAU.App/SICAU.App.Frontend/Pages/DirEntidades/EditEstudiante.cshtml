@@ -1,0 +1,41 @@
+﻿@page
+@model SICAU.App.FrontEnd.Pages.EditEstudianteModel
+@{
+} 
+<h1>Editar Estudiante</h1>
+
+ @* <h1>Crear Nuevo Estudiante</h1> *@
+
+<p></p>
+
+<a class="btn btn-primary table-btn" asp-page="/DirEntidades/ListEstudiante">
+<i class="fas fa-arrow-circle-left"></i> 
+    Regresar
+</a>
+
+<p></p>
+<form method="post">
+    <input type="hidden" asp-for="estudiante.id">
+  
+    <div class="form-group">
+        <label for="nombre">Nombre Estudiante</label>
+         <input asp-for="estudiante.nombre" class="form-control"> 
+        <label for="apellido">Apellido Estudiante</label> 
+         <input asp-for="estudiante.apellido" class="form-control">  
+        <label for="identificacion">Identificación Estudiante</label> 
+         <input asp-for="estudiante.identificacion" class="form-control"> 
+        <label for="fechaNacimiento">Fecha Nacimiento Estudiante</label> 
+         <input asp-for="estudiante.fechaNacimiento" class="form-control">   
+        <label for="estadoCovid">Estado Covid Estudiante</label> 
+         <input asp-for="estudiante.estadoCovid" class="form-control">         
+         @* <label for="sede">Sede estudiante</label> 
+         <input asp-for="estudiante.sede.sede" class="form-control">   *@
+                
+        <span class="text_danger" asp-validation.for="Estudiante.nombre"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Guardar Cambios
+        <i class="far fa-save"></i>
+    </button>
+</form>
+
+

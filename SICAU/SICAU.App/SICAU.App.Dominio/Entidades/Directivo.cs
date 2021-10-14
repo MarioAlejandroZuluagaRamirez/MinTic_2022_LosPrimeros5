@@ -1,3 +1,5 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace SICAU.App.Dominio
 {
     public class Directivo:Persona

@@ -12,7 +12,6 @@ namespace SICAU.App.Frontend.Pages
     public class ListSintomaModel : PageModel
     {
         public IRepositorioSintoma _repositorioSintoma = new RepositorioSintoma(new Persistencia.AppContext());
-        
         public IEnumerable<Sintoma> sintomas {get;set;}
         public string criterio;
         public void OnGet(string criterio)
