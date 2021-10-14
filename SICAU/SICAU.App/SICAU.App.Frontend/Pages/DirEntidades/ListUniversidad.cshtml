@@ -19,6 +19,7 @@
 <a type="button" class="btn btn-primary" asp-page="/DirEntidades/EditUniversidad">Adicionar Nuevo Registro
 <i class="far fa-file"></i>
 </a>
+
 <p></p>
 
 <table class="table table-bordered table-striped">
@@ -28,7 +29,6 @@
             <th scope="col">Universidad</th>
             <th scope="col">Edición</th>
             <th scope="col">Eliminar</th>
-            <th scope="col">Sedes</th>
         </tr>
   </thead>
   <tbody>
@@ -45,11 +45,6 @@
             <td>
                 <a class="btn btn-warning table-btn" asp-page="/DirEntidades/DeleteUniversidad" asp-route-idUniversidad="@universidad.id">
                 <i class="far fa-trash-alt"></i>
-                </a>
-            </td>
-            <td>
-                <a type="button" class="btn btn-secondary" asp-page="/DirEntidades/ListDetailSede" asp-route-idUniversidad="@universidad.id">
-                <i class="far fa-building"></i>
                 </a>
             </td>
         </tr>

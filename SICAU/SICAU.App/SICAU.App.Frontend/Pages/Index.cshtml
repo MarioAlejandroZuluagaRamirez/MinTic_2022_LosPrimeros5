@@ -5,22 +5,9 @@
 }
 
 <div class="text-center">
-    @* <img src="Imagen_sicau.png" style="max-width:65%;width:auto;height:auto;"> *@
-    <h1 class="display-4">Bienvenido!!!</h1>
+    <img src="Imagen_sicau.png" style="max-width:65%;width:auto;height:auto;">
+    @* <h1 class="display-4">Bienvenido!!!</h1>
     <h1 class="display-4">Proyecto de Desarrollo de Software</h1>
-    <h1 class="display-4">MinTic 2022</h1>
+    <h1 class="display-4">MinTic 2022</h1> *@
     @* <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p> *@
 </div>
-
-@if (User.Identity.IsAuthenticated)
-{
-    <table class="table table-sm">
-        @foreach (var claim in User.Claims)
-        {
-            <tr>
-                <td>@claim.Type</td>
-                <td>@claim.Value</td>
-            </tr>
-        }
-    </table>
-}

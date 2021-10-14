@@ -1,4 +1,0 @@
-{
-    "appService.defaultWebAppToDeploy": "/subscriptions/d89608a5-8ca7-4337-b509-fdef43c0ebe4/resourceGroups/appsvc_windows_centralus/providers/Microsoft.Web/sites/MinTic2022SICAU",
-    "appService.deploySubpath": "SICAU\\SICAU.App\\SICAU.App.Frontend\\publish"
-}

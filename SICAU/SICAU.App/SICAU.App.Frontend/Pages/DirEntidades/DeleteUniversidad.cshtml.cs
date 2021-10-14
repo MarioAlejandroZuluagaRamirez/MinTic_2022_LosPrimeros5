@@ -6,11 +6,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using SICAU.App.Dominio;
 using SICAU.App.Persistencia;
-using Microsoft.AspNetCore.Authorization;
 
 namespace SICAU.App.Frontend.Pages
 {
-    [Authorize]
     public class DeleteUniversidadModel : PageModel
     {
         private static IRepositorioUniversidad _repoUniversidad = new RepositorioUniversidad(new Persistencia.AppContext());
