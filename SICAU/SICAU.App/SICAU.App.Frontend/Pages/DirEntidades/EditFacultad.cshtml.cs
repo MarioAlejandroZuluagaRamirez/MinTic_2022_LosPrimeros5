@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -10,6 +11,7 @@ using SICAU.App.Persistencia;
 
 namespace SICAU.App.Frontend.Pages
 {
+    [Authorize]
     public class EditFacultadModel : PageModel
     {
         private static IRepositorioSede _repoSede = new RepositorioSede(new Persistencia.AppContext());

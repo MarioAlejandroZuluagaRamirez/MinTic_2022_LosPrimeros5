@@ -25,6 +25,7 @@ namespace SICAU.App.Frontend
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
+            services.AddControllersWithViews();
             //Oscar
             //services.AddScoped<IRepositorioSede,RepositorioSede>();
             //services.AddSingleton<IRepositorioDirectivo, RepositorioDirectivo>();
@@ -49,10 +50,15 @@ namespace SICAU.App.Frontend
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
+                //endpoints.MapRazorPages();
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
             });
         }

@@ -19,8 +19,9 @@ namespace SICAU.App.Frontend
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
-                {
-                    webBuilder.UseStartup<Startup>();
-                });
+                {webBuilder.UseStartup<Startup>();});
     }
 }
+
+// Cadena de conexion del JSon
+// "IdentityDataContextConnection": "Server=(localdb)\\mssqllocaldb;Database=SICAU_Users.App.Frontend;Trusted_Connection=True;MultipleActiveResultSets=true"
