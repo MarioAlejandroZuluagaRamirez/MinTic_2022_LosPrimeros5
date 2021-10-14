@@ -369,3 +369,8 @@ C:\Users\mazul\Desktop\Desarrollo de Software MinTic\C#\Projecto\SICAU\SICAU.App
 C:\Users\mazul\Desktop\Desarrollo de Software MinTic\C#\Projecto\SICAU\SICAU.App\SICAU.App.Frontend\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
 C:\Users\mazul\Desktop\Desarrollo de Software MinTic\C#\Projecto\SICAU\SICAU.App\SICAU.App.Frontend\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Logout.cshtml.g.cs
 C:\Users\mazul\Desktop\Desarrollo de Software MinTic\C#\Projecto\SICAU\SICAU.App\SICAU.App.Frontend\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Register.cshtml.g.cs
+C:\Users\mazul\Desktop\Desarrollo de Software MinTic\C#\Projecto\SICAU\SICAU.App\SICAU.App.Frontend\bin\Debug\net5.0\publish\web.config
+C:\Users\mazul\Desktop\Desarrollo de Software MinTic\C#\Projecto\SICAU\SICAU.App\SICAU.App.Frontend\bin\Debug\net5.0\publish\appsettings.Development.json
+C:\Users\mazul\Desktop\Desarrollo de Software MinTic\C#\Projecto\SICAU\SICAU.App\SICAU.App.Frontend\bin\Debug\net5.0\publish\appsettings.json
+C:\Users\mazul\Desktop\Desarrollo de Software MinTic\C#\Projecto\SICAU\SICAU.App\SICAU.App.Frontend\bin\Debug\net5.0\publish\SICAU.App.Frontend.deps.json
+C:\Users\mazul\Desktop\Desarrollo de Software MinTic\C#\Projecto\SICAU\SICAU.App\SICAU.App.Frontend\bin\Debug\net5.0\publish\SICAU.App.Frontend.runtimeconfig.json
