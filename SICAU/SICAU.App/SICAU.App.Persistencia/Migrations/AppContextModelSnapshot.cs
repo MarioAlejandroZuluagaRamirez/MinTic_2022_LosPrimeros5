@@ -96,18 +96,15 @@ namespace SICAU.App.Persistencia.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<int?>("Universidadid")
-                        .HasColumnType("int");
-
                     b.Property<string>("facultad")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<int?>("sedeid")
                         .HasColumnType("int");
 
                     b.HasKey("id");
-
-                    b.HasIndex("Universidadid");
 
                     b.HasIndex("sedeid");
 
@@ -428,12 +425,8 @@ namespace SICAU.App.Persistencia.Migrations
 
             modelBuilder.Entity("SICAU.App.Dominio.Facultad", b =>
                 {
-                    b.HasOne("SICAU.App.Dominio.Universidad", null)
-                        .WithMany("facultades")
-                        .HasForeignKey("Universidadid");
-
                     b.HasOne("SICAU.App.Dominio.Sede", "sede")
-                        .WithMany()
+                        .WithMany("facultades")
                         .HasForeignKey("sedeid");
 
                     b.Navigation("sede");
@@ -534,10 +527,13 @@ namespace SICAU.App.Persistencia.Migrations
                     b.Navigation("sede");
                 });
 
-            modelBuilder.Entity("SICAU.App.Dominio.Universidad", b =>
+            modelBuilder.Entity("SICAU.App.Dominio.Sede", b =>
                 {
                     b.Navigation("facultades");
+                });
 
+            modelBuilder.Entity("SICAU.App.Dominio.Universidad", b =>
+                {
                     b.Navigation("sedes");
                 });
 #pragma warning restore 612, 618

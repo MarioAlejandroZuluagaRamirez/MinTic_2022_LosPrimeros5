@@ -12,7 +12,6 @@ namespace SICAU.App.Persistencia
         {
             _appContext = appContext;
         }
-
         public Sede AsignaUniversidad(int idSede, int idUniversidad)
         {
             Sede sede = _appContext.sedes.First(p => p.id == idSede);
@@ -62,7 +61,7 @@ namespace SICAU.App.Persistencia
         }
         Sede IRepositorioSede.GetSede(int idSede)
         {
-            Sede sede =  _appContext.sedes.FirstOrDefault(p => p.id == idSede);
+            Sede sede =  _appContext.sedes.First(p => p.id == idSede);
             _appContext.Entry(sede).Reference(u => u.universidad).Load();
             return sede;
         }
@@ -78,6 +77,17 @@ namespace SICAU.App.Persistencia
                 //sedeEncontrado.universidad = sede.universidad;
                 _appContext.SaveChanges();
             }
+            return sedeEncontrado;
+        }
+
+        Sede IRepositorioSede.AdicionarFacultad(int idSede, Facultad facultad)
+        {
+            var sedeEncontrado = _appContext.sedes.First(s => s.id == idSede);
+            Facultad nuevaFacultad = new();
+            nuevaFacultad  = facultad;
+            (sedeEncontrado.facultades ??= new List<Facultad>()).Add(facultad);
+            _appContext.Update(sedeEncontrado);
+            _appContext.SaveChanges();
             return sedeEncontrado;
         }
     }

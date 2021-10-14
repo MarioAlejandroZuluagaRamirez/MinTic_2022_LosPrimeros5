@@ -7,4 +7,8 @@ build_property.PublishSingleFile =
 build_property.IncludeAllContentForSelfExtract = 
 build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
 build_property.RootNamespace = SICAU.App.Frontend
+<<<<<<< HEAD
 build_property.ProjectDir = C:\SICAU\MinTic_2022_LosPrimeros5\SICAU\SICAU.App\SICAU.App.Frontend\
+=======
+build_property.ProjectDir = C:\Users\mazul\Desktop\Desarrollo de Software MinTic\C#\Projecto\SICAU\SICAU.App\SICAU.App.Frontend\
+>>>>>>> c39d80b900f29ffc6b4821dea6f080ab6512cf36

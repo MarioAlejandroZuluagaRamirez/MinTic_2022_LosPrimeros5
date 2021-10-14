@@ -27,7 +27,8 @@ namespace SICAU.App.Persistencia
             if (!optionsBuilder.IsConfigured)
             {
                 optionsBuilder
-                .UseSqlServer("Data Source = (localdb)\\MSSQLLocalDB; Initial Catalog = ProjectSICAUData");
+                // .UseSqlServer("Data Source = (localdb)\\MSSQLLocalDB; Initial Catalog = ProjectSICAUData");
+                .UseSqlServer("Server=tcp:marioalejandro.database.windows.net,1433;Initial Catalog=SICAU;Persist Security Info=False;User ID=mazuluagar;Password=Alejo8776134;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30");
                 // .EnableSensitiveDataLogging(true);
             }
         }

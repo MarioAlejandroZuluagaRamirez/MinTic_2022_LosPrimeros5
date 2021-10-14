@@ -11,5 +11,6 @@ namespace SICAU.App.Persistencia
         Facultad UpdateFacultad(Facultad facultad);
         void DeleteFacultad(int idFacultad);
         Facultad GetFacultad(int idFacultad);
+        Facultad AsignaFacultad(int idFacultad, int idSede);
     }
 }

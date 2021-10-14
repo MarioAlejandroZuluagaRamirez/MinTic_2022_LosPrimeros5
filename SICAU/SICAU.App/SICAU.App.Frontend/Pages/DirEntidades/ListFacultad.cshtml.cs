@@ -6,9 +6,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using SICAU.App.Dominio;
 using SICAU.App.Persistencia;
+using Microsoft.AspNetCore.Authorization;
 
 namespace SICAU.App.Frontend.Pages
 {
+    [Authorize]
     public class ListFacultadModel : PageModel
     {
         public IRepositorioFacultad _repositorioFacultad = new RepositorioFacultad(new Persistencia.AppContext());

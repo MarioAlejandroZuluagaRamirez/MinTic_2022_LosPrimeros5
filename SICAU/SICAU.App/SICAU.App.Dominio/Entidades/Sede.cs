@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace SICAU.App.Dominio
@@ -11,5 +12,7 @@ namespace SICAU.App.Dominio
         public string ubicacion {get;set;}
         [Required]
         public Universidad universidad {get;set;}
+
+        public List<Facultad> facultades { get; set; }
     }
 }

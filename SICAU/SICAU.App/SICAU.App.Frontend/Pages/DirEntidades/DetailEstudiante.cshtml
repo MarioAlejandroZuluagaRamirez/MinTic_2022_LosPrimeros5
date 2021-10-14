@@ -48,6 +48,6 @@
     </tr>
     <tr>
         <td class="table-dark">Programa</td>
-        <td>@Model.estudiante.programa.programa</td>
+        <td>@if (@Model.estudiante.programa != null) @Model.estudiante.programa.programa</td>
     </tr>
 </table>
