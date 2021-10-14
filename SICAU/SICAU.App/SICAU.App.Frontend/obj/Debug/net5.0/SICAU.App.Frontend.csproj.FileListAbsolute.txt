@@ -348,3 +348,6 @@ C:\Users\mazul\Desktop\Desarrollo de Software MinTic\C#\Projecto\SICAU\SICAU.App
 C:\Users\mazul\Desktop\Desarrollo de Software MinTic\C#\Projecto\SICAU\SICAU.App\SICAU.App.Frontend\obj\Debug\net5.0\ref\SICAU.App.Frontend.dll
 C:\Users\mazul\Desktop\Desarrollo de Software MinTic\C#\Projecto\SICAU\SICAU.App\SICAU.App.Frontend\obj\Debug\net5.0\SICAU.App.Frontend.pdb
 C:\Users\mazul\Desktop\Desarrollo de Software MinTic\C#\Projecto\SICAU\SICAU.App\SICAU.App.Frontend\obj\Debug\net5.0\SICAU.App.Frontend.genruntimeconfig.cache
+C:\Users\mazul\Desktop\Desarrollo de Software MinTic\C#\Projecto\SICAU\SICAU.App\SICAU.App.Frontend\obj\Debug\net5.0\Razor\Pages\DirEntidades\DeleteFacultad.cshtml.g.cs
+C:\Users\mazul\Desktop\Desarrollo de Software MinTic\C#\Projecto\SICAU\SICAU.App\SICAU.App.Frontend\obj\Debug\net5.0\Razor\Pages\DirEntidades\EditFacultad.cshtml.g.cs
+C:\Users\mazul\Desktop\Desarrollo de Software MinTic\C#\Projecto\SICAU\SICAU.App\SICAU.App.Frontend\obj\Debug\net5.0\Razor\Pages\DirEntidades\ListDetailSede.cshtml.g.cs

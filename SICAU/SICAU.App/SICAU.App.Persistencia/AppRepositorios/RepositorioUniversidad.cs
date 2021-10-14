@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.EntityFrameworkCore;
 using SICAU.App.Dominio;
 
 namespace SICAU.App.Persistencia
@@ -76,6 +77,12 @@ namespace SICAU.App.Persistencia
             _appContext.Update(universidadEncontrado);
             _appContext.SaveChanges();
             return universidadEncontrado;
+        }
+
+        IEnumerable<Sede> IRepositorioUniversidad.GetSedes(int idUniversidad)
+        {
+            var universidad = _appContext.universidades.Include(s => s.sedes).First(u => u.id == idUniversidad);
+            return universidad.sedes;
         }
     }
 }

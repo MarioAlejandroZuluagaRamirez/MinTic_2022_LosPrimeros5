@@ -12,5 +12,6 @@ namespace SICAU.App.Persistencia
         void DeleteUniversidad(int idUniversidad);
         Universidad GetUniversidad(int idUniversidad);
         Universidad AdicionarSede(int idUniversidad, Sede sede);
+        IEnumerable<Sede> GetSedes (int idUniversidad);
     }
 }

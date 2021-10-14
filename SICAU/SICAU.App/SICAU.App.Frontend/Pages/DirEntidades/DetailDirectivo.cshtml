@@ -48,6 +48,6 @@
     </tr>
     <tr>
         <td class="table-dark">Sede a la que se encuentra asignado</td>
-        <td>@Model.directivo.sede.sede</td>
+        <td>@if (@Model.directivo.sede != null)@Model.directivo.sede.sede</td>
     </tr>
 </table>
